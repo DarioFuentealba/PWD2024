@@ -10,5 +10,24 @@
  }
 .boton{
     background-color: green;
-    
+    border-radius: 10px;
+    color: white;
+    font-size: x-large;
+}
+.divform label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    color: brown;
+}
+.divtitulo{
+    background-color: blueviolet;
+    width: 90%;
+    margin: 5%;
+    padding: 10px;
+}
+.divform{
+    border: 1px solid green;
+    width: 80%;
+    margin: 3%;
+    padding: 10px;
 }
