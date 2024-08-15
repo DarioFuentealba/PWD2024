@@ -45,6 +45,9 @@
             <li><a class="dropdown-item" href="../../TP1/Ejercicio/ejercicio3.php">Ejercicio 3</a></li>
             <li><a class="dropdown-item" href="../../TP1/Ejercicio/ejercicio4.php">Ejercicio 4</a></li>
             <li><a class="dropdown-item" href="../../TP1/Ejercicio/ejercicio5.php">Ejercicio 5</a></li>
+            <li><a class="dropdown-item" href="../../TP1/Ejercicio/ejercicio6.php">Ejercicio 6</a></li>
+            <li><a class="dropdown-item" href="../../TP1/Ejercicio/ejercicio7.php">Ejercicio 7</a></li>
+            <li><a class="dropdown-item" href="../../TP1/Ejercicio/ejercicio8.php">Ejercicio 8</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
