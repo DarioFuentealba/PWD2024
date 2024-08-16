@@ -17,6 +17,7 @@ class Persona {
         $this->direccion = "";
         $this->estudio = "";
         $this->sexo = "";
+        $this->colDeportes = Array();
     }// fin constructor
 
     public function getNombre(){
@@ -102,7 +103,12 @@ class Persona {
         }
         return $retorno;
     }
-
+    /**
+     * @return void
+     */
+    public function agregarDeporte($dep){
+        array_push($this->colDeportes, $dep);
+    }
 
 }
 

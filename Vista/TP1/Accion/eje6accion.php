@@ -1,5 +1,5 @@
 <?php
-$titulo = "Ejercicio 5";
+$titulo = "Ejercicio 6";
 include_once '../../Estructura/header.php';
 
 $objpersona = new Persona();
@@ -11,6 +11,11 @@ $objpersona->setEdad($recibido["edad"]);
 $objpersona->setDireccion($recibido["direccion"]);
 $objpersona->setEstudio($recibido["estudios"]);
 $objpersona->setSexo($recibido["sexo"]);
+echo var_dump($recibido);
+/*
+for ($i=0; $i<6; $i++){
+    $objpersona->agregarDeporte($recibido["futbol"])
+}*/
 
 
 $mayor = "";
@@ -23,7 +28,7 @@ if ($objpersona->mayorEdad()){
 
 ?>
 <div class="divtitulo">
-    <h1>Ejercicio 5</h1>
+    <h1>Ejercicio 6</h1>
 </div>
 <div class="divform">
     <?php 
@@ -32,7 +37,7 @@ if ($objpersona->mayorEdad()){
         echo "Estudios cursados: " . $objpersona->mostrarEstudios() . "<br> Soy de sexo " . $objpersona->mostrarSexo(). "<br>";
     ?>
 </div>
-<div><a href="../Ejercicio/ejercicio5.php" class="boton">Volver</a></div>
+<div><a href="../Ejercicio/ejercicio6.php" class="boton">Volver</a></div>
 <?php
 include_once '../../Estructura/footer.php';
 ?>
