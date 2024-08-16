@@ -1,13 +1,19 @@
 <?php
-$titulo = "Ejercicio N 5";
+$titulo = "Ejercicio N 6";
 include_once '../../Estructura/header.php';
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 5</h1>
+    <h1><?php echo $titulo;?></h1>
+</div>
+<div class="enunciado">
+  <p>Enunciado: </p>
+  <p>
+    Modificar el formulario del ejercicio anterior para que permita seleccionar los diferentes deportes que practica (futbol, basket, tennis, voley) un alumno. Mostrar en la página que procesa el formulario la cantidad de deportes que practica. 
+  </p>
 </div>
 <div class="divform">
-    <form id="form5" name="form4" action="../Accion/eje5accion.php" method="get">
+    <form id="form5" name="form4" action="../Accion/eje6accion.php" method="post">
         <label for="lnombre">Nombre:</label><br>
         <input type="text" name="nombre" id="nombre"><br>
         <label for="lapellido">Apellido:</label><br>
@@ -28,21 +34,24 @@ include_once '../../Estructura/header.php';
             <option value="F">Femenino</option>
         </select><br>
         <br>
-        <input type="checkbox" id="futbol" name="futbol" value="futbol">
+        <input type="checkbox" id="deporte" name="d1" value="futbol">
         <label for="lfutbol">Futbol</label><br>
-        <input type="checkbox" id="basket" name="basket" value="basket">
+        <input type="checkbox" id="basket" name="d2" value="basket">
         <label for="lbasket">Basket</label><br>
-        <input type="checkbox" id="voley" name="voley" value="voley">
+        <input type="checkbox" id="voley" name="d3" value="voley">
         <label for="lvoley">Voley</label><br>
-        <input type="checkbox" id="tenis" name="tenis" value="tenis">
+        <input type="checkbox" id="tenis" name="d4" value="tenis">
         <label for="ltenis">Tenis</label><br>
-        <input type="checkbox" id="handbol" name="handbol" value="handbol">
+        <input type="checkbox" id="handbol" name="d5" value="handbol">
         <label for="lhandbol">Handbol</label><br>
-        <input type="checkbox" id="otros" name="otros" value="otros">
+        <input type="checkbox" id="otros" name="d6" value="otros">
         <label for="lotros">Otros</label><br>
 
         <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
+    <div>
+
+    </div>
 </div>
 
 

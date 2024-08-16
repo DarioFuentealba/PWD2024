@@ -1,5 +1,5 @@
 <?php
-include_once "../../estructura/head.php";
+include_once "../../estructura/header.php";
 
 $recibido=data_submitted();
 $nro=intval($recibido["numero"]);

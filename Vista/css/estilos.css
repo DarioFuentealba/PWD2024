@@ -21,21 +21,32 @@
 }
 .divtitulo{
     background-color: blueviolet;
+    color: yellowgreen;
+    font-weight: bold;
     width: 90%;
-    margin: 5%;
+    margin: 5px;
     padding: 10px;
     text-align: center;
 }
 .divform{
-    border: 1px solid green;
-    width: 80%;
-    margin: 3%;
+    border: 1px solid violet;
+    width: 30%;
+    margin-left: 25%;
+    margin-top: 2%;
     padding: 10px;
+    text-align: center;
 }
 .portada{
     position: relative;
-    width: 600px;
+    width: 50%;
     margin: auto;
     text-align: center;
-    padding: 30%;
+    padding: 3%;
+}
+.enunciado{
+    border: 1px solid red;
+    width: 80%;
+    margin-left: 10%;
+    padding: 5px;
+    text-align: justify;
 }

@@ -68,11 +68,11 @@ class Persona {
 
     /**
      * Summary of mayorEdad
-     * @return bool
+     * @return string
      */
     public function mayorEdad(){
-        $retorno = false;
-        if ($this->edad >= 18){$retorno = true;}
+        $retorno = "No soy";
+        if ($this->edad >= 18){$retorno = "Soy";}
         return $retorno;
     }
     /**
@@ -109,7 +109,17 @@ class Persona {
     public function agregarDeporte($dep){
         array_push($this->colDeportes, $dep);
     }
-
+    /**
+     * Summary of mostrarDeportes
+     * @return string
+     */
+    public function mostrarDeportes(){
+        $retorno = "";
+        for ($i=0; $i< count($this->colDeportes); $i++){
+            $retorno .= $this->colDeportes[$i] . " ";
+        }
+        return $retorno;
+    }
 }
 
 

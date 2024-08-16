@@ -1,11 +1,18 @@
 <?php
 $titulo = "Ejercicio N 1";
 include_once "../../Estructura/header.php";
-
 ?>
 
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 
-<h1>Primer Ejercio TP 1</h1>
+<div class="enunciado">
+  <p>Enunciado: </p>
+  <p>
+    Confeccionar un formulario que solicite un número. Al pulsar el botón de enviar debe llamar a un script -vernumero.php- y visualizar un mensaje que indique si el número enviado fue: positivo, cero o negativo. Añadir un link, a la página que visualiza la respuesta, que permita volver a la página anterior.
+  </p>
+</div>
 <form name="form1" method="post" action="../Accion/vernumero.php" onsubmit="return validar();">
   <label for="lnumero">Ingrese un numero:</label><br>
   <input type="text" name="numero" id="numero"><br>

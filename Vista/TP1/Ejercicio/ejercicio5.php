@@ -4,7 +4,13 @@ include_once '../../Estructura/header.php';
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 5</h1>
+    <h1><?php echo $titulo;?></h1>
+</div>
+<div class="enunciado">
+  <p>Enunciado: </p>
+  <p>
+    Modificar el formulario del ejercicio anterior solicitando, tal que usando componentes “radios buttons” se ingrese el nivel de estudio de la persona: 1-no tiene estudios, 2estudios primarios, 3-estudios secundarios. Agregar el componente que crea más apropiado para solicitar el sexo. En la página que procesa el formulario mostrar además un mensaje que indique el tipo de estudios que posee y su sexo. 
+  </p>
 </div>
 <div class="divform">
     <form id="form5" name="form4" action="../Accion/eje5accion.php" method="get">

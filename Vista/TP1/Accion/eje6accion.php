@@ -11,30 +11,24 @@ $objpersona->setEdad($recibido["edad"]);
 $objpersona->setDireccion($recibido["direccion"]);
 $objpersona->setEstudio($recibido["estudios"]);
 $objpersona->setSexo($recibido["sexo"]);
-echo var_dump($recibido);
-/*
-for ($i=0; $i<6; $i++){
-    $objpersona->agregarDeporte($recibido["futbol"])
-}*/
 
-
-$mayor = "";
-
-if ($objpersona->mayorEdad()){
-    $mayor = "Soy ";
-}else{
-    $mayor = "No soy ";
+foreach ($recibido as $indice => $valor) {
+    if ($valor=="") break	;
+    if ($indice == "d1" || $indice == "d2" || $indice == "d3" || $indice == "d4" || $indice == "d5" || $indice == "d6"){
+        $objpersona->agregarDeporte($valor);
+    }
 }
 
+$cadena = "Hola, yo soy ".$objpersona->getNombre()." ".$objpersona->getApellido()." tengo ".$objpersona->getEdad()." años y vivo en la calle ".$objpersona->getDireccion().
+".  " . $objpersona->mayorEdad() . " mayor de edad."."<br>Estudios cursados: " . $objpersona->mostrarEstudios() . "<br> Soy de sexo " . $objpersona->mostrarSexo(). "<br>";
+$cadena .= "Mis deportes preferidos son: " . $objpersona->mostrarDeportes() . "<br>";
 ?>
 <div class="divtitulo">
-    <h1>Ejercicio 6</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <?php 
-        echo "Hola, yo soy ".$objpersona->getNombre()." ".$objpersona->getApellido()." tengo ".$objpersona->getEdad()." años y vivo en la calle ".$objpersona->getDireccion(); 
-        echo ".  " .$mayor . " mayor de edad."."<br>"; 
-        echo "Estudios cursados: " . $objpersona->mostrarEstudios() . "<br> Soy de sexo " . $objpersona->mostrarSexo(). "<br>";
+        echo $cadena;
     ?>
 </div>
 <div><a href="../Ejercicio/ejercicio6.php" class="boton">Volver</a></div>

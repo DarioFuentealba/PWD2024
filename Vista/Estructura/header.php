@@ -31,7 +31,7 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Grupo X</a>
+    <a class="navbar-brand" href="../../Inicio/Principal/principal.php">Grupo X</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -57,7 +57,16 @@
             <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio2.php">Ejercicio 2</a></li>
             <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio3.php">Ejercicio 3</a></li>
             <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio4.php">Ejercicio 4</a></li>
-            <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio5.php">Ejercicio 5</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 3</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio1.php">Ejercicio 1</a></li>
+            <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio2.php">Ejercicio 2</a></li>
+            <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio3.php">Ejercicio 3</a></li>
+            <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio4.php">Ejercicio 4</a></li>
+            <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio5.php">Ejercicio 5</a></li>
           </ul>
         </li>
       </ul>
@@ -65,6 +74,3 @@
   </div>
 </nav>
 
-  <div>
-    <h1>Trabajo Práctico N° 1</h1>
-  </div>
