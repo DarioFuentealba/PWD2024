@@ -24,10 +24,18 @@
     width: 90%;
     margin: 5%;
     padding: 10px;
+    text-align: center;
 }
 .divform{
     border: 1px solid green;
     width: 80%;
     margin: 3%;
     padding: 10px;
+}
+.portada{
+    position: relative;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 30%;
 }
