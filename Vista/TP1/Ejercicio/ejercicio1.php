@@ -10,12 +10,12 @@ include_once "../../Estructura/header.php";
 <div class="enunciado">
   <p>Enunciado: </p>
   <p>
-    Confeccionar un formulario que solicite un número. Al pulsar el botón de enviar debe llamar a un script -vernumero.php- y visualizar un mensaje que indique si el número enviado fue: positivo, cero o negativo. Añadir un link, a la página que visualiza la respuesta, que permita volver a la página anterior.
+    Confeccionar un formulario que solicite un n&uacute;mero. Al pulsar el botón de enviar debe llamar a un script -vernumero.php- y visualizar un mensaje que indique si el n&uacute;mero enviado fue: positivo, cero o negativo. Añadir un link, a la p&aacute;gina que visualiza la respuesta, que permita volver a la p&aacute;gina anterior.
   </p>
 </div>
 <form name="form1" method="post" action="../Accion/vernumero.php" onsubmit="return validar();">
-  <label for="lnumero">Ingrese un numero:</label><br>
-  <input type="text" name="numero" id="numero"><br>
+  <label for="lnumero">Ingrese un n&uacute;mero:</label><br>
+  <input type="number" name="numero" id="numero" value="0"><br>
   <input type="submit" id="enviar" name="enviar" value="Enviar" class="boton"><br>
 
 </form>
@@ -25,16 +25,3 @@ include_once "../../Estructura/header.php";
 </body>
 <?php include_once '../../Estructura/footer.php';
 ?>
-<script>
-  function validar(){
-    let = num;
-    let exito = true;
-
-    num = document.getElementById("numero").value;
-    if (num == ""){
-      exito = false
-    }
-
-    return exito;
-  }
-</script>

@@ -1,5 +1,9 @@
 <?php
+
+$titulo = "Ejercicio N 1";
+
 include_once "../../estructura/header.php";
+
 
 $recibido=data_submitted();
 $nro=intval($recibido["numero"]);

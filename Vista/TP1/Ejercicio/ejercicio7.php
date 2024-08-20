@@ -9,17 +9,17 @@ include_once '../../Estructura/header.php';
 <div class="enunciado">
   <p>Enunciado: </p>
   <p>
-    Crear una página con un formulario que contenga dos input de tipo text y un select. En los inputs se ingresarán números y el select debe dar la opción de una operación matemática que podrá resolverse usando los números ingresados. En la página que procesa la información se debe mostrar por pantalla la operación seleccionada, cada uno de los operandos y el resultado obtenido de resolver la operación. Ejemplo del formulario: 
+    Crear una p&aacute;gina con un formulario que contenga dos input de tipo text y un select. En los inputs se ingresarán n&uacute;meros y el select debe dar la opci&oacute;n de una operaci&oacute;n matem&aacute;tica que podr&aacute; resolverse usando los n&uacute;meros ingresados. En la p&aacute;gina que procesa la informaci&oacute;n se debe mostrar por pantalla la operaci&oacute;n seleccionada, cada uno de los operandos y el resultado obtenido de resolver la operaci&oacute;n. Ejemplo del formulario: 
   </p>
 </div>
 
 <div class="divform">
     <form method="get" action="../Accion/eje7accion.php">
         <label>Número 1:</label>
-        <input type="text" id="numero1" name="numero1" required>
+        <input type="number" id="numero1" name="numero1" step="any" required>
 
         <label>Número 2:</label>
-        <input type="text" id="numero2" name="numero2" required>
+        <input type="number" id="numero2" name="numero2" step="any" required>
 
         <label>Operación:</label>
         <select id="operacion" name="operacion" required>

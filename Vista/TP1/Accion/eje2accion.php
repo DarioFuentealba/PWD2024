@@ -1,5 +1,9 @@
 <?php
+
+$titulo = "Ejercicio 2";
+
 include_once "../../estructura/header.php";
+
 
 $datos = data_submitted();
 $obj = new Horas($datos);

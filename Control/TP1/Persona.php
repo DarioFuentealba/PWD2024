@@ -72,7 +72,9 @@ class Persona {
      */
     public function mayorEdad(){
         $retorno = "No soy";
-        if ($this->edad >= 18){$retorno = "Soy";}
+        if ($this->edad >= 18){
+            $retorno = "Soy";
+        }
         return $retorno;
     }
     /**

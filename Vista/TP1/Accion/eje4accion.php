@@ -11,7 +11,7 @@ $objpersona->setEdad($recibido["edad"]);
 $objpersona->setDireccion($recibido["direccion"]);
 $mayor = "";
 
-if ($objpersona->mayorEdad()){
+if ($objpersona->mayorEdad() == "Soy"){
     $mayor = "Soy ";
 }else{
     $mayor = "No soy ";

@@ -14,7 +14,7 @@ $objpersona->setSexo($recibido["sexo"]);
 
 $mayor = "";
 
-if ($objpersona->mayorEdad()){
+if ($objpersona->mayorEdad() == "Soy"){
     $mayor = "Soy ";
 }else{
     $mayor = "No soy ";
