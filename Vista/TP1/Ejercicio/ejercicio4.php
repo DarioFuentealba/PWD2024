@@ -4,7 +4,7 @@ include_once '../../Estructura/header.php';
 ?>
 
 <!--Incluyo el archivo JS con las validaciones de los campos-->
-<script src="../../Js/eje4.js"></script>
+<script src="../../Js/tp1eje4.js"></script>
 
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>

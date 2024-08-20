@@ -4,7 +4,7 @@
 ?>
 
 <!--Incluyo el archivo JS con las validaciones de los campos-->
-<script src="../../Js/eje3.js"></script>
+<script src="../../Js/tp1eje3.js"></script>
 
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
