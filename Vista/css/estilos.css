@@ -1,3 +1,26 @@
+/*************************************************/
+/*********** Estilos para los submenús ***********/
+/*************************************************/
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    display: none;
+    position: absolute;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+/*************************************************/
+/********* Fin estilos para los submenús *********/
+/*************************************************/
+
+
 
 .footer {
     position: fixed;
@@ -7,7 +30,7 @@
     background-color: violet;
     color: white;
     text-align: center;
- }
+}
 .boton{
     background-color: green;
     border-radius: 10px;
