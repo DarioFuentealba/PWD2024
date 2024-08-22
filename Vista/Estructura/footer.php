@@ -4,6 +4,6 @@
 
 <footer>
     <div class="footer">
-        Integrantes: yo y los dem&aacute;s
+        Integrantes: Fuentealba Dario - Riveiro Mat&iacute;s - Mamani Ariel - Bustos Ignacio
     </div>
 </footer>
