@@ -1,6 +1,6 @@
 <?php
 
-$titulo = "Ejercicio N 1";
+$titulo = "Ejercicio 1";
 include_once "../../estructura/header.php";
 
 $recibido=data_submitted();
@@ -25,7 +25,7 @@ $tipoNumero=$obj->verificaSigno();
 
         }// fin if 
 
-     ?>
+    ?>
     <div class="volver-tp1-ej1"><a href="../Ejercicio/ejercicio2-1.php" class="volver-accion-ej1">Volver</a></div>
 </div>
 

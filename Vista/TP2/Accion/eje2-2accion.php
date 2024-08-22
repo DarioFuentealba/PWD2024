@@ -1,6 +1,6 @@
 <?php
 
-$titulo = "Ejercicio N 2";
+$titulo = "Ejercicio 2";
 include_once ("../../Estructura/header.php");
 
 $datos = data_submitted();

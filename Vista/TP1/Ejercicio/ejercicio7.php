@@ -1,5 +1,5 @@
 <?php
-$titulo = "Ejercicio N 7";
+$titulo = "Ejercicio 7";
 include_once '../../Estructura/header.php';
 ?>
 
