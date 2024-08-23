@@ -14,7 +14,7 @@ $informacion = $archivos->cinema($datos_form, $array_img);
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 3</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="container full-height">
     <div class="form-container rounded p-4 shadow bg-light">

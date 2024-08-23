@@ -20,14 +20,10 @@ if($respuesta === '0'){
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 1</h1>
+    <h1><?php echo $titulo; ?></h1>
 </div>
 <h1><?php echo $mensaje; ?></h1>
-
-
-
-
-
+<div><a href="../Ejercicio/ejercicio1.php" class="btn btn-success" role="button">Volver</a></div>
 <?php
 include_once '../../Estructura/footer.php';
 ?>

@@ -1,10 +1,10 @@
 <?php
-$titulo = "Ejercicio N 4";
+$titulo = "Ejercicio N 3";
 include_once '../../Estructura/header.php';
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 4</h1>
+    <h1><?php echo $titulo; ?></h1>
 </div>
 <div class="container full-height">
     <div class="form-container rounded p-4 shadow bg-light">
@@ -107,8 +107,8 @@ include_once '../../Estructura/header.php';
                     <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*" required>
                 </div>
                 <div id="botones" class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary" name="enviar">Enviar</button>
-                    <button type="reset" class="btn btn-secondary ms-2" name="reset" >Borrar</button>
+                    <button type="submit" class="btn btn-success" name="enviar">Enviar</button>
+                    <button type="reset" class="btn btn-success ms-2" name="reset" >Borrar</button>
                 </div>
                 
             </form>

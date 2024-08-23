@@ -4,7 +4,7 @@ include_once '../../Estructura/header.php';
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 4</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="container full-height">
     <div class="form-container rounded p-4 shadow bg-light">

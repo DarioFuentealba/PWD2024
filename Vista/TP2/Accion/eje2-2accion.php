@@ -7,7 +7,9 @@ $datos = data_submitted();
 $obj = new Horas($datos);
 $horasTotales=$obj->sumarHoras($datos);
 ?>
-
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 <div class="container-tp1-ej2">
     <h1 id="tituloAccion2">Horas totales por semana:
 

@@ -8,7 +8,7 @@ $obj=new Login($recibido['usuario'],$recibido['clave']);
 $respuesta = $obj->validarUsuario();
 ?>
 <div class="divtitulo">
-    <h1>Ejercicio 2</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <?php echo $respuesta ;  ?>

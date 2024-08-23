@@ -5,7 +5,7 @@ include_once '../../Estructura/header.php';
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 <div class="divtitulo">
-    <h1>Ejercicio 3</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 
 <div class="divform rounded p-4 shadow">

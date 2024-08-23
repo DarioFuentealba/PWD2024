@@ -4,9 +4,8 @@ include_once '../../Estructura/header.php';
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio N° 8 </h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
-
 <div class="divform">
     <form id="form8" method="get" action="../Accion/eje2-8accion.php">
         <label>Ingrese sus datos para calcular la tarifa:</label><br><br>

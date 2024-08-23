@@ -3,19 +3,10 @@ $titulo = "Ejercicio N 4";
 include_once '../../Estructura/header.php';
 $datos = data_submitted();
 $obj = new Cine($datos);
-/*$obj = new Cine($datos["titulo"],
-            $datos["actores"],
-            $datos["director"],
-            $datos["guion"],
-            $datos["produccion"],
-            $datos["anio"],
-            $datos["nacionalidad"],
-            $datos["genero"],
-            $datos["duracion"],
-            $datos["restriccion"],
-            $datos["sinopsis"]); */
 ?>
-
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 <div class="container my-4">
     <div class="container my-4 p-4 text-success border border-success rounded" style="background-color: #d4edda;"> <!-- Verde claro personalizado -->
         <h1 class="text-primary">Ejercicio 4</h1>

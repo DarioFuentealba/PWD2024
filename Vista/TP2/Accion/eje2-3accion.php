@@ -7,7 +7,7 @@ $objpersona = new Persona($recibido);
 
 ?>
 <div class="divtitulo">
-    <h1>Ejercicio 3</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <?php echo "Hola, yo soy ".$objpersona->getNombre()." ".$objpersona->getApellido()." tengo ".$objpersona->getEdad()." años y vivo en la calle ".$objpersona->getDireccion();  ?>

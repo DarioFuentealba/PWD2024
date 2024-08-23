@@ -9,7 +9,7 @@ $resultado = $objCalculadora->realizaOperacion();
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 7</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <?php echo $resultado ;  ?>

@@ -9,6 +9,9 @@ $obj = new Numero($nro);
 $tipoNumero = $obj->verificaSigno();
 ?>
 
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 <div class="container-tp1-ej1">
     <h1 id="tituloAccion1">El numero seleccionado es: <?php echo $nro ?></h1>
 

@@ -9,7 +9,7 @@ $tarifa = $obj->calculaTarifa();
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 8</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <?php echo 'El precio de la entrada es de '.'$'.$tarifa ;  ?>

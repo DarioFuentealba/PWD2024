@@ -4,7 +4,9 @@ include_once ("../../Estructura/header.php");
 
 ?>
 
-<h1>Primer Ejercio TP 1</h1>
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 <form name="form1" method="post" action="../Accion/eje2-1accion.php">
   <label for="lnumero">Ingrese un numero:</label><br>
   <input type="text" name="numero" id="numero"><br>

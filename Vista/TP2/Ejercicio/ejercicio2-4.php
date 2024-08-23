@@ -4,7 +4,7 @@ include_once '../../Estructura/header.php';
 ?>
 
 <div class="divtitulo">
-    <h1>Ejercicio 4</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <form id="form3" name="form3" action="../Accion/eje2-4accion.php" method="get">

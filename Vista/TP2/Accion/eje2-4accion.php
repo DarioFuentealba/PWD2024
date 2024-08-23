@@ -15,7 +15,7 @@ if ($objpersona->mayorEdad()){
 
 ?>
 <div class="divtitulo">
-    <h1>Ejercicio 4</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <?php 

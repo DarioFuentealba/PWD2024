@@ -15,7 +15,7 @@ if ($objpersona->mayorEdad() == "Soy"){
 
 ?>
 <div class="divtitulo">
-    <h1>Ejercicio 5</h1>
+    <h1><?php echo $titulo;?></h1>
 </div>
 <div class="divform">
     <?php 
