@@ -23,11 +23,11 @@ include_once '../../Estructura/header.php';
         <label for="ldireccion">Direcci&oacute;n</label><br>
         <input type="text" name="direccion" id="direccion"><br>
         <label for="lnivelestudio">Nivel de estudios:</label><br>
-        <input type="radio" id="estudios" name="estudios" value="1">
+        <input type="radio" id="estudio" name="estudio" value="1">
         <label for="lsin">Sin Estudios</label><br>
-        <input type="radio" id="estudios" name="estudios" value="2">
+        <input type="radio" id="estudio" name="estudio" value="2">
         <label for="lsecundario">Secundarios</label><br>
-        <input type="radio" id="estudios" name="estudios" value="3">
+        <input type="radio" id="estudio" name="estudio" value="3">
         <label for="lterciario">Terciarios</label><br>
         <select name="sexo" id="sexo">
             <option value="M">Masculino</option>
