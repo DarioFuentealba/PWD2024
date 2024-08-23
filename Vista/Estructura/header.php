@@ -29,6 +29,7 @@
 </head>
 
 <body>
+<div class="divmenu">
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="../../Inicio/Principal/principal.php">Grupo 5</a>
@@ -91,4 +92,4 @@
     </div>
   </div>
 </nav>
-
+</div>

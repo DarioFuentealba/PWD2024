@@ -24,7 +24,12 @@ body {
 /*************************************************/
 
 
-
+.divmenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
 .footer {
     position: fixed;
     left: 0;
@@ -52,6 +57,7 @@ body {
     width: 100%; /* Ocupa todo el ancho */
     margin: 0; /* Elimina márgenes */
     padding: 10px;
+    padding-top: 5%;
     text-align: center;
     box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
