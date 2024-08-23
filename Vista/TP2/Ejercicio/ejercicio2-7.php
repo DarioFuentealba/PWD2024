@@ -23,7 +23,7 @@ include_once '../../Estructura/header.php';
             <option value="division">División</option>
         </select>
 
-        <input type="submit" value="Calcular">
+        <input type="submit" value="Calcular" class="btn btn-success" role="button">
     </form>
     <script type="text/javascript" src="../../Js/tp2ej7.js"></script>
 
@@ -31,8 +31,6 @@ include_once '../../Estructura/header.php';
 
 </body>
 </html>
-
-</div>
 
 <?php
 include_once '../../Estructura/footer.php';

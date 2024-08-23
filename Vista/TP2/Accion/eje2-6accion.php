@@ -24,7 +24,7 @@ $cadena .= "Mis deportes preferidos son: " . $objpersona->mostrarDeportes() . "<
         echo $cadena;
     ?>
 </div>
-<div><a href="../Ejercicio/ejercicio2-6.php" class="boton">Volver</a></div>
+<div><a href="../Ejercicio/ejercicio2-6.php" class="btn btn-success" role="button">Volver</a>
 <?php
 include_once '../../Estructura/footer.php';
 ?>

@@ -24,7 +24,7 @@ if ($objpersona->mayorEdad()){
         echo "Estudios cursados: " . $objpersona->mostrarEstudios() . "<br> Soy de sexo " . $objpersona->mostrarSexo(). "<br>";
     ?>
 </div>
-<div><a href="../Ejercicio/ejercicio2-5.php" class="boton">Volver</a></div>
+<div><a href="../Ejercicio/ejercicio2-5.php" class="btn btn-success" role="button">Volver</a>
 <?php
 include_once '../../Estructura/footer.php';
 ?>

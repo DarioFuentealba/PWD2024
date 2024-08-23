@@ -31,15 +31,9 @@ $obj = new Cine($datos);
         <p><strong>Duración:</strong> <?php echo($obj->getDuracion()) ?></p>
         <p><strong>Restricciones de edad:</strong> <?php echo($obj->getRestriccion()) ?></p>
     </div>
-    <div class="d-flex justify-content-center mt-4">
-        <a href="../Ejercicio/ejercicio4.php" class="btn btn-success btn-lg">Volver</a>
-    </div>
+    <div><a href="../Ejercicio/ejercicio4.php" class="btn btn-success" role="button">Volver</a>
 
 </div>
-
-
-
-
 
 
 <?php

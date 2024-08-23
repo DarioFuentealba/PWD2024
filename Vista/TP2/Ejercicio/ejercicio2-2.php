@@ -19,7 +19,7 @@ include_once('../../Estructura/header.php');
 
         Viernes:<input type="number" id="viernes" name="viernes" required><br><br>
 
-        <button type="submit" >Calcular Horas Totales</button>
+        <button type="submit" class="btn btn-success" role="button">Calcular Horas Totales</button>
     </form>
     <script type="text/javascript" src="../../Js/tp2ej2.js"></script>
 </div>

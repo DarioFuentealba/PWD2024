@@ -8,7 +8,7 @@ include_once ("../../Estructura/header.php");
 <form name="form1" method="post" action="../Accion/eje2-1accion.php">
   <label for="lnumero">Ingrese un numero:</label><br>
   <input type="text" name="numero" id="numero"><br>
-  <input type="submit" id="enviar" name="enviar" value="Enviar" class="boton"><br>
+  <input type="submit" id="enviar" name="enviar" value="Enviar" class="btn btn-success" role="button"><br>
 
 </form>
 <script type="text/javascript" src="../../Js/tp2ej1.js"></script>

@@ -23,10 +23,6 @@ include_once '../../Estructura/header.php';
     </form>
 </div>
 <script type="text/javascript" src="../../Js/tp2ej3b.js"></script>
-</div>
-
-
-
 
 
 

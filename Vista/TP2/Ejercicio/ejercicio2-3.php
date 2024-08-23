@@ -17,7 +17,7 @@ include_once '../../Estructura/header.php';
         <label for="ldireccion">Direcci&oacute;n</label><br>
         <input type="text" name="direccion" id="direccion"><br>
         <br>
-        <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
     <script type="text/javascript" src="../../Js/tp2ej3.js"></script>
 </div>

@@ -13,7 +13,8 @@ $respuesta = $obj->validarUsuario();
 <div class="divform">
     <?php echo $respuesta ;  ?>
 </div>
-    <div class="boton">
-        <a href="../Ejercicio/ejercicio3.php">Volver</a>
-    </div>
+<div><a href="../Ejercicio/ejercicio3.php" class="btn btn-success" role="button">Volver</a>
 
+<?php
+include_once '../../Estructura/footer.php';
+?>

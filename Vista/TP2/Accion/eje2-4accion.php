@@ -23,7 +23,7 @@ if ($objpersona->mayorEdad()){
         echo ".  " .$mayor . " mayor de edad."; 
     ?>
 </div>
-<div><a href="../Ejercicio/ejercicio2-4.php" class="boton">Volver</a></div>
+<div><a href="../Ejercicio/ejercicio2-4.php" class="btn btn-success" role="button">Volver</a>
 <?php
 include_once '../../Estructura/footer.php';
 ?>

@@ -17,7 +17,7 @@ include_once '../../Estructura/header.php';
         <input type="radio" id="estudia_si" name="estudia" value="si" >Estudio<br>
         <input type="radio" id="estudia_no" name="estudia" value="no" >No estudio<br><br>
 
-        <input type="submit" name="submit" value="Enviar" class="botonFormulario">
+        <input type="submit" name="submit" value="Enviar" class="btn btn-success" role="button">
         <input type="reset" value="Limpiar Formulario">
     </form>
     <script type="text/javascript" src="../../Js/ej8.js"></script>
@@ -25,8 +25,6 @@ include_once '../../Estructura/header.php';
 
 </body>
 </html>
-
-</div>
 
 <?php
 include_once '../../Estructura/footer.php';

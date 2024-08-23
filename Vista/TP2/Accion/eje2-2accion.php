@@ -13,5 +13,8 @@ $horasTotales=$obj->sumarHoras($datos);
 
 <?php echo $horasTotales ?></h1>
 
-    <div class="volver-tp1-ej2"><a href="../Ejercicio/ejercicio2-2.php" class="volver-accion-ej2">Volver</a></div>
+    <div><a href="../Ejercicio/ejercicio2-2.php" class="btn btn-success" role="button">Volver</a>
 </div>
+<?php
+include_once '../../Estructura/footer.php';
+?>

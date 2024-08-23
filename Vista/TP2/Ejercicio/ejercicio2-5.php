@@ -29,7 +29,7 @@ include_once '../../Estructura/header.php';
             <option value="F">Femenino</option>
         </select><br>
         <br>
-        <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input type="submit" name="enviar" id="enviar" value="Enviar" class="btn btn-success" role="button">
     </form>
     <script type="text/javascript" src="../../Js/tp2ej5.js"></script>
 
