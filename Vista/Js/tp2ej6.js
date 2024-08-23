@@ -37,7 +37,7 @@ $(document).ready(function(){
         }
         
         var estudiosLabel = $("label[for='lnivelestudio']");
-        if (!$("input[name='estudios']:checked").val()) {
+        if (!$("input[name='estudio']:checked").val()) {
             mensaje += "- Por favor, seleccione un nivel de estudios.\n";
             estudiosLabel.css("color", "red"); // Cambia el color del label a rojo            
             verifica = false;
