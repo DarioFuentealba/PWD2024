@@ -53,10 +53,10 @@
           </ul>
         </li>
 
-<!-- Menú TP 2 -->
-<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 2</a>
-  <ul class="dropdown-menu">
+  <!-- Menú TP 2 -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 2</a>
+    <ul class="dropdown-menu">
 
     <!-- Submenú Ejercicio 2 TP 2 -->
     <li class="dropdown-submenu">

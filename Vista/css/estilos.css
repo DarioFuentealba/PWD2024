@@ -58,7 +58,7 @@ body {
 .divform{
     border: 1px solid violet;
     width: 30%;
-    margin-left: 25%;
+    margin: auto;
     margin-top: 2%;
     padding: 10px;
     text-align: center;
