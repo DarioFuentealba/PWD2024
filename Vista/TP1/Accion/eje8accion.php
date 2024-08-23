@@ -12,8 +12,8 @@ $tarifa = $obj->calculaTarifa();
 </div>
 <div class="divform">
     <?php echo 'El precio de la entrada es de '.'$'.$tarifa ;  ?>
+    <div><a href="../Ejercicio/ejercicio8.php" class="btn btn-success" role="button">Volver</a></div>
 </div>
-<div><a href="../Ejercicio/ejercicio8.php" class="btn btn-success" role="button">Volver</a></div>
 <?php
 include_once '../../Estructura/footer.php';
 ?>

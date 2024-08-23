@@ -22,8 +22,8 @@ if ($objpersona->mayorEdad() == "Soy"){
         echo "Hola, yo soy ".$objpersona->getNombre()." ".$objpersona->getApellido()." tengo ".$objpersona->getEdad()." años y vivo en la calle ".$objpersona->getDireccion(); 
         echo ".  " .$mayor . " mayor de edad."; 
     ?>
-</div>
 <div><a href="../Ejercicio/ejercicio4.php" class="btn btn-success" role="button"">Volver</a></div>
+</div>
 <?php
 include_once '../../Estructura/footer.php';
 ?>

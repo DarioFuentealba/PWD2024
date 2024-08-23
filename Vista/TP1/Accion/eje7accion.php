@@ -13,13 +13,8 @@ $resultado = $objCalculadora->realizaOperacion();
 </div>
 <div class="divform">
     <?php echo $resultado ;  ?>
+    <div><a href="../Ejercicio/ejercicio7.php" class="btn btn-success" role="button">Volver</a></div>
 </div>
-<<<<<<< Updated upstream
-<div><a href="../Ejercicio/ejercicio7.php" class="btn btn-success" role="button">Volver</a></div>
-=======
-<div><a href="../Ejercicio/ejercicio7.php" class="btn btn-success" role="button">Volver</a>
-    </div>
->>>>>>> Stashed changes
 <?php
 include_once '../../Estructura/footer.php';
 ?>
