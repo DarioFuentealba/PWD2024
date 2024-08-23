@@ -10,10 +10,10 @@ include_once '../../Estructura/header.php';
 <div class="divform">
     <form id="form7" name="form7" method="get" action="../Accion/eje2-7accion.php">
         <label>Número 1:</label>
-        <input type="text" id="numero1" name="numero1" required>
+        <input type="number" id="numero1" name="numero1" step="any" required>
 
         <label>Número 2:</label>
-        <input type="text" id="numero2" name="numero2" required>
+        <input type="number" id="numero2" name="numero2" step="any" required>
 
         <label>Operación:</label>
         <select id="operacion" name="operacion" required>
