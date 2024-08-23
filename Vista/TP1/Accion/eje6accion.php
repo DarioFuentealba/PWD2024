@@ -2,15 +2,9 @@
 $titulo = "Ejercicio 6";
 include_once '../../Estructura/header.php';
 
-$objpersona = new Persona();
 $recibido = data_submitted();
+$objpersona = new Persona($recibido);
 
-$objpersona->setNombre($recibido["nombre"]);
-$objpersona->setApellido($recibido["apellido"]);
-$objpersona->setEdad($recibido["edad"]);
-$objpersona->setDireccion($recibido["direccion"]);
-$objpersona->setEstudio($recibido["estudios"]);
-$objpersona->setSexo($recibido["sexo"]);
 
 foreach ($recibido as $indice => $valor) {
     if ($valor=="") break	;

@@ -2,13 +2,9 @@
 $titulo = "Ejercicio 3";
 include_once '../../Estructura/header.php';
 
-$objpersona = new Persona();
 $recibido = data_submitted();
+$objpersona = new Persona($recibido);
 
-$objpersona->setNombre($recibido["nombre"]);
-$objpersona->setApellido($recibido["apellido"]);
-$objpersona->setEdad($recibido["edad"]);
-$objpersona->setDireccion($recibido["direccion"]);
 
 ?>
 <div class="divtitulo">

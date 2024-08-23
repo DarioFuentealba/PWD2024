@@ -2,7 +2,8 @@
 $titulo = "Ejercicio N 4";
 include_once '../../Estructura/header.php';
 $datos = data_submitted();
-$obj = new Cine($datos["titulo"],
+$obj = new Cine($datos);
+/*$obj = new Cine($datos["titulo"],
             $datos["actores"],
             $datos["director"],
             $datos["guion"],
@@ -12,7 +13,7 @@ $obj = new Cine($datos["titulo"],
             $datos["genero"],
             $datos["duracion"],
             $datos["restriccion"],
-            $datos["sinopsis"]);
+            $datos["sinopsis"]); */
 ?>
 
 <div class="container my-4">

@@ -11,7 +11,7 @@ class Cine{
     private $duracion;
     private $restriccion;
     private $sinopsis;
-    
+    /*
     public function __construct($titulo,$actores,$director,$guion,$produccion,$anio,$nacionalidad,$genero,$duracion,$restriccion,$sinopsis){
         $this->titulo=$titulo;
         $this->actores=$actores;
@@ -24,6 +24,20 @@ class Cine{
         $this->duracion=$duracion;
         $this->restriccion=$restriccion;
         $this->sinopsis=$sinopsis;
+    }  */
+
+    public function __construct($arregloDatos){
+        $this->titulo = $arregloDatos["titulo"];
+        $this->actores = $arregloDatos["actores"];
+        $this->director = $arregloDatos["director"]; 
+        $this->guion = $arregloDatos["guion"];
+        $this->produccion = $arregloDatos["produccion"];
+        $this->anio = $arregloDatos["anio"];
+        $this->nacionalidad = $arregloDatos["nacionalidad"];
+        $this->genero = $arregloDatos["genero"];
+        $this->duracion = $arregloDatos["duracion"];
+        $this->restriccion = $arregloDatos["restriccion"];
+        $this->sinopsis = $arregloDatos["sinopsis"];
     }
     public function getNombre(){
         return $this->titulo;

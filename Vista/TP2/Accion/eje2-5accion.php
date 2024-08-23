@@ -2,15 +2,8 @@
 $titulo = "Ejercicio 5";
 include_once '../../Estructura/header.php';
 
-$objpersona = new Persona();
 $recibido = data_submitted();
-
-$objpersona->setNombre($recibido["nombre"]);
-$objpersona->setApellido($recibido["apellido"]);
-$objpersona->setEdad($recibido["edad"]);
-$objpersona->setDireccion($recibido["direccion"]);
-$objpersona->setEstudio($recibido["estudios"]);
-$objpersona->setSexo($recibido["sexo"]);
+$objpersona = new Persona($recibido);
 
 $mayor = "";
 

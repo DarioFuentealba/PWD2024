@@ -6,11 +6,11 @@ class Calculadora{
     private $operacion;
 
 
-    public function __construct()
+    public function __construct($arregloDatos)
     {
-        $this->numero1 = "";
-        $this->numero2 = "";
-        $this->operacion = "";
+        $this->numero1 = $arregloDatos["numero1"];
+        $this->numero2 = $arregloDatos["numero2"];
+        $this->operacion = $arregloDatos["operacion"];
     }
 
     public function getNumero1(){

@@ -2,10 +2,8 @@
 $titulo = "Ejercicio 8";
 include_once '../../Estructura/header.php';
 
-$obj = new CineTarifa();
 $recibido = data_submitted();
-$obj->setEdad($recibido["edad"]);
-$obj->setEstudio($recibido["estudia"]);
+$obj = new CineTarifa($recibido);
 $tarifa = $obj->calculaTarifa();
 ?>
 

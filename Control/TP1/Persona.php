@@ -9,14 +9,14 @@ class Persona {
     private $sexo;
     private $colDeportes;
 
-    public function __construct()
+    public function __construct($ArregloDatos)
     {
-        $this->nombre = "";
-        $this->apellido = "";
-        $this->edad = 0;
-        $this->direccion = "";
-        $this->estudio = "";
-        $this->sexo = "";
+        $this->nombre = $ArregloDatos["nombre"];
+        $this->apellido = $ArregloDatos["apellido"];
+        $this->edad = $ArregloDatos["edad"];
+        $this->direccion = $ArregloDatos["direccion"];
+        $this->estudio = $ArregloDatos["estudio"];
+        $this->sexo = $ArregloDatos["sexo"];
         $this->colDeportes = Array();
     }// fin constructor
 

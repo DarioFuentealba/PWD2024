@@ -2,12 +2,9 @@
 $titulo = "Ejercicio 7";
 include_once '../../Estructura/header.php';
 
-$objCalculadora = new Calculadora();
 $recibido = data_submitted();
+$objCalculadora = new Calculadora($recibido);
 
-$objCalculadora->setNumero1($recibido["numero1"]);
-$objCalculadora->setNumero2($recibido["numero2"]);
-$objCalculadora->setOperacion($recibido["operacion"]);
 $resultado = $objCalculadora->realizaOperacion();
 ?>
 

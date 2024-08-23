@@ -5,10 +5,10 @@ class CineTarifa{
     private $estudio;
 
 
-    public function __construct()
+    public function __construct($arregloDatos)
     {
-        $this->edad = "";
-        $this->estudio = "";
+        $this->edad = $arregloDatos["edad"];
+        $this->estudio = $arregloDatos["estudia"];
     }
 
     public function getEdad(){
