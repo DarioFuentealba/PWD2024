@@ -57,7 +57,6 @@
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 2</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio1.php">Ejercicio 1</a></li>
 
     <!-- Submenú Ejercicio 2 TP 2 -->
     <li class="dropdown-submenu">
