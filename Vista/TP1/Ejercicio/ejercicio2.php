@@ -26,8 +26,8 @@ include_once('../../Estructura/header.php');
 
 <button type="submit">Calcular Horas Totales</button>
 </form>
-
 </body>
+
 <?php
 include_once('../../Estructura/footer.php');
 ?>
