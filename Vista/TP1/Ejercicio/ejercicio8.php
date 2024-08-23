@@ -25,8 +25,8 @@ include_once '../../Estructura/header.php';
         <input type="radio" name="estudia" value="si" required>Estudio<br>
         <input type="radio" name="estudia" value="no" required>No estudio<br><br>
 
-        <input type="submit" name="submit" value="Enviar" class="botonFormulario">
-        <input type="reset" value="Limpiar Formulario">
+        <input type="submit" name="submit" value="Enviar" class="btn btn-success" role="button">
+        <input type="reset" value="Limpiar Formulario" class="btn btn-success" role="button">
 
     </form>
 </div>

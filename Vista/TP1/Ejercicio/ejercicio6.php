@@ -51,7 +51,7 @@ include_once '../../Estructura/header.php';
         <input type="checkbox" id="otros" name="d6" value="otros">
         <label for="lotros">Otros</label><br>
 
-        <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
     <div>
 

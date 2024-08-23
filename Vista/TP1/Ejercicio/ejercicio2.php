@@ -24,7 +24,7 @@ include_once('../../Estructura/header.php');
 
     Viernes:<input type="number" id="viernes" name="viernes" value="0" min="0" step="1" required><br><br>
 
-<button type="submit">Calcular Horas Totales</button>
+<button type="submit" class="btn btn-success" role="button">Calcular Horas Totales</button>
 </form>
 </body>
 

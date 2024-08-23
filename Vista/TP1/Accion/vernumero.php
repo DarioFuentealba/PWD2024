@@ -28,6 +28,6 @@ $tipoNumero=$obj->verificaSigno();
         }// fin if 
 
      ?>
-    <div class="volver-tp1-ej1"><a href="../Ejercicio/ejercicio1.php" class="volver-accion-ej1">Volver</a></div>
+    <div class="volver-tp1-ej1"><a href="../Ejercicio/ejercicio1.php" class="btn btn-success" role="button">Volver</a></div>
 </div>
 

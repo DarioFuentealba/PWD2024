@@ -29,7 +29,7 @@ include_once '../../Estructura/header.php';
             <option value="division">División</option>
         </select>
 
-        <input type="submit" value="Calcular">
+        <input type="submit" value="Calcular" class="btn btn-success" role="button">
     </form>
 </div>
 

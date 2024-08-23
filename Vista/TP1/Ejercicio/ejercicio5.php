@@ -22,7 +22,7 @@ include_once '../../Estructura/header.php';
         <label for="lapellido">Apellido:</label><br>
         <input type="text" name="apellido" id="apellido" oninput="validarNombre(event)" required><br>
         <label for="ledad">Edad:</label><br>
-        <input type="number" name="edad" id="edad" oninput="validarEdad(event)" required> min="1"<br>
+        <input type="number" name="edad" id="edad" oninput="validarEdad(event)" min="1" required><br>
         <label for="ldireccion">Direcci&oacute;n</label><br>
         <input type="text" name="direccion" id="direccion" required><br>
         <label for="lnivelestudio">Nivel de estudios:</label><br>
@@ -38,7 +38,7 @@ include_once '../../Estructura/header.php';
             <option value="F">Femenino</option>
         </select><br>
         <br>
-        <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
 </div>
 

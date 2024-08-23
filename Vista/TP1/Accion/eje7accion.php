@@ -14,7 +14,7 @@ $resultado = $objCalculadora->realizaOperacion();
 <div class="divform">
     <?php echo $resultado ;  ?>
 </div>
-<div><a href="../Ejercicio/ejercicio7.php" class="boton">Volver</a></div>
+<div><a href="../Ejercicio/ejercicio7.php" class="btn btn-success" role="button">Volver</a></div>
 <?php
 include_once '../../Estructura/footer.php';
 ?>
