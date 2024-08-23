@@ -1,6 +1,9 @@
 /*************************************************/
 /*********** Estilos para los submenús ***********/
 /*************************************************/
+body {
+    padding-bottom: 100px; /* Ajusta este valor según el tamaño del footer */
+}
 .dropdown-submenu {
     position: relative;
 }
@@ -42,14 +45,15 @@
     font-size: x-large;
     color: brown;
 }
-.divtitulo{
+.divtitulo {
     background-color: blueviolet;
     color: yellowgreen;
     font-weight: bold;
-    width: 90%;
-    margin: 5px;
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 0; /* Elimina márgenes */
     padding: 10px;
     text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 .divform{
     border: 1px solid violet;
@@ -58,6 +62,7 @@
     margin-top: 2%;
     padding: 10px;
     text-align: center;
+    border-radius: 5px;
 }
 .portada{
     position: relative;
