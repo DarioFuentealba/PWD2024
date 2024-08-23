@@ -27,6 +27,13 @@
         <input type="text" name="direccion" id="direccion" required><br>
         <br>
         <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
+
+        <!-- Campo oculto estudio -->
+        <input type="hidden" name="estudio" value=""><br>
+        <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
+        <!-- Campo oculto sexo -->
+        <input type="hidden" name="sexo" value=""><br>
+        <input class="boton" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
 </div>
 
