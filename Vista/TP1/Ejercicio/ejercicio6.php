@@ -23,7 +23,7 @@ include_once '../../Estructura/header.php';
         <label for="lapellido">Apellido:</label><br>
         <input type="text" name="apellido" id="apellido" oninput="validarNombre(event)" required><br>
         <label for="ledad">Edad:</label><br>
-        <input type="text" name="edad" id="edad" oninput="validarEdad(event)" required><br>
+        <input type="number" name="edad" id="edad" oninput="validarEdad(event)" required min="0"><br>
         <label for="ldireccion">Direcci&oacute;n</label><br>
         <input type="text" name="direccion" id="direccion" required><br>
         <label for="lnivelestudio">Nivel de estudios:</label><br>

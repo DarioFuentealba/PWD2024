@@ -13,7 +13,7 @@ include_once '../../Estructura/header.php';
         <label for="lapellido">Apellido:</label><br>
         <input type="text" name="apellido" id="apellido"><br>
         <label for="ledad">Edad:</label><br>
-        <input type="text" name="edad" id="edad"><br>
+        <input type="number" name="edad" id="edad" require min="1"><br>
         <label for="ldireccion">Direcci&oacute;n</label><br>
         <input type="text" name="direccion" id="direccion"><br>
         <br>
