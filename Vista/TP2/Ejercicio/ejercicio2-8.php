@@ -21,7 +21,6 @@ include_once '../../Estructura/header.php';
         <input type="reset" value="Limpiar Formulario">
     </form>
     <script type="text/javascript" src="../../Js/ej8.js"></script>
-
 </div>
 
 </body>
