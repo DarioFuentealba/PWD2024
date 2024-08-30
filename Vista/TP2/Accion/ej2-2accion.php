@@ -1,0 +1,19 @@
+<?php
+
+$titulo = "TP 2 - Ejercicio 2-2";
+
+include_once "../../Estructura/header.php";
+
+
+$datos = data_submitted();
+$obj = new Ej2Horas($datos);
+$horasTotales=$obj->sumarHoras($datos);
+?>
+
+<div class="container-tp1-ej2">
+    <h1 id="tituloAccion2">Horas totales por semana:
+
+<?php echo $horasTotales ?></h1>
+
+    <div class="volver-tp1-ej2"><a href="../Ejercicio/ejercicio2-2.php" class="volver-accion-ej2">Volver</a></div>
+</div>

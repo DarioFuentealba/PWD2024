@@ -1,9 +1,9 @@
 <?php
-$titulo = "Ejercicio 8";
+$titulo = "TP 2 - Ejercicio 2-8";
 include_once '../../Estructura/header.php';
 
 $recibido = data_submitted();
-$obj = new CineTarifa($recibido);
+$obj = new Ej8Cinema($recibido);
 
 $tarifa = $obj->calculaTarifa();
 ?>
@@ -11,10 +11,15 @@ $tarifa = $obj->calculaTarifa();
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
+
 <div class="divform">
-    <?php echo 'El precio de la entrada es de '.'$'.$tarifa ;  ?>
+    <?php
+    echo 'El precio de la entrada es de '.'$'.$tarifa;
+    ?>
 </div>
+
 <div><a href="../Ejercicio/ejercicio2-8.php" class="btn btn-success" role="button">Volver</a>
+
 <?php
 include_once '../../Estructura/footer.php';
 ?>
