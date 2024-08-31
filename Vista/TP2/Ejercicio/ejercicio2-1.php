@@ -27,7 +27,4 @@ include_once "../../Estructura/header.php";
   </form>
 </div>
 
-<div class="footer">
-</div>
-
 <?php include_once '../../Estructura/footer.php'; ?>

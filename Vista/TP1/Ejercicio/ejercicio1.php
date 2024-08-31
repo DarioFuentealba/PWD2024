@@ -20,6 +20,6 @@ include_once "../../Estructura/header.php";
   <input type="submit" id="enviar" name="enviar" value="Enviar" class="btn btn-success" role="button"><br>
 </form>
 </div>
-</body>
+
 <?php include_once '../../Estructura/footer.php';
 ?>

@@ -25,6 +25,48 @@ include_once '../../Estructura/header.php';
 <script type="text/javascript" src="../../Js/tp2ej3b.js"></script>
 
 
+
 <?php
+include_once '../../Estructura/footer.php';
+?>
+
+
+
+<script>
+    //seleccionamos el formulario
+    var formulario = document.getElementById("formularioLogin")
+    //definimos un evento para validar
+    formulario.addEventListener('submit', evento => {
+        if (!formulario.checkValidity()) {//revisamos si algun campo es invalido
+            event.preventDefault()
+            event.stopPropagation()
+            }
+        formulario.classList.add('was-validated')
+    })
+
+    var loginModal = new bootstrap.Modal("#login")
+
+    //mostramos el modal apenas carga la pagina
+    window.addEventListener("DOMContentLoaded", () => {
+        loginModal.show()
+    })
+
+
+
+</script>  
+
+
+
+echo '<div class="divtitulo"> <h1>';
+echo $titulo.'</h1></div>';
+
+if(!empty(data_submitted())){
+
+
+<?php
+}else{
+    echo '<div class="divform"> <p>NO HAY DATOS</p><br>
+    <div><a href="../Ejercicio/ejercicio1.php" class="btn btn-success" role="button">Volver</a></div></div>';
+}
 include_once '../../Estructura/footer.php';
 ?>

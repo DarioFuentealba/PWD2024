@@ -35,7 +35,6 @@
     </form>
 </div>
 
-
 <?php
 include_once '../../Estructura/footer.php';
 ?>

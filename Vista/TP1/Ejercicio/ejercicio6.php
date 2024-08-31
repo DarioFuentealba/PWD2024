@@ -53,14 +53,7 @@ include_once '../../Estructura/header.php';
 
         <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
-    <div>
-
-    </div>
 </div>
-
-
-
-
 
 <?php
 include_once '../../Estructura/footer.php';
