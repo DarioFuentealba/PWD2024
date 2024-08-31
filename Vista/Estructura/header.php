@@ -13,6 +13,6 @@
   <?php  include_once "links.php"; ?>
 
 </head>
-
+<body>
   <?php include_once "menu.php"; ?>
 
