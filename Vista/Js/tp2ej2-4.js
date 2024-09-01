@@ -1,3 +1,6 @@
+
+//------------------------- LO PROBE Y NO ANDA --------------------
+// probando el ejercicio en el navegador, no valida ningun campo y no se marca visualmente con css
 $(document).ready(function(){
     $("#form4").on('submit', function(event){
         var verificaNombreApellido = true;

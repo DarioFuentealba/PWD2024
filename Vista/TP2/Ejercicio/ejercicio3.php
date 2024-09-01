@@ -12,11 +12,11 @@ include_once '../../Estructura/header.php';
     <h3 class="mb-3">Member Login</h3>
     <form action="../Accion/eje3accion.php" method="post" id='form3'>                    
             <div class="input-group mb-4">
-                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person" style="font-size: 22px; color: black;"></i></span>
                 <input type="text" class="form-control" name="usuario" id="usuario" required placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
             </div>
             <div class="input-group mb-4">
-                <span class="input-group-text" id="basic-addon2"><i class="fas fa-lock"></i></span>
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-lock-fill" style="font-size: 22px;"></i></span>
                 <input type="password" class="form-control" id="clave" name="clave" required placeholder="Clave" aria-label="Clave" aria-describedby="basic-addon2">
             </div>
             <button type="submit" value="Ingresar" id="btn_enviar" name="iniciar" class="btn btn-success form-control">Enviar</button>

@@ -14,7 +14,7 @@ include_once "../../Estructura/header.php";
 </div>
 
 <div class="enunciado">
-  <p>Enunciado: </p>
+  <p class="h5 mb-4 text-primary">Enunciado: </p>
   <p>
     Confeccionar un formulario que solicite un número. Al pulsar el botón de enviar debe llamar a un script -vernumero.php- y visualizar un mensaje que indique si el número enviado fue: positivo, cero o negativo. Añadir un link, a la página que visualiza la respuesta, que permita volver a la página anterior.
   </p>
@@ -23,7 +23,7 @@ include_once "../../Estructura/header.php";
   <form id="form1" name="form1" method="post" action="../Accion/ej2-1accion.php">
     <label for="numero">Ingrese un n&uacute;mero:</label><br>
     <input type="text" name="numero" id="numero" oninput="validarNumero(this)"><br>
-    <input type="submit" id="enviar" name="enviar" value="Enviar" class="btn btn-success" role="button"><br>
+    <input type="submit" id="enviar" name="enviar" value="Enviar" class="btn btn-success mt-5" role="button"><br>
   </form>
 </div>
 
