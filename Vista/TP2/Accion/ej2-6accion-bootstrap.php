@@ -24,7 +24,7 @@ if(!empty(data_submitted())){
             echo $cadena;
         ?>
 
-        <div><a href="../Ejercicio/ej2-6-bootstrap-validation.php" class="btn btn-success" role="button">Volver</a></div>
+        <div><a href="../Ejercicio/ej2-6-bootstrap.php" class="btn btn-success" role="button">Volver</a></div>
     </div>
 
 <?php
