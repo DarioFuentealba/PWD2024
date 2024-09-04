@@ -27,9 +27,9 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 2</a>
             <ul class="dropdown-menu">
 
-              <!-- Submenú Ejercicio 2 - TP 2 -->
+              <!-- Submenú Ejercicio 2 - TP 2 - Validacion JQUERY -->
               <li class="dropdown-submenu">
-                <a class="dropdown-item dropdown-toggle" href="#">Ejercicio 2</a>
+                <a class="dropdown-item dropdown-toggle" href="#">Ejercicio 2 - Jquery</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio2-1.php">Ejercicio 1</a></li>
                   <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio2-2.php">Ejercicio 2</a></li>
@@ -39,6 +39,22 @@
                   <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio2-6.php">Ejercicio 6</a></li>
                   <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio2-7.php">Ejercicio 7</a></li>
                   <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejercicio2-8.php">Ejercicio 8</a></li>
+                </ul>
+              </li>
+
+
+              <!-- Submenú Ejercicio 2 - TP 2 - Validacion BOOTSTRAP -->
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Ejercicio 2 - Bootstrap</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-1-bootstrap-validation.php">Ejercicio 1</a></li>
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-2-bootstrap-validation.php">Ejercicio 2</a></li>
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-3-bootstrap-validation.php">Ejercicio 3</a></li>
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-4-bootstrap-validation.php">Ejercicio 4</a></li>
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-5-bootstrap-validation.php">Ejercicio 5</a></li>
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-6-bootstrap-validation.php">Ejercicio 6</a></li>
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-7-bootstrap-validation.php">Ejercicio 7</a></li>
+                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej2-8-bootstrap-validation.php">Ejercicio 8</a></li>
                 </ul>
               </li>
 
