@@ -59,7 +59,9 @@
               <li class="dropdown-submenu">
                 <a class="dropdown-item dropdown-toggle" href="../../TP2/Ejercicio/ejercicio3.php">Ejercicio 3</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="../../TP2/Ejercicio/ejeprueba.php">Ejer</a></li>
+                <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej3-a-bootstrap.php">Ejercicio 3-a</a></li>
+                <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej3-b-bootstrap.php">Ejercicio 3-b</a></li>
+                <li><a class="dropdown-item" href="../../TP2/Ejercicio/ej3-c-bootstrap.php">Ejercicio 3-c</a></li>
                 </ul>
               </li>
 
