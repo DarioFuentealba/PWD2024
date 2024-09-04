@@ -43,13 +43,13 @@ include_once '../../Estructura/header.php';
 
                     <!-- Si estudia -->
                     <div class="form-check">
-                        <input type="radio" id="radioInput1" name="estudio" class="form-check-input" required>
+                        <input type="radio" id="radioInput1" name="estudia" class="form-check-input" required>
                         <label for="radioInput1" class="form-check-label">Estudio</label>
                     </div>
 
                     <!-- No estudia -->
                     <div class="form-check">
-                        <input type="radio" id="radioInput2" name="estudio" class="form-check-input" required>
+                        <input type="radio" id="radioInput2" name="estudia" class="form-check-input" required>
                         <label for="radioInput2" class="form-check-label">No estudio</label>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ include_once '../../Estructura/header.php';
 
                 <!-- Boton limpiar formulario -->
                 <div class="mb-3 col-md-4">
-                    <button class="btn btn-warning" type="submit">Limpiar Formulario</button>
+                    <button class="btn btn-warning" type="reset">Limpiar Formulario</button>
                 </div>
             </div>
         </form>
