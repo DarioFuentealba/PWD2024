@@ -87,3 +87,12 @@ body {
     padding: 5px;
     text-align: justify;
 }
+ .divformulario{
+    border: 1px solid blue;
+    width: 50%;
+    margin: auto;
+    margin-top: 1%;
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+ }

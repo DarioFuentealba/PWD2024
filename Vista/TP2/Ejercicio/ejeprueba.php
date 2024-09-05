@@ -8,63 +8,114 @@ include_once '../../Estructura/header.php';
     <h1><?php echo $titulo;?></h1>
 </div>
 
-<div class="divform">
+<div class="divformulario">
 <form class="row g-3 needs-validation" id="formLogin" name="formLogin" novalidate>
-  <div class="col-md-3">
-    <label for="validationCustom01" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-    <div class="valid-feedback">
-      ¡Se ve bien!
-    </div>
+
+  <div class="col-md-4">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" minlength="2" maxlength="30" pattern="^\s*[A-z]+(\s[A-z]+)*\s*$" title="Ingrese solo letras" required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Ingrese un nombre.</div>
   </div>
-  <div class="col-md-3">
-    <label for="validationCustom02" class="form-label">Apellido</label>
-    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-    <div class="valid-feedback">
-      ¡Se ve bien!
-    </div>
+
+  <div class="col-md-4">
+    <label for="apellido" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" minlength="2" maxlength="30" pattern="^\s*[A-Za-z]+(\s[A-Za-z]+)*\s*$" title="Ingrese solo letras" required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Ingrese apellido</div>
   </div>
-  <div class="col-md-3">
-    <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
+
+  
+  <div class="col-md-4">
+    <label for="dni" class="form-label">D.N.I</label>
+    <input type="text" class="form-control" id="dni" name="dni" placeholder="11222333" pattern="[0-9]{6,8}"  required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">dni no válido.</div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="usuario" class="form-label">Nombre de usuario</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="inputGroupPrepend" required>
-      <div class="invalid-feedback">
-        Por favor, elije un nombre de usuario.
-      </div>
+      <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" aria-describedby="inputGroupPrepend" minlength="6" maxlength="30" pattern="[A-9]{6, 30}"  required>
+      <div class="valid-feedback">¡Ok!</div>
+      <div class="invalid-feedback">Por favor, elije un nombre de usuario.</div>
     </div>
   </div>
-  <div class="col-md-3">
-    <label for="validationcontra" class="form-label">Clave</label>
-    <input type="text" class="form-control" id="clave" name="clave" required>
-    <div class="valid-feedback">
-      ¡Se ve bien!
-    </div>
+
+  <div class="col-md-4">
+    <label for="clave" class="form-label">Contraseña</label>
+    <input type="text" class="form-control" id="clave" placeholder="Contraseña" minlength="8" maxlength="30" name="clave" pattern="[A-z0-9][A-z0-9]+[0-9A-z]+"  required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, contraseña</div>
   </div>
+
+  <div class="col-md-4">
+    <label for="clave2" class="form-label">Repetir Contraseña</label>
+    <input type="password" class="form-control" id="clave2" name="clave2" pattern="^\s*[A-Za-z0-9]+(\s[A-Za-z0-9]+)*\s*{8,30}[0-9]{+}$"  required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, contraseña</div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="prefijo" class="form-label">Código Area</label>
+    <input type="text" class="form-control" id="prefijo" name="prefijo" placeholder="123" pattern="[0-9]{2,3}"  required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">prefijo no válido.</div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="telefono" class="form-label">Teléfono</label>
+    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="2333678" pattern="[0-9]{6,9}"  required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Telefono no válido.</div>
+  </div>
+
   <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">Ciudad</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
-    <div class="invalid-feedback">
-      Proporciona una ciudad válida.
-    </div>
+    <label for="email"  class="form-label">Correo Electrónico</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="correo@correo.com" required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
   </div>
-  <div class="col-md-3">
-    <label for="validationCustom04" class="form-label">Estado</label>
-    <select class="form-select" id="validationCustom04" required>
+
+  <div class="col-md-4">
+    <label for="direccion" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion 123" pattern="^\s*[A-Za-z0-9]+(\s[A-Za-z0-9]+)*\s*$" required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, ingrese la dirección.</div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="ciudad" class="form-label">Ciudad</label>
+    <input type="text" class="form-control" id="ciudad" name="ciudad" minlength="2" maxlength="30" pattern="^\s*[A-Za-z]+(\s[A-Za-z]+)*\s*$" required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, elije una ciudad.</div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="provincia" class="form-label">Provincia</label>
+    <select class="form-select" id="provincia" required>
       <option selected disabled value="">Elige...</option>
       <option>...</option>
     </select>
-    <div class="invalid-feedback">
-      Selecciona un estado válido.
-    </div>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, elije un nombre de usuario.</div>
   </div>
-  <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">Código postal</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
-    <div class="invalid-feedback">
-      Proporciona un código postal válido.
-    </div>
+
+  <div class="col-md-4">
+    <label for="patente" class="form-label">Patente</label>
+    <input type="text" class="form-control" id="patente" name="patente" placeholder="AAA 123   ó   AA 456 AA" pattern="[A-z]{3}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, ingrese la patente.</div>
   </div>
+
+  <div class="col-md-2">
+    <label for="modelo" class="form-label">Modelo</label>
+    <input type="text" class="form-control" id="modelo" name="modelo" placeholder="2023" min="1930" max="2024" pattern="[0-9]{4}" required>
+    <div class="valid-feedback">¡Ok!</div>
+    <div class="invalid-feedback">Por favor, el año.</div>
+  </div>
+
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
