@@ -11,6 +11,7 @@
                 var anioInput = form.querySelector('#anio');
                 
                 // Validación personalizada del año
+                
                 if(parseInt(anioInput.value) > 2024){
                     anioInput.setCustomValidity(' ');
                 }else{
@@ -26,3 +27,15 @@
             }, false)
         })
 })();
+
+function validarAnio(obj){
+    var valid = false;
+    if(parseInt(obj.value) > 2024){
+        obj.setCustomValidity(' ');
+        valid = true;
+    }else{
+        obj.setCustomValidity(''); // Restablecer la validez si el año es válido
+        valid = false;
+    }
+    return valid;
+}

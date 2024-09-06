@@ -96,3 +96,6 @@ body {
     text-align: left;
     border-radius: 5px;
  }
+ .form-label:hover{
+    cursor: pointer;
+ }

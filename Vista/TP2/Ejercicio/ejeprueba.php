@@ -9,7 +9,7 @@ include_once '../../Estructura/header.php';
 </div>
 
 <div class="divformulario">
-<form class="row g-3 needs-validation" id="formLogin" name="formLogin" novalidate>
+<form class="row g-3 needs-validation" action="../Accion/ejeprueba-accion.php" method="post" id="formLogin" name="formLogin" novalidate>
 
   <div class="col-md-4">
     <label for="nombre" class="form-label">Nombre</label>
@@ -45,14 +45,14 @@ include_once '../../Estructura/header.php';
 
   <div class="col-md-4">
     <label for="clave" class="form-label">Contraseña</label>
-    <input type="text" class="form-control" id="clave" placeholder="Contraseña" minlength="8" maxlength="30" name="clave" pattern="[A-z0-9][A-z0-9]+[0-9A-z]+"  required>
+    <input type="password" class="form-control" id="clave" placeholder="Contraseña" minlength="8" maxlength="30" name="clave" pattern="[A-z0-9][A-z0-9]+[0-9A-z]+"  required>
     <div class="valid-feedback">¡Ok!</div>
     <div class="invalid-feedback">Por favor, contraseña</div>
   </div>
 
   <div class="col-md-4">
     <label for="clave2" class="form-label">Repetir Contraseña</label>
-    <input type="password" class="form-control" id="clave2" name="clave2" pattern="^\s*[A-Za-z0-9]+(\s[A-Za-z0-9]+)*\s*{8,30}[0-9]{+}$"  required>
+    <input type="password" class="form-control" id="clave2" name="clave2" pattern=""  required>
     <div class="valid-feedback">¡Ok!</div>
     <div class="invalid-feedback">Por favor, contraseña</div>
   </div>
@@ -73,7 +73,7 @@ include_once '../../Estructura/header.php';
 
   <div class="col-md-6">
     <label for="email"  class="form-label">Correo Electrónico</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="correo@correo.com" required>
+    <input type="email" class="form-control" id="email" name="email" placeholder="correo@correo.com" required pattern="[A-z0-9-_/.][@]{1}[A-z]{3}[/.][A-z]{2,3}">
     <div class="valid-feedback">¡Ok!</div>
     <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
   </div>
@@ -96,7 +96,13 @@ include_once '../../Estructura/header.php';
     <label for="provincia" class="form-label">Provincia</label>
     <select class="form-select" id="provincia" required>
       <option selected disabled value="">Elige...</option>
-      <option>...</option>
+      <option>Chubut</option>
+      <option>La Pampa</option>
+      <option>Mendoza</option>
+      <option>Neuquén</option>
+      <option>Río Negro</option>
+      <option>Salta</option>
+      <option>Santa Cruz</option>
     </select>
     <div class="valid-feedback">¡Ok!</div>
     <div class="invalid-feedback">Por favor, elije un nombre de usuario.</div>
@@ -129,6 +135,8 @@ include_once '../../Estructura/header.php';
   </div>
   <div class="col-12">
     <button class="btn btn-primary" type="submit">Enviar formulario</button>
+    <button type="reset" class="btn btn-secondary">Borrar</button>
+    <button type="button" class="btn btn-info">Guardare lo dato</button>
   </div>
 </form>
 
@@ -141,6 +149,16 @@ include_once '../../Estructura/footer.php';
 
 
 <script>
+$(document).ready(function(){
+  $("#clave2").blur(function(){
+    var password1 = $("#clave").val();
+    var password2 = $("#clave2").val();
+    if(password1 === password2){
+      $(this).attr("pattern","*");
+    }else{$(this).attr("pattern","");}
+  });
+});
+
     //seleccionamos el formulario
     var objform = document.getElementById("formLogin")
     //definimos un evento para validar
@@ -156,11 +174,13 @@ include_once '../../Estructura/footer.php';
 function validarContra(){
     var usuario = $("#usuario").val().trim();
     var password = $("#clave").val().trim();
+    var password2 = $("#clave2").val().trim();
     var exito = true;
     var regexNumero = /\d/;
     var regexLetra = /[a-zA-Z]/;
     if(password.length < 8) {exito = false;        }
     if(password === usuario){ exito = false  }
+    if(password != password2){ exito = false  }
     if(!regexNumero.test(password) || !regexLetra.test(password)) { exito = false }
 
     return exito;
