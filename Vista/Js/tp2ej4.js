@@ -11,12 +11,12 @@
                 var anioInput = form.querySelector('#anio');
                 
                 // Validación personalizada del año
-                
+                /*
                 if(parseInt(anioInput.value) > 2024){
                     anioInput.setCustomValidity(' ');
                 }else{
                     anioInput.setCustomValidity(''); // Restablecer la validez si el año es válido
-                }
+                }*/
                 
                 if(!form.checkValidity()){
                     event.preventDefault();
@@ -29,12 +29,14 @@
 })();
 
 function validarAnio(obj){
+    var fechaActual = new Date();
+    var anio = parseInt(obj.value);
     var valid = false;
-    if(parseInt(obj.value) > 2024){
-        obj.setCustomValidity(' ');
+    if((anio < fechaActual.getFullYear()) && (anio >= 1900) ){
+        obj.setCustomValidity('');
         valid = true;
     }else{
-        obj.setCustomValidity(''); // Restablecer la validez si el año es válido
+        obj.setCustomValidity(' '); // Restablecer la validez si el año es válido
         valid = false;
     }
     return valid;

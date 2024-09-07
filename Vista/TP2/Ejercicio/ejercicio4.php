@@ -134,6 +134,11 @@ include_once '../../Estructura/header.php';
     </div>
 
 <script>
+    $(document).ready(function(){
+        $("#anio").blur(function(){
+            validarAnio(this);
+        });
+    });
  //   document.getElementById("anio").addEventListener("input",function(){
    //     validarAnio(document.getElementById("anio"));
   //  });
