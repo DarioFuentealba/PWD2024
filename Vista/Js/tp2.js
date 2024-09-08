@@ -34,11 +34,6 @@ function validarContrasena(campo){
     return regexContra.test(campo);
 }
 
-// Función para validar longitud mínima
-function validarLongitud(campo, minLength){
-    return campo.length >= minLength;
-}
-
 //-------------------------------- VALIDA FORMULARIOS  ------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function(){
