@@ -31,13 +31,9 @@
 function validarAnio(obj){
     var fechaActual = new Date();
     var anio = parseInt(obj.value);
-    var valid = false;
-    if((anio < fechaActual.getFullYear()) && (anio >= 1900) ){
-        obj.setCustomValidity('');
-        valid = true;
+    if((anio <= fechaActual.getFullYear()) && (anio >= 1900) ){
+        obj.setCustomValidity('');  // Restablecer la validez si el año es válido
     }else{
-        obj.setCustomValidity(' '); // Restablecer la validez si el año es válido
-        valid = false;
+        obj.setCustomValidity(' '); 
     }
-    return valid;
 }

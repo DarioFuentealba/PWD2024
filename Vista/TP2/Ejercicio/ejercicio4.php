@@ -134,14 +134,12 @@ include_once '../../Estructura/header.php';
     </div>
 
 <script>
-    $(document).ready(function(){
-        $("#anio").blur(function(){
+  /*  $(document).ready(function(){
+        $("#anio").keypress(function(){
             validarAnio(this);
         });
-    });
- //   document.getElementById("anio").addEventListener("input",function(){
-   //     validarAnio(document.getElementById("anio"));
-  //  });
+    });*/
+    document.getElementById("anio").addEventListener("blur", function(){ validarAnio(this);});
 </script>
 
 <?php
