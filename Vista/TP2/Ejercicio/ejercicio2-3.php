@@ -22,7 +22,6 @@
     <form id="miFormulario" name="form3" action="../Accion/ej2-3accion.php" method="post">
         <label for="lnombre">Nombre:</label><br>
         <input type="text" name="nombre" id="nombre" class="nombreApellido" ><br>
-        <div class="mensaje-error"></div>
         <label for="lapellido">Apellido:</label><br>
         <input type="text" name="apellido" id="apellido" class="nombreApellido" ><br>
         <div class="mensaje-error"></div>
@@ -31,7 +30,7 @@
         <div class="error-numero"></div>
         <label for="ldireccion">Direcci&oacute;n:</label><br>
         <input type="text" name="direccion" id="direccion"><br>
-        <div class="mensaje-error"></div>
+        <div class="error-direccion"></div>
         <br>
 
         <!-- Campo oculto estudio -->

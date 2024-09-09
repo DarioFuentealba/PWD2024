@@ -18,26 +18,25 @@ include_once '../../Estructura/header.php';
 <div class="divform">
     <form id="miFormulario" name="form6" action="../Accion/ej2-6accion.php" method="get">
       <label for="lnombre">Nombre:</label><br>
-        <input type="text" name="nombre" id="nombre" class="nombreApellido" oninput="validarNombre(this)" ><br>
-        <div class="mensaje-error"></div>
+        <input type="text" name="nombre" id="nombre" class="nombreApellido" ><br>
         <label for="lapellido">Apellido:</label><br>
-        <input type="text" name="apellido" id="apellido" class="nombreApellido" oninput="validarNombre(this)"><br>
+        <input type="text" name="apellido" id="apellido" class="nombreApellido"><br>
         <div class="mensaje-error"></div>
         <label for="ledad">Edad:</label><br>
         <input type="text" name="edad" id="edad" ><br>
         <div class="error-numero"></div>
         <label for="ldireccion">Direcci&oacute;n:</label><br>
-        <input type="text" name="direccion" id="direccion" oninput="validarDireccion(this)"><br>
-        <div class="mensaje-error"></div>
-        <br>
+        <input type="text" name="direccion" id="direccion"><br>
+        <div class="error-direccion"></div>
+        <br><br>
 
         <label for="lnivelestudio">Nivel de estudios:</label><br>
         <div class="radio-group">
-          <input type="radio" id="estudio" name="estudio" value="1" >
+          <input type="radio" id="estudio1" name="estudio" value="1" >
           <label for="lsin">Sin Estudios</label><br>
-          <input type="radio" id="estudio" name="estudio" value="2" >
+          <input type="radio" id="estudio2" name="estudio" value="2" >
           <label for="lsecundario">Secundarios</label><br>
-          <input type="radio" id="estudio" name="estudio" value="3" >
+          <input type="radio" id="estudio3" name="estudio" value="3" >
           <label for="lterciario">Terciarios</label>
         </div>
         <div class="error-radio"></div>
@@ -69,7 +68,7 @@ include_once '../../Estructura/header.php';
             <input type="checkbox" id="ninguno" name="deportes" value="ninguno">
             <label for="ninguno">Ninguno</label><br>
           </div>
-          <div class="error-box"></div>
+          <div class="error-box"></div><br><br>
 
         <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>

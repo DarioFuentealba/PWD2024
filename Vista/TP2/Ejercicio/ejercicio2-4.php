@@ -31,7 +31,7 @@ include_once '../../Estructura/header.php';
         <div class="error-numero"></div>
         <label for="ldireccion">Direcci&oacute;n:</label><br>
         <input type="text" name="direccion" id="direccion"><br>
-        <div class="mensaje-error"></div>
+        <div class="error-direccion"></div>
         <br>
 
         <!-- Campo oculto estudio -->

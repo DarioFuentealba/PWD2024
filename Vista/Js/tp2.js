@@ -33,6 +33,11 @@ function validarContrasena(campo){
     var regexContra = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; 
     return regexContra.test(campo);
 }
+// Funcion valida direccion
+function validarDireccion(campo){
+    var regexDireccion = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$/;
+    return regexDireccion.test(campo);
+}
 
 //-------------------------------- VALIDA FORMULARIOS  ------------------------------------------
 
@@ -48,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
             // Validación según el tipo de campo
             // Valida campos que solo contengan letras, no permite numeros ni signos
-            if(campoId === "nombre" || campoId === "apellido" || campoId === "nacionalidad" || campoId === "direccion"){
+            if(campoId === "nombre" || campoId === "apellido" || campoId === "nacionalidad"){
                 if(!validarCampoVacio(valorCampo) || !validarNombre(valorCampo)){
                     campo.css({
                         "border-color": "red",
@@ -63,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function(){
                     });
                     $('.mensaje-error').text('');
                 }
-            //Valida campos que solo contengan numeros, no permite letras ni signos
             }else if(campoId === "numero" || campoId === "edad" || campoId === "año" || campoId === "lunes" || campoId === "martes" || campoId === "miercoles" || campoId === "jueves" || campoId === "viernes"){
                 if(!validarCampoVacio(valorCampo) || !validarNumeros(valorCampo)){
                     campo.css({
@@ -125,9 +129,24 @@ document.addEventListener("DOMContentLoaded", function(){
                         "border-color": "",
                         "background-color": ""
                     });
-                    $('.error-email').text('');
+                    $('.error-contraseña').text('');
                 }
-            }
+            }else if(campoId === "direccion"){
+                if(!validarCampoVacio(valorCampo) || !validarDireccion(valorCampo)){
+                    campo.css({
+                        "border-color": "red",
+                        "background-color": "#FFB0B0"
+                    });
+                    $('.error-direccion').text('Campo obligatorio, ingrese una direccion').css({"color": "red"});
+                    formularioValido = false;
+                } else {
+                    campo.css({
+                        "border-color": "green",
+                        "background-color": ""
+                    });
+                    $('.error-direccion').text('');
+                }
+            }            
         });
 
         // Validar que al menos un radio esté seleccionado solo si existen radios en el formulario
@@ -135,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function(){
             var radioSeleccionado = $("input[name='estudio']:checked").length;
             if(radioSeleccionado === 0){
                 $('.radio-group').css("border", "2px solid red");
-                $('.error-radio').text('Debe seleccionar una opción de estudio').css({"color": "red"});
+                $('.error-radio').text('Debe seleccionar una opción').css({"color": "red"});
                 formularioValido = false;
             }else{
                 $('.radio-group').css("border", ""); // Limpiar el borde si está seleccionado
@@ -160,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function(){
             var boxSeleccionado = $("input[name='deportes']:checked").length;
             if (boxSeleccionado === 0) {
                 $('.radio-group').css("border", "2px solid red");
-                $('.error-box').text('Debe seleccionar una opción de estudio').css({"color": "red"});
+                $('.error-box').text('Debe seleccionar una opción').css({"color": "red"});
                 formularioValido = false;
             }else{
                 $('.radio-group').css("border", ""); // Limpiar el borde si está seleccionado
@@ -172,11 +191,11 @@ document.addEventListener("DOMContentLoaded", function(){
             var valorSelect = $("#operacion").val();
             if(valorSelect === ""){
                 $('#operacion').css("border-color", "red");
-                $('.error-select').text('Debe seleccionar una operacion').css({"color": "red"});
+                $('.error-operacion').text('Debe seleccionar una operacion').css({"color": "red"});
                 formularioValido = false;
             }else{
                 $('#operacion').css("border-color", ""); // Limpiar el borde si se seleccionó una opción válida
-                $('.error-select').text('')
+                $('.error-operacion').text('')
             }
         }
         // Si algún campo no es válido, evitamos el envío del formulario

@@ -19,11 +19,11 @@ include_once '../../Estructura/header.php';
 <div class="divform">
     <form id="miFormulario" name="form7" method="get" action="../Accion/ej2-7accion.php">
         <label>N&uacute;mero 1:</label>
-        <input type="text" id="numero" name="numero1">
+        <input type="number" id="numero" name="numero1" min="1" step="1">
         <br><br>
 
         <label>N&uacute;mero 2:</label>
-        <input type="text" id="numero" name="numero2">
+        <input type="number" id="numero" name="numero2" min="1" step="1">
         <div class="error-numero"></div>
         <br><br>
         
@@ -35,7 +35,7 @@ include_once '../../Estructura/header.php';
           <option value="multiplicacion">Multiplicaci&oacute;n</option>
           <option value="division">Divisi&oacute;n</option>
         </select>
-        <div class="error-select"></div>
+        <div class="error-operacion"></div>
         <br><br>
 
         <input type="submit" value="Calcular" class="btn btn-success" role="button">
