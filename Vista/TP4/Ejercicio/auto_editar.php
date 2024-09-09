@@ -1,5 +1,6 @@
 <?php
-include_once '../configuracion.php';
+$titulo = "Ejercicio N 1";
+include_once '../../Estructura/header.php';
 $objAbmAuto = new AbmAuto();
 $datos = data_submitted();
 $obj =NULL;

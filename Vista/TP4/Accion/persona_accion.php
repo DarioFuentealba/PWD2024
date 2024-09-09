@@ -1,5 +1,8 @@
-<?php 
-include_once '../../configuracion.php';
+<?php
+$titulo = "Personas";
+include_once '../../Estructura/header.php';
+echo '<div class="divtitulo"> <h1>';
+echo $titulo.'</h1></div>';
 $datos = data_submitted();
 //verEstructura($datos);
 $resp = false;
