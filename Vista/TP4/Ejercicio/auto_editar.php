@@ -25,13 +25,13 @@ if ($obj!=null)
 	<input id="Patente:" readonly name ="Patente" width="80" type="text" value="<?php echo $obj->getPatente()?>"><br/>
 
 	<label>Marca</label><br/>
-	<input id="Marca:" readonly name ="Marca" width="80" type="text" value="<?php echo $obj->getMarca()?>"><br/>
+	<input id="Marca:" name ="Marca" width="80" type="text" value="<?php echo $obj->getMarca()?>"><br/>
 
 	<label>Modelo</label><br/>
-	<input id="Modelo:" readonly name ="Modelo" width="80" type="text" value="<?php echo $obj->getModelo()?>"><br/>
+	<input id="Modelo:" name ="Modelo" width="80" type="text" value="<?php echo $obj->getModelo()?>"><br/>
 
 	<label>DniDuenio</label><br/>
-	<input id="DniDuenio:" readonly name ="DniDuenio" width="80" type="text" value="<?php echo $obj->getObjDuenio()->getNroDni()?>"><br/>
+	<input id="DniDuenio:" name ="DniDuenio" width="80" type="text" value="<?php echo $obj->getObjDuenio()->getNroDni()?>"><br/>
 
 	<input id="accion" name ="accion" value="editar" type="hidden">
 	<input type="submit">

@@ -21,8 +21,8 @@
                 echo '<td style="width:500px;">'.$objPersona->getFechaNac().'</td>';
                 echo '<td style="width:500px;">'.$objPersona->getTelefono().'</td>';
                 echo '<td style="width:500px;">'.$objPersona->getDomicilio().'</td>';
-                echo '<td><a href="persona_editar.php?id='.$objPersona->getNroDni().'">editar</a></td>';
-                echo '<td><a href="../Accion/persona_accion.php?accion=borrar&id='.$objPersona->getNroDni().'">borrar</a></td></tr>'; 
+                echo '<td><a href="persona_editar.php?Patente='.$objPersona->getNroDni().'">editar</a></td>';
+                echo '<td><a href="../Accion/persona_accion.php?accion=borrar&Patente='.$objPersona->getNroDni().'">borrar</a></td></tr>'; 
             }
         }
     ?>

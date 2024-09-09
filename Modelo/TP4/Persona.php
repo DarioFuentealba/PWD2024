@@ -7,10 +7,9 @@ class Persona {
     private $telefono;
     private $domicilio;
     private $mensajeoperacion;
-    
-   
+
+
     public function __construct(){
-        
         $this->nroDni="";
         $this->apellido = "";
         $this->nombre = "";
@@ -19,6 +18,8 @@ class Persona {
         $this->domicilio="";
         $this->mensajeoperacion ="";
     }
+
+
     public function setear($dni, $apellido, $nombre, $fechaNac, $telefono, $domicilio)    {
         $this->setNroDni($dni);
         $this->setApellido($apellido);
@@ -27,19 +28,20 @@ class Persona {
         $this->setTelefono($telefono);
         $this->setdomiciliot($domicilio);
     }
-    
-    
-    
+
+
     public function getNroDni(){
         return $this->nroDni;
     }
+
     public function setNroDni($valor){
         $this->nroDni = $valor;
     }
-    
+
     public function getApellido(){
         return $this->apellido;
     }
+
     public function setApellido($valor){
         $this->apellido = $valor;
     }
@@ -47,6 +49,7 @@ class Persona {
     public function getNombre(){
         return $this->nombre;
     }
+
     public function setNombre($valor){
         $this->nombre = $valor;
     }
@@ -54,6 +57,7 @@ class Persona {
     public function getFechaNac(){
         return $this->fechaNac;
     }
+
     public function setFechaNac($valor){
         $this->fechaNac = $valor;
     }
@@ -61,6 +65,7 @@ class Persona {
     public function getTelefono(){
         return $this->telefono;
     }
+
     public function setTelefono($valor){
         $this->telefono = $valor;
     }
@@ -68,32 +73,33 @@ class Persona {
     public function getDomicilio(){
         return $this->domicilio;
     }
+
     public function setDomiciliot($valor){
         $this->domicilio = $valor;
     }
+
     public function getmensajeoperacion(){
         return $this->mensajeoperacion;
-        
     }
+
     public function setmensajeoperacion($valor){
         $this->mensajeoperacion = $valor;
-        
     }
-    
-    
+
+ 
     public function cargar(){
         $resp = false;
-        $base=new BaseDatos();
-        $sql="SELECT * FROM persona WHERE NroDni = ".$this->getNroDni();
-        if ($base->Iniciar()) {
+        $base = new BaseDatos();
+        $sql = "SELECT * FROM persona WHERE NroDni = ".$this->getNroDni();
+        if($base->Iniciar()){
             $res = $base->Ejecutar($sql);
-            if($res>-1){
-                if($res>0){
+            if($res > -1){
+                if($res > 0){
                     $row = $base->Registro();
                     $this->setear($row['NroDni'], $row['Apellido'], $row['Nombre'], $row['fechaNac'], $row['Telefono'],$row['Domicilio']);
                 }
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Tabla->listar: ".$base->getError());
         }
         return $resp;
@@ -101,8 +107,8 @@ class Persona {
     
     public function insertar(){
         $resp = false;
-        $base=new BaseDatos();
-        $sql="INSERT INTO persona(NroDni, Apellido, Nombre, fechaNac, Telefono, Domicilio)  VALUES('"
+        $base  =  new BaseDatos();
+        $sql  =  "INSERT INTO persona(NroDni, Apellido, Nombre, fechaNac, Telefono, Domicilio)  VALUES('"
         .$this->getNroDni()."', '"
         .$this->getApellido()."', '"
         .$this->getNombre()."', '"
@@ -110,12 +116,12 @@ class Persona {
         .$this->getTelefono()."', '"
         .$this->getdomicilio()."');";
         if ($base->Iniciar()) {
-            if ($base->Ejecutar($sql)) {
+            if($base->Ejecutar($sql)){
                 $resp = true;
             }else{
                 $this->setmensajeoperacion("Persona->insertar: ".$base->getError());
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Personaa->insertar: ".$base->getError());
         }
         return $resp;
@@ -123,20 +129,20 @@ class Persona {
     
     public function modificar(){
         $resp = false;
-        $base=new BaseDatos();
-        $sql="UPDATE persona SET 
+        $base = new BaseDatos();
+        $sql = "UPDATE persona SET 
         Apellido = '".$this->getApellido()."', 
         Nombre = '".$this->getNombre()."', 
         fechaNac = '".$this->getFechaNac()."', 
         Telefono = '".$this->getTelefono()."', 
         Domicilio = '".$this->getdomicilio()."' WHERE NroDni = '".$this->getnroDni()."'";
         if ($base->Iniciar()) {
-            if ($base->Ejecutar($sql)) {
+            if($base->Ejecutar($sql)){
                 $resp = true;
-            } else {
+            }else{
                 $this->setmensajeoperacion("Tabla->modificar: ".$base->getError());
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Tabla->modificar: ".$base->getError());
         }
         return $resp;
@@ -144,15 +150,15 @@ class Persona {
     
     public function eliminar(){
         $resp = false;
-        $base=new BaseDatos();
-        $sql="DELETE FROM persona WHERE NroDni = '".$this->getNroDni()."'";
+        $base = new BaseDatos();
+        $sql = "DELETE FROM persona WHERE NroDni = '".$this->getNroDni()."'";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 return true;
-            } else {
+            }else{
                 $this->setmensajeoperacion("Tabla->eliminar: ".$base->getError());
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Tabla->eliminar: ".$base->getError());
         }
         return $resp;
@@ -160,31 +166,25 @@ class Persona {
     
     public static function listar($parametro=""){
         $arreglo = array();
-        $base=new BaseDatos();
-        $sql="SELECT * FROM persona ";
-        if ($parametro!="") {
+        $base = new BaseDatos();
+        $sql = "SELECT * FROM persona ";
+        if ($parametro != "") {
             $sql .= " WHERE " .$parametro;
         }
         $res = $base->Ejecutar($sql);
-        if($res>-1){
-            if($res>0){
+        if($res > -1){
+            if($res > 0){
                 
                 while ($row = $base->Registro()){
-                    $obj= new Persona();
+                    $obj = new Persona();
                     $obj->setear($row['NroDni'], $row['Apellido'], $row['Nombre'], $row['fechaNac'], $row['Telefono'], $row['Domicilio']);
                     array_push($arreglo, $obj);
                 }
-               
             }
-            
-        } else {
-            $this->setmensajeoperacion("Persona->listar: ".$base->getError());
+        }else{
+            self::setmensajeoperacion("Persona->listar: ".$base->getError());
         }
- 
         return $arreglo;
     }
-    
 }
-
-
 ?>

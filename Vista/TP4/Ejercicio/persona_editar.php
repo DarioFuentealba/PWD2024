@@ -26,19 +26,19 @@ if ($obj != null)
 		<input id="NroDni:" readonly name="NroDni" width="80" type="text" value="<?php echo $obj->getNroDni()?>"><br/>
 
 		<label>Apellido: </label><br/>
-		<input id="Apellido:" readonly name="Apellido" width="80" type="text" value="<?php echo $obj->getApellido()?>"><br/>
+		<input id="Apellido:" name="Apellido" width="80" type="text" value="<?php echo $obj->getApellido()?>"><br/>
 
 		<label>Nombre: </label><br/>
-		<input id="Nombre:" readonly name="Nombre" width="80" type="text" value="<?php echo $obj->getNombre()?>"><br/>
+		<input id="Nombre:" name="Nombre" width="80" type="text" value="<?php echo $obj->getNombre()?>"><br/>
 
 		<label>Fecha Nacimiento: </label><br/>
-		<input id="fechaNac:" readonly name="fechaNac" width="80" type="text" value="<?php echo $obj->getFechaNac()?>"><br/>
+		<input id="fechaNac:" name="fechaNac" width="80" type="text" value="<?php echo $obj->getFechaNac()?>"><br/>
 
 		<label>Tel&eacute;fono: </label><br/>
-		<input id="Telefono:" readonly name="Telefono" width="80" type="text" value="<?php echo $obj->getTelefono()?>"><br/>
+		<input id="Telefono:" name="Telefono" width="80" type="text" value="<?php echo $obj->getTelefono()?>"><br/>
 
 		<label>Domicilio: </label><br/>
-		<input id="Domicilio:" readonly name="Domicilio" width="80" type="text" value="<?php echo $obj->getDomicilio()?>"><br/>
+		<input id="Domicilio:" name="Domicilio" width="80" type="text" value="<?php echo $obj->getDomicilio()?>"><br/>
 
 		<input id="accion" name ="accion" value="editar" type="hidden">
 		<input type="submit">

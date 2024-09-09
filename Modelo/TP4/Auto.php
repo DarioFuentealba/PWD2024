@@ -5,16 +5,16 @@ class Auto {
     private $modelo;
     private $objDuenio;
     private $mensajeoperacion;
-    
-   
+
+
     public function __construct(){
-        
-        $this->patente="";
+        $this->patente = "";
         $this->marca = "";
         $this->modelo = "";
         $this->objDuenio = new Persona();
-        $this->mensajeoperacion ="";
+        $this->mensajeoperacion = "";
     }
+
     public function setear($patente, $marca, $modelo, $objDuenio)    {
         $this->setPatente($patente);
         $this->setMarca($marca);
@@ -24,16 +24,15 @@ class Auto {
 
     public function getPatente(){
         return $this->patente;
-        
     }
     public function setPatente($valor){
         $this->patente = $valor;
-        
     }
     
     public function getMarca(){
         return $this->marca;  
     }
+
     public function setMarca($valor){
         $this->marca = $valor; 
     }
@@ -41,6 +40,7 @@ class Auto {
     public function getModelo(){
         return $this->modelo;  
     }
+
     public function setModelo($valor){
         $this->modelo = $valor; 
     }
@@ -48,6 +48,7 @@ class Auto {
     public function getObjDuenio(){
         return $this->objDuenio;  
     }
+
     public function setObjDuenio($obj){
         $this->objDuenio = $obj; 
     }
@@ -55,117 +56,116 @@ class Auto {
     public function getmensajeoperacion(){
         return $this->mensajeoperacion;
     }
+
     public function setmensajeoperacion($valor){
-       $this->mensajeoperacion = $valor; 
+        $this->mensajeoperacion = $valor; 
     }
-    
-    
+
+
     public function cargar(){
         $resp = false;
-        $base=new BaseDatos();
+        $base = new BaseDatos();
         $objDuenio = new Persona();     
-        $sql="SELECT * FROM auto WHERE Patente = ".$this->getPatente();
+        $sql = "SELECT * FROM auto WHERE Patente = ".$this->getPatente();
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
-            if($res>-1){
-                if($res>0){
+            if($res > -1){
+                if($res > 0){
                     $row = $base->Registro();
                     $objDuenio->setNroDni( $row['DniDuenio']);
                     $objDuenio->cargar();
                     $this->setear($row['Patente'], $row['Marca'], $row['Modelo'], $objDuenio); 
                 }
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Auto->listar: ".$base->getError());
         }
         return $resp;
     }
-    
+
+
     public function insertar(){
         $resp = false;
-        $base=new BaseDatos();
-        $sql="INSERT INTO auto (Patente, Marca, Modelo, DniDuenio)  VALUES ('"
+        $base = new BaseDatos();
+        $sql = "INSERT INTO auto (Patente, Marca, Modelo, DniDuenio)  VALUES ('"
         .$this->getPatente()."', '"
         .$this->getMarca()."', '"
         .$this->getModelo()."', '"
         .$this->getObjDuenio()->getNroDni()."');";
         if ($base->Iniciar()) {
-            if ($base->Ejecutar($sql)) {
+            if($base->Ejecutar($sql)){
                 $resp = true;
-            } else {
+            }else{
                 $this->setmensajeoperacion("Auto->insertar: ".$base->getError());
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Auto->insertar: ".$base->getError());
         }
         return $resp;
     }
-    
+
+
     public function modificar(){
         $resp = false;
-        $base=new BaseDatos();
-        $sql="UPDATE auto SET 
+        $base = new BaseDatos();
+        $sql = "UPDATE auto SET 
         Marca = '".$this->getMarca()."', 
         Modelo = '".$this->getModelo()."', 
         DniDuenio = '".$this->getObjDuenio()->getNroDni()."' WHERE Patente = '".$this->getPatente()."'";
         if ($base->Iniciar()) {
-            if ($base->Ejecutar($sql)) {
+            if($base->Ejecutar($sql)){
                 $resp = true;
-            } else {
+            }else{
                 $this->setmensajeoperacion("Auto->modificar: ".$base->getError());
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Auto->modificar: ".$base->getError());
         }
         return $resp;
     }
-    
+
+
     public function eliminar(){
         $resp = false;
-        $base=new BaseDatos();
-        $sql="DELETE FROM auto WHERE Patente = '".$this->getPatente()."'";
+        $base = new BaseDatos();
+        $sql = "DELETE FROM auto WHERE Patente = '".$this->getPatente()."'";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 return true;
-            } else {
+            }else{
                 $this->setmensajeoperacion("Auto->eliminar: ".$base->getError());
             }
-        } else {
+        }else{
             $this->setmensajeoperacion("Auto->eliminar: ".$base->getError());
         }
         return $resp;
     }
-    
+
+
     public static function listar($parametro=""){
         $arreglo = array();
-        $base=new BaseDatos();
+        $base = new BaseDatos();
         $objDuenio = new Persona();
-        $sql="SELECT * FROM auto ";
-        if ($parametro!="") {
+        $sql = "SELECT * FROM auto ";
+        if ($parametro != "") {
             $sql .= " WHERE " .$parametro;
         }
+
         $res = $base->Ejecutar($sql);
-        if($res>-1){
-            if($res>0){
-                
+        if($res > -1){
+            if($res > 0){
                 while ($row = $base->Registro()){
-                    $obj= new Auto();
+                    $obj = new Auto();
                     $objDuenio->setNroDni( $row['DniDuenio']);
                     $objDuenio->cargar();
                     $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $objDuenio);
                     array_push($arreglo, $obj);
                 }
-               
             }
-            
-        } else {
-            $this->setmensajeoperacion("Tabla->listar: ".$base->getError());
+        }else{
+            self::setmensajeoperacion("Tabla->listar: ".$base->getError());
         }
- 
         return $arreglo;
     }
-    
 }
-
-
 ?>

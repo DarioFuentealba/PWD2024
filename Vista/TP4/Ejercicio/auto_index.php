@@ -20,8 +20,8 @@ $listaAuto = $objAbmAuto->buscar(null);
             echo '<td style="width:500px;">'.$objAuto->getMarca().'</td>';
             echo '<td style="width:500px;">'.$objAuto->getModelo().'</td>';
             echo '<td style="width:500px;">'.$objAuto->getObjDuenio()->getNroDni().'</td>';
-            echo '<td><a href="auto_editar.php?id='.$objAuto->getPatente().'">editar</a></td>';
-            echo '<td><a href="../Accion/auto_accion.php?accion=borrar&id='.$objAuto->getPatente().'">borrar</a></td></tr>'; 
+            echo '<td><a href="auto_editar.php?NroDni='.$objAuto->getPatente().'">editar</a></td>';
+            echo '<td><a href="../Accion/auto_accion.php?accion=borrar&NroDni='.$objAuto->getPatente().'">borrar</a></td></tr>'; 
         }
     }
     ?>
