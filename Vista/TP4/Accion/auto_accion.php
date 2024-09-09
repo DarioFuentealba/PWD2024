@@ -7,34 +7,36 @@ $datos = data_submitted();
 //verEstructura($datos);
 $resp = false;
 $objTrans = new AbmAuto();
+
 if (isset($datos['accion'])){
-    if($datos['accion']=='editar'){
+    if($datos['accion'] == 'editar'){
         if($objTrans->modificacion($datos)){
             $resp = true;
         }
     }
-    if($datos['accion']=='borrar'){
+
+    if($datos['accion'] == 'borrar'){
         if($objTrans->baja($datos)){
             $resp =true;
         }
-        
     }
-    if($datos['accion']=='nuevo'){
+
+    if($datos['accion'] == 'nuevo'){
         if($objTrans->alta($datos)){
             $resp =true;
         }
-        
     }
+
     if($resp){
         $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
     }else {
         $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
     }
-    
 }
-
 ?>
+
 <h3>Auto</h3>
+
 <br><a href="../Ejercicio/auto_index.php">Volver</a><br>
 
 <?php	

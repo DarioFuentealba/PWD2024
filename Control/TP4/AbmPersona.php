@@ -5,12 +5,12 @@ class AbmPersona{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
-     * @param array $param
-     * @return Persona
+     * @param ARRAY $param
+     * @return Persona $obj
      */
     private function cargarObjeto($param){
         $obj = null;
-           
+
         if( array_key_exists('NroDni',$param) and 
         array_key_exists('Apellido',$param) and
         array_key_exists('Nombre',$param) and
@@ -25,8 +25,8 @@ class AbmPersona{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves
-     * @param array $param
-     * @return Persona
+     * @param ARRAY $param
+     * @return Persona $obj
      */
     private function cargarObjetoConClave($param){
         $obj = null;
@@ -41,8 +41,8 @@ class AbmPersona{
     
     /**
      * Corrobora que dentro del arreglo asociativo estan seteados los campos claves
-     * @param array $param
-     * @return boolean
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     
     private function seteadosCamposClaves($param){
@@ -54,7 +54,8 @@ class AbmPersona{
     
     /**
      * 
-     * @param array $param
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function alta($param){
         $resp = false;
@@ -69,14 +70,14 @@ class AbmPersona{
     }
     /**
      * permite eliminar un objeto 
-     * @param array $param
-     * @return boolean
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function baja($param){
         $resp = false;
         if ($this->seteadosCamposClaves($param)){
             $elObjPersona = $this->cargarObjetoConClave($param);
-            if ($elObjPersona!=null and $elObjPersona->eliminar()){
+            if ($elObjPersona != null and $elObjPersona->eliminar()){
                 $resp = true;
             }
         }
@@ -86,8 +87,8 @@ class AbmPersona{
     
     /**
      * permite modificar un objeto
-     * @param array $param
-     * @return boolean
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function modificacion($param){
         //echo "Estoy en modificacion";
@@ -103,12 +104,12 @@ class AbmPersona{
     
     /**
      * permite buscar un objeto
-     * @param array $param
-     * @return array
+     * @param ARRAY $param
+     * @return ARRAY $arreglo
      */
     public function buscar($param){
         $where = " true ";
-        if ($param<>NULL){
+        if ($param <> NULL){
             if (isset($param['NroDni']))
                 $where .= " and NroDni = '".$param['NroDni']."'";
             if (isset($param['Apellido']))
@@ -125,6 +126,5 @@ class AbmPersona{
         $arreglo = Persona::listar($where);  
         return $arreglo;
     }
-    
 }
 ?>
