@@ -18,5 +18,3 @@ include_once '../../Estructura/header.php';
 </form>
 <br><br>
 <a href="auto_index.php">Volver</a>
-</body>
-</html>

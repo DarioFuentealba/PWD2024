@@ -1,10 +1,10 @@
 <?php
-$titulo = "Ejercicio N 1";
+$titulo = "Persona";
 include_once '../../Estructura/header.php';
 $objAbmPersona = new AbmPersona();
 $datos = data_submitted();
 $obj =NULL;
-if (isset($datos['id'])){
+if (isset($datos['NroDni'])){
     $listaPersona = $objAbmPersona->buscar($datos);
     if (count($listaPersona)==1){
         $obj= $listaPersona[0];
@@ -12,13 +12,6 @@ if (isset($datos['id'])){
 }
 
 ?>	
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>Persona</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
 <h3>Persona</h3>
 <?php if ($obj!=null){?>
 <form method="post" action="../Accion/persona_accion.php">
@@ -43,5 +36,3 @@ if (isset($datos['id'])){
 }?>
 <br><br>
 <a href="persona_index.php">Volver</a>
-</body>
-</html>

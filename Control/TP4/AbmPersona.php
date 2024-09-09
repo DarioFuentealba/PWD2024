@@ -58,7 +58,7 @@ class AbmPersona{
      */
     public function alta($param){
         $resp = false;
-        $param['NroDni'] =null;
+      //  $param['NroDni'] =null;
         $elObjPersona = $this->cargarObjeto($param);
 //        verEstructura($elObjPersona);
         if ($elObjPersona != null and $elObjPersona->insertar()){

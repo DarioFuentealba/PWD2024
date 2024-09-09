@@ -79,6 +79,14 @@
               <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio3.php">Ejercicio 3</a></li>
             </ul>
           </li>
+                    <!-- Menu TP 4 -->
+                    <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 4</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_index.php">Auto</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
