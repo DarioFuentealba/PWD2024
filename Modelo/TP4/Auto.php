@@ -145,17 +145,17 @@ class Auto {
     public static function listar($parametro=""){
         $arreglo = array();
         $base = new BaseDatos();
-        $objDuenio = new Persona();
         $sql = "SELECT * FROM auto ";
         if ($parametro != "") {
             $sql .= " WHERE " .$parametro;
         }
-
+        
         $res = $base->Ejecutar($sql);
         if($res > -1){
             if($res > 0){
                 while ($row = $base->Registro()){
                     $obj = new Auto();
+                    $objDuenio = new Persona();
                     $objDuenio->setNroDni( $row['DniDuenio']);
                     $objDuenio->cargar();
                     $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $objDuenio);

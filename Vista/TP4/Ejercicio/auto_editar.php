@@ -4,7 +4,7 @@ include_once '../../Estructura/header.php';
 $objAbmAuto = new AbmAuto();
 $datos = data_submitted();
 $obj =NULL;
-if (isset($datos['id'])){
+if (isset($datos['Patente'])){
     $listaAuto = $objAbmAuto->buscar($datos);
     if (count($listaAuto)==1){
         $obj= $listaAuto[0];

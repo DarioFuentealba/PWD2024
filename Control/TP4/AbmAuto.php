@@ -10,13 +10,15 @@ class AbmAuto{
      */
     private function cargarObjeto($param){
         $obj = null;
-
         if( array_key_exists('Patente',$param) and 
         array_key_exists('Marca',$param) and
         array_key_exists('Modelo',$param) and
         array_key_exists('DniDuenio',$param)){
             $obj = new Auto();
-            $obj->setear($param['Patente'], $param['Marca'], $param['Modelo'], $param['DniDuenio']);
+            $objDuenio =  new Persona();
+            $objDuenio->setNroDni( $param['DniDuenio']);
+            $objDuenio->cargar();
+            $obj->setear($param['Patente'], $param['Marca'], $param['Modelo'], $objDuenio);
         }
         return $obj;
     }
@@ -57,7 +59,6 @@ class AbmAuto{
      */
     public function alta($param){
         $resp = false;
-        $param['Patente'] = null;
         $elObjAuto = $this->cargarObjeto($param);
 //        verEstructura($elObjAuto);
         if ($elObjAuto != null and $elObjAuto->insertar()){
@@ -111,14 +112,14 @@ class AbmAuto{
         if ($param <> NULL){
             if (isset($param['Patente']))
                 $where .= " and Patente = '".$param['Patente']."'";
-            if (isset($param['Marca']))
+          /*  if (isset($param['Marca']))
                 $where .= " and Marca = '".$param['Marca']."'";
             if (isset($param['Modelo']))
                 $where .= " and Modelo = '".$param['Modelo']."'";  
             if (isset($param['DniDuenio']))
-                $where .= " and DniDuenio = '".$param['DniDuenio']."'";     
+                $where .= " and DniDuenio = '".$param['DniDuenio']."'";    */ 
         }
-        $arreglo = $objAuto->listar($where);  //Auto::listar($where)
+        $arreglo = Auto::listar($where);  //Auto::listar($where)   $objAuto->
         return $arreglo;
     }
     
