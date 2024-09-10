@@ -27,6 +27,7 @@ if (isset($datos['accion'])){
         }
     }
 
+
     if($resp){
         $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
     }else {

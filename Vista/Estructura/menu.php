@@ -85,7 +85,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_index.php">Auto</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/verAutos.php">Ver Autos</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_ver.php">Ver Autos</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_buscar.php">Buscar Autos</a></li>
             </ul>
           </li>
         </ul>
