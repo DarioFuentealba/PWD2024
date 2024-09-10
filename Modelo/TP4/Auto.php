@@ -163,7 +163,7 @@ class Auto {
                 }
             }
         }else{
-            self::setmensajeoperacion("Tabla->listar: ".$base->getError());
+            self::setmensajeoperacion("Auto->listar: ".$base->getError());
         }
         return $arreglo;
     }

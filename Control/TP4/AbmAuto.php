@@ -5,7 +5,7 @@ class AbmAuto{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los Modelos de las variables instancias del objeto
-     * @param ARRAY $param
+     * @param array $param
      * @return Auto $obj
      */
     private function cargarObjeto($param){
@@ -25,7 +25,7 @@ class AbmAuto{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los Modelos de las variables instancias del objeto que son claves
-     * @param ARRAY $param
+     * @param array $param
      * @return Auto $obj
      */
     private function cargarObjetoConClave($param){
@@ -41,8 +41,8 @@ class AbmAuto{
     
     /**
      * Corrobora que dentro del arreglo asociativo estan seteados los campos claves
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean $resp
      */
     
     private function seteadosCamposClaves($param){
@@ -54,8 +54,8 @@ class AbmAuto{
     
     /**
      * 
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean $resp
      */
     public function alta($param){
         $resp = false;
@@ -69,8 +69,8 @@ class AbmAuto{
     }
     /**
      * permite eliminar un objeto 
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean $resp
      */
     public function baja($param){
         $resp = false;
@@ -86,8 +86,8 @@ class AbmAuto{
     
     /**
      * permite modificar un objeto
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean $resp
      */
     public function modificacion($param){
         //echo "Estoy en modificacion";
@@ -103,8 +103,8 @@ class AbmAuto{
     
     /**
      * permite buscar un objeto
-     * @param ARRAY $param
-     * @return ARRAY $arreglo
+     * @param array $param
+     * @return array $arreglo
      */
     public function buscar($param){
         $objAuto = new Auto();

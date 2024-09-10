@@ -11,6 +11,14 @@
 <a href="persona_nuevo.php">nuevo</a>
 
 <table border="1">
+<tr>
+        <th style="width:500px;">Dni</th>
+        <th style="width:500px;">Apellido</th>
+        <th style="width:500px;">Nombre</th>
+        <th style="width:500px;">Fecha Nacimiento</th>
+        <th style="width:500px;">Teléfono</th>
+        <th style="width:500px;">Domicilio</th>
+    </tr>
     <?php	
         if( count($listaPersona) > 0){
             foreach ($listaPersona as $objPersona) { 

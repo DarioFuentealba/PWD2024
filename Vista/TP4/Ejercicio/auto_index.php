@@ -12,6 +12,12 @@ $listaAuto = $objAbmAuto->buscar(null);
 <a href="auto_nuevo.php">nuevo</a><br><br>
 
 <table border="1">
+    <tr>
+        <th style="width:500px;">Patente</th>
+        <th style="width:500px;">Marca</th>
+        <th style="width:500px;">Modelo</th>
+        <th style="width:500px;">Dueño</th>
+    </tr>
     <?php	
     //var_dump($listaAuto);
     if( count($listaAuto)>0){
