@@ -85,8 +85,11 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_index.php">Auto</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_ver.php">Ver Autos</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_buscar.php">Buscar Autos</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_ver.php">Ver Autos Ej3a</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_buscar.php">Buscar Autos Ej4a</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_lista.php">Lista Persona Ej3b</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_nuevo.php">Persona nuevo Ej4b</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_nuevo.php">Auto Nuevo Ej5</a></li>
             </ul>
           </li>
         </ul>

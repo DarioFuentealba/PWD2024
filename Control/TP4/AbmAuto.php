@@ -107,7 +107,7 @@ class AbmAuto{
      * @return array $arreglo
      */
     public function buscar($param){
-        $objAuto = new Auto();
+        
         $where = " true ";
         if ($param <> NULL){
             if (isset($param['Patente']))
@@ -115,9 +115,9 @@ class AbmAuto{
           /*  if (isset($param['Marca']))
                 $where .= " and Marca = '".$param['Marca']."'";
             if (isset($param['Modelo']))
-                $where .= " and Modelo = '".$param['Modelo']."'";  
+                $where .= " and Modelo = '".$param['Modelo']."'";  */
             if (isset($param['DniDuenio']))
-                $where .= " and DniDuenio = '".$param['DniDuenio']."'";    */ 
+                $where .= " and DniDuenio = '".$param['DniDuenio']."'";    
         }
         $arreglo = Auto::listar($where);  //Auto::listar($where)   $objAuto->
         return $arreglo;

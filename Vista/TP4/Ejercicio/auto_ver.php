@@ -7,7 +7,7 @@ $objAbmAuto = new AbmAuto();
 $listaAuto = $objAbmAuto->buscar(null);
 ?>	
 
-<h3>Ver Autos</h3>
+<h3>Ver Autos Ej 3a</h3>
 
 <table border="1">
     <tr>

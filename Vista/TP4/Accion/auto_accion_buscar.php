@@ -10,9 +10,8 @@ if(!empty($datos)){
     $resp = false;
     $arregloAuto = Array();
     $objAbmAuto = new AbmAuto();
-    $objAuto = new Auto();
     if($arregloAuto = $objAbmAuto->buscar($datos)){
-        var_dump($arregloAuto);
+        //var_dump($arregloAuto);
         $objAuto = $arregloAuto[0];
 ?>
 <h3>ABM - Auto</h3>
