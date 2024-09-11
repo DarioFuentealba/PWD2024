@@ -90,6 +90,8 @@
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_lista.php">Lista Persona Ej3b</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_nuevo.php">Persona nuevo Ej4b</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_nuevo.php">Auto Nuevo Ej5</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_cambio_duenio.php">Auto Cambio de Dueño Ej6</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_buscar.php">Buscar Persona Ej7</a></li>
             </ul>
           </li>
         </ul>

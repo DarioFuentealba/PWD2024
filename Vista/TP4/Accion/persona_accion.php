@@ -37,8 +37,8 @@ if (isset($datos['accion'])){
 ?>
 
 <h3>Persona</h3>
-
-<br><a href="../Ejercicio/persona_index.php">Volver</a><br>
+<br><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a><br>
+<<button onclick="history.back();">Atras</button>
 
 <?php	
 echo $mensaje;

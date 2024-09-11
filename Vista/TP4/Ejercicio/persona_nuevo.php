@@ -30,5 +30,5 @@ include_once '../../Estructura/header.php';
 	<input type="submit">
 </form>
 <br><br>
-
-<a href="persona_index.php">Volver</a>
+<br><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a><br>
+<button onclick="history.back();">Atras</button>
