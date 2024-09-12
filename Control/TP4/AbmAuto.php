@@ -133,8 +133,6 @@ class AbmAuto{
         $arreglo = Auto::listar($where);  //Auto::listar($where)   $objAuto->
         return $arreglo;
     }
-<<<<<<< Updated upstream
-=======
 
         /**
      * permite modificar el dni ddel duenio
@@ -159,6 +157,5 @@ class AbmAuto{
         return $resp;
     }
     
->>>>>>> Stashed changes
 }
 ?>
