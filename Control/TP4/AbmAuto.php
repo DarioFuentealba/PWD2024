@@ -117,22 +117,48 @@ class AbmAuto{
      * @return ARRAY $arreglo
      */
     public function buscar($param){
-        
         $where = " true ";
 
         if ($param <> NULL)
         {
             if (isset($param['Patente']))
-                $where .= " and Patente = '".$param['Patente']."'";
-          /*  if (isset($param['Marca']))
-                $where .= " and Marca = '".$param['Marca']."'";
-            if (isset($param['Modelo']))
-                $where .= " and Modelo = '".$param['Modelo']."'";  */
-            if (isset($param['DniDuenio']))
-                $where .= " and DniDuenio = '".$param['DniDuenio']."'";    
+            $where .= " and Patente = '".$param['Patente']."'";
+        /*  if (isset($param['Marca']))
+        $where .= " and Marca = '".$param['Marca']."'";
+        if (isset($param['Modelo']))
+        $where .= " and Modelo = '".$param['Modelo']."'";  */
+        if (isset($param['DniDuenio']))
+        $where .= " and DniDuenio = '".$param['DniDuenio']."'";    
         }
         $arreglo = Auto::listar($where);  //Auto::listar($where)   $objAuto->
         return $arreglo;
     }
+<<<<<<< Updated upstream
+=======
+
+        /**
+     * permite modificar el dni ddel duenio
+     * @param array $param
+     * @return boolean $resp
+     */
+    public function modificarDni($param){
+        //echo "Estoy en modificacion";
+        $resp = false;
+        if ($this->seteadosCamposClaves($param)){
+            $elObjAuto = $this->cargarObjetoConClave($param);
+            $elObjAuto->cargar(); 
+            $objDuenio =  new Persona();
+            $objDuenio->setNroDni( $param['NroDni']);
+            $objDuenio->cargar();
+            $elObjAuto->setObjDuenio($objDuenio);
+
+            if($elObjAuto != null and $elObjAuto->modificar()){
+                $resp = true;
+            }
+        }
+        return $resp;
+    }
+    
+>>>>>>> Stashed changes
 }
 ?>

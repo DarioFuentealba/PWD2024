@@ -26,8 +26,38 @@
                 echo "No existe en la base de datos el propietario.";
                 echo "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div>";
 
+<<<<<<< Updated upstream
             }
         }
+=======
+    //Buscar en la BDD si ya existe el auto con esa patente
+    $enviar['Patente'] = $datos['Patente'];      //Enviamos solo la patente
+    $listaAuto = $objAbmAuto->buscar($enviar);
+    if(empty($listaAuto)){
+
+        if(isset($datos['DniDuenio'])){
+            $enviar['NroDni'] = $datos['DniDuenio'];
+            $listaPersona = $objAbmDuenio->buscar($enviar);
+            if(!empty($listaPersona)){
+                if($objAbmAuto->alta($datos)){
+                    $autoLoad =true;
+                }  
+            }else{ //Si la persona duenño no existe
+                echo "No existe el propietario en la base de datos.";
+                echo "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div>";
+            }
+        }
+    }else{
+        echo "La patente ya está registrada en la base de datos";
+    }
+    
+
+    if($autoLoad){
+        $mensaje = "La carga en la base de datos se realizo correctamente.";
+    }else {
+        $mensaje = "La carga no pudo concretarse.";
+    }
+>>>>>>> Stashed changes
 
         if($autoLoad){
             $mensaje = "La carga en la base de datos se realizo correctamente.";

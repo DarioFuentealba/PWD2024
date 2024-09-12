@@ -46,6 +46,7 @@
 				<input id="Marca" name ="Marca" width="80" type="text" value="<?php echo $objAuto->getMarca()?>" class="form-control"[A-Za-z0-9][A-Za-z0-9\s]*$" required>
 				<br/>
 
+<<<<<<< Updated upstream
                 <!-- Mensajes aprobado y error -->
                 <div class="valid-feedback">Ok!</div>
                 <div class="invalid-feedback">S&oacute;lo se permiten letras, n&uacute;meros y espacios</div>
@@ -81,6 +82,11 @@
 		</form>
 	</div>
 </div>
+=======
+	<input id="accion" name ="accion" value="editar" type="hidden">
+	<input type="submit" class="btn btn-success" role="button">
+</form>
+>>>>>>> Stashed changes
 
 <?php
 	}else{

@@ -28,6 +28,7 @@
 				<input class="form-control" id="Marca" name ="Marca" type="text" pattern="^[A-Za-z0-9\s]*[A-Za-z0-9][A-Za-z0-9\s]*$" required><br/>
 				<label for="Marca" class="form-label">Marca</label><br>
 
+<<<<<<< Updated upstream
 				<!-- Mensajes aprobado y error -->
                 <div class="valid-feedback">Ok!</div>
                 <div class="invalid-feedback">S&oacute;lo se permiten letras, n&uacute;meros y espacios</div>
@@ -73,3 +74,11 @@
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
+=======
+	
+	<input type="submit" class="btn btn-success" role="button">
+</form>
+<br><br>
+
+<a href="auto_index.php" class="btn btn-success" role="button">Volver</a>
+>>>>>>> Stashed changes

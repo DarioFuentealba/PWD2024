@@ -10,6 +10,7 @@
 <!-- Titulo en la pagina -->
 <h3 class="text-center">Buscar un auto</h3>
 
+<<<<<<< Updated upstream
 <!-- Contenedor de formulario -->
 <div class="container">
     <div class="row">
@@ -36,6 +37,15 @@
 </div>
 
 <!-- Tabla -->
+=======
+<form action="../Accion/auto_accion_buscar.php" method="post" id="formBuscar" name="formBuscar">
+    <label for="patente" class="form-label">Patente</label>
+    <input type="text" class="form-control" id="Patente" name="Patente" placeholder="AAA 123   ó   AA 456 AA" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required>
+	<input id="accion" name ="accion" value="buscar" type="hidden"><br>
+	<input type="submit" value="Buscar" class="btn btn-success" role="button"><br>
+</form>
+<div></div>
+>>>>>>> Stashed changes
 <table border="1">
     <tr>
         <th style="width:500px;">Patente</th>

@@ -66,7 +66,7 @@ class Auto {
         $resp = false;
         $base = new BaseDatos();
         $objDuenio = new Persona();     
-        $sql = "SELECT * FROM auto WHERE Patente = ".$this->getPatente();
+        $sql = "SELECT * FROM auto WHERE Patente = '".$this->getPatente()."'";
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
             if($res > -1){
