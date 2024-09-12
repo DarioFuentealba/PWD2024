@@ -89,6 +89,7 @@
 ?>
 <br><br>
 
+<<<<<<< Updated upstream
 <!-- Boton atras -->
 <div class="col-md-4">
 	<button class="btn btn-info" type="submit">Atr&aacute;s</button>
@@ -99,3 +100,6 @@
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
+=======
+<a href="auto_index.php" class="btn btn-success" role="button">Volver</a>
+>>>>>>> Stashed changes
