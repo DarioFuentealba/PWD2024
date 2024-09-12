@@ -5,46 +5,49 @@ class AbmAuto{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los Modelos de las variables instancias del objeto
-     * @param array $param
-     * @return Auto $obj
+     * @param ARRAY $param
+     * @return OBJETO $objAuto
      */
     private function cargarObjeto($param){
-        $obj = null;
+        $objAuto = null; //Inicializo variable
+
         if( array_key_exists('Patente',$param) and 
         array_key_exists('Marca',$param) and
         array_key_exists('Modelo',$param) and
-        array_key_exists('DniDuenio',$param)){
-            $obj = new Auto();
-            $objDuenio =  new Persona();
+        array_key_exists('DniDuenio',$param))
+        {
+            $objAuto = new Auto();
+            $objDuenio = new Persona();
             $objDuenio->setNroDni( $param['DniDuenio']);
             $objDuenio->cargar();
-            $obj->setear($param['Patente'], $param['Marca'], $param['Modelo'], $objDuenio);
+            $objAuto->setear($param['Patente'], $param['Marca'], $param['Modelo'], $objDuenio);
         }
-        return $obj;
+        return $objAuto;
     }
     
+
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los Modelos de las variables instancias del objeto que son claves
-     * @param array $param
-     * @return Auto $obj
+     * @param ARRAY $param
+     * @return OBJETO $objAuto
      */
     private function cargarObjetoConClave($param){
-        $obj = null;
+        $objAuto = null;
         
-        if( isset($param['Patente']) ){
-            $obj = new Auto();
-            $obj->setear($param['Patente'], null, null, null);
+        if( isset($param['Patente']) )
+        {
+            $objAuto = new Auto();
+            $objAuto->setear($param['Patente'], null, null, null);
         }
-        return $obj;
+        return $objAuto;
     }
     
     
     /**
      * Corrobora que dentro del arreglo asociativo estan seteados los campos claves
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
-    
     private function seteadosCamposClaves($param){
         $resp = false;
         if (isset($param['Patente']))
@@ -52,16 +55,18 @@ class AbmAuto{
         return $resp;
     }
     
+
     /**
      * 
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function alta($param){
         $resp = false;
         $elObjAuto = $this->cargarObjeto($param);
 //        verEstructura($elObjAuto);
-        if ($elObjAuto != null and $elObjAuto->insertar()){
+        if ($elObjAuto != null and $elObjAuto->insertar())
+        {
             $resp = true;
         }
         return $resp;
@@ -69,14 +74,16 @@ class AbmAuto{
     }
     /**
      * permite eliminar un objeto 
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function baja($param){
         $resp = false;
-        if ($this->seteadosCamposClaves($param)){
+        if ($this->seteadosCamposClaves($param))
+        {
             $elObjAuto = $this->cargarObjetoConClave($param);
-            if ($elObjAuto!=null and $elObjAuto->eliminar()){
+            if ($elObjAuto!=null and $elObjAuto->eliminar())
+            {
                 $resp = true;
             }
         }
@@ -86,15 +93,18 @@ class AbmAuto{
     
     /**
      * permite modificar un objeto
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
-    public function modificacion($param){
+    public function modificacion($param)
+    {
         //echo "Estoy en modificacion";
         $resp = false;
-        if ($this->seteadosCamposClaves($param)){
+        if ($this->seteadosCamposClaves($param))
+        {
             $elObjAuto = $this->cargarObjeto($param);
-            if($elObjAuto != null and $elObjAuto->modificar()){
+            if($elObjAuto != null and $elObjAuto->modificar())
+            {
                 $resp = true;
             }
         }
@@ -103,13 +113,15 @@ class AbmAuto{
     
     /**
      * permite buscar un objeto
-     * @param array $param
-     * @return array $arreglo
+     * @param ARRAY $param
+     * @return ARRAY $arreglo
      */
     public function buscar($param){
         
         $where = " true ";
-        if ($param <> NULL){
+
+        if ($param <> NULL)
+        {
             if (isset($param['Patente']))
                 $where .= " and Patente = '".$param['Patente']."'";
           /*  if (isset($param['Marca']))
@@ -122,6 +134,5 @@ class AbmAuto{
         $arreglo = Auto::listar($where);  //Auto::listar($where)   $objAuto->
         return $arreglo;
     }
-    
 }
 ?>

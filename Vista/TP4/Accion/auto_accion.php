@@ -1,43 +1,54 @@
 <?php
-$titulo = "Autos";
-include_once '../../Estructura/header.php';
-echo '<div class="divtitulo"> <h1>';
-echo $titulo.'</h1></div>';
-$datos = data_submitted();
-//verEstructura($datos);
-$resp = false;
-$objTrans = new AbmAuto();
+    $titulo = "Autos"; //Titulo en la pestania
+    include_once '../../Estructura/header.php';
+    echo '<div class="divtitulo"> <h1>';
+    echo $titulo.'</h1></div>';
+    $datos = data_submitted();
+    //verEstructura($datos);
 
-if (isset($datos['accion'])){
-    if($datos['accion'] == 'editar'){
-        if($objTrans->modificacion($datos)){
-            $resp = true;
+    $resp = false;
+    $objTrans = new AbmAuto();
+
+    if (isset($datos['accion']))
+    {
+        if($datos['accion'] == 'editar')
+        {
+            if($objTrans->modificacion($datos))
+            {
+                $resp = true;
+            }
+        }
+
+        if($datos['accion'] == 'borrar')
+        {
+            if($objTrans->baja($datos))
+            {
+                $resp = true;
+            }
+        }
+
+        if($datos['accion'] == 'nuevo')
+        {
+            if($objTrans->alta($datos))
+            {
+                $resp = true;
+            }
+        }
+
+
+        if($resp)
+        {
+            $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+        }else{
+            $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
         }
     }
-
-    if($datos['accion'] == 'borrar'){
-        if($objTrans->baja($datos)){
-            $resp =true;
-        }
-    }
-
-    if($datos['accion'] == 'nuevo'){
-        if($objTrans->alta($datos)){
-            $resp =true;
-        }
-    }
-
-
-    if($resp){
-        $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
-    }else {
-        $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
-    }
-}
 ?>
 
-<h3>Auto</h3>
+<!-- Titulo en la pagina -->
+<h3 class="text-center">Auto</h3>
 
+<!-- Boton volver -->
 <br><a href="../Ejercicio/auto_index.php">Volver</a><br>
 
 <?php	

@@ -5,44 +5,46 @@ class AbmPersona{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
-     * @param array $param
-     * @return Persona $obj
+     * @param ARRAY $param
+     * @return OBJETO $objPersona
      */
     private function cargarObjeto($param){
-        $obj = null;
+        $objPersona = null;
 
         if( array_key_exists('NroDni',$param) and 
         array_key_exists('Apellido',$param) and
         array_key_exists('Nombre',$param) and
         array_key_exists('fechaNac',$param) and
         array_key_exists('Telefono',$param) and
-        array_key_exists('Domicilio',$param)){
-            $obj = new Persona();
-            $obj->setear($param['NroDni'], $param['Apellido'], $param['Nombre'], $param['fechaNac'], $param['Telefono'], $param['Domicilio']);
+        array_key_exists('Domicilio',$param))
+        {
+            $objPersona = new Persona();
+            $objPersona->setear($param['NroDni'], $param['Apellido'], $param['Nombre'], $param['fechaNac'], $param['Telefono'], $param['Domicilio']);
         }
-        return $obj;
+        return $objPersona;
     }
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves
-     * @param array $param
-     * @return Persona $obj
+     * @param ARRAY $param
+     * @return OBJETO $objPersona
      */
     private function cargarObjetoConClave($param){
-        $obj = null;
+        $objPersona = null;
         
-        if( isset($param['NroDni']) ){
-            $obj = new Persona();
-            $obj->setear($param['NroDni'], null, null, null, null, null);
+        if( isset($param['NroDni']) )
+        {
+            $objPersona = new Persona();
+            $objPersona->setear($param['NroDni'], null, null, null, null, null);
         }
-        return $obj;
+        return $objPersona;
     }
     
     
     /**
      * Corrobora que dentro del arreglo asociativo estan seteados los campos claves
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     
     private function seteadosCamposClaves($param){
@@ -52,64 +54,73 @@ class AbmPersona{
         return $resp;
     }
     
+
     /**
      * 
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function alta($param){
         $resp = false;
       //  $param['NroDni'] =null;
         $elObjPersona = $this->cargarObjeto($param);
 //        verEstructura($elObjPersona);
-        if ($elObjPersona != null and $elObjPersona->insertar()){
+        if ($elObjPersona != null and $elObjPersona->insertar())
+        {
             $resp = true;
         }
         return $resp;
-        
     }
+
+
     /**
      * permite eliminar un objeto 
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function baja($param){
         $resp = false;
-        if ($this->seteadosCamposClaves($param)){
+        if ($this->seteadosCamposClaves($param))
+        {
             $elObjPersona = $this->cargarObjetoConClave($param);
-            if ($elObjPersona != null and $elObjPersona->eliminar()){
+            if ($elObjPersona != null and $elObjPersona->eliminar())
+            {
                 $resp = true;
             }
         }
-        
         return $resp;
     }
     
+
     /**
      * permite modificar un objeto
-     * @param array $param
-     * @return boolean $resp
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
      */
     public function modificacion($param){
         //echo "Estoy en modificacion";
         $resp = false;
-        if ($this->seteadosCamposClaves($param)){
+        if ($this->seteadosCamposClaves($param))
+        {
             $elObjPersona = $this->cargarObjeto($param);
-            if($elObjPersona!=null and $elObjPersona->modificar()){
+            if($elObjPersona != null and $elObjPersona->modificar())
+            {
                 $resp = true;
             }
         }
         return $resp;
     }
     
+
     /**
      * permite buscar un objeto
-     * @param array $param
-     * @return array $arreglo
+     * @param ARRAY $param
+     * @return ARRAY $arreglo
      */
     public function buscar($param){
         $where = " true ";
-        if ($param <> NULL){
+        if ($param <> NULL)
+        {
             if (isset($param['NroDni']))
                 $where .= " and NroDni = '".$param['NroDni']."'";
             if (isset($param['Apellido']))
