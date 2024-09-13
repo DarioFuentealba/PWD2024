@@ -10,7 +10,7 @@
 <h3 class="text-center">Lista de personas</h3>
 
 <!-- Tabla -->
-<table border="1">
+<table border="1" class="container mt-3 table table-hover table-striped">
     <tr>
         <th style="width:200px;">Apellido</th>
         <th style="width:200px;">Nombre</th>
@@ -32,7 +32,7 @@
 
 <!-- Boton atras -->
 <div class="col-md-4">
-	<button class="btn btn-info" type="submit">Atr&aacute;s</button>
+	<button class="btn btn-info m-3" type="submit" >Atr&aacute;s</button>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->

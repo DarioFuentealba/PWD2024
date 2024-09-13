@@ -7,7 +7,7 @@
     $autoLoad = false;
     $objAbmAuto = new AbmAuto();
     $objAbmDuenio = new AbmPersona();
-
+    $aviso = '';
     if(!empty(data_submitted()))
     {
 
@@ -23,8 +23,8 @@
                 }
 
             }else{ //Si la persona duenio no existe
-                echo "No existe en la base de datos el propietario.";
-                echo "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div>";
+                $aviso .= "No existe en la base de datos el propietario.<br>";
+                $aviso .= "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div><br>";
             }
         }
         //Buscar en la BDD si ya existe el auto con esa patente
@@ -40,12 +40,12 @@
                         $autoLoad =true;
                     }  
                 }else{ //Si la persona duenño no existe
-                    echo "No existe el propietario en la base de datos.";
-                    echo "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div>";
+                    $aviso .= "No existe el propietario en la base de datos.<br>";
+                    $aviso .= "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div><br>";
                 }
             }
         }else{
-            echo "La patente ya está registrada en la base de datos";
+            $aviso .= "La patente ya está registrada en la base de datos <br>";
         }
     
 
@@ -59,15 +59,18 @@
         <!-- Titulo en la pagina -->
         <h3 class="text-center">Auto</h3>
 
-        <!-- Boton volver -->
-        <br><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a><br>
+        
+<div class="alert alert-info text-center p-3">
+    <?php
+        echo $aviso ;	
+        echo $mensaje;
+        }else{
+            echo '<div class="divform"> <p>NO HAY DATOS</p><br>
+            <div><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a></div></div>';
+        }
 
-<?php	
-    echo $mensaje;
-    }else{
-        echo '<div class="divform"> <p>NO HAY DATOS</p><br>
-        <div><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a></div></div>';
-    }
-
-    include_once '../../Estructura/footer.php';
-?>
+        include_once '../../Estructura/footer.php';
+    ?>
+</div>
+<!-- Boton volver -->
+<br><a href="../Ejercicio/auto_index.php" class="btn btn-success m-3" role="button">Volver</a><br>

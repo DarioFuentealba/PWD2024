@@ -86,7 +86,7 @@
 
 <!-- Boton atras -->
 <div class="col-md-4">
-	<button class="btn btn-info" type="submit">Atr&aacute;s</button>
+	<button class="btn btn-info m-3" type="submit">Atr&aacute;s</button>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
