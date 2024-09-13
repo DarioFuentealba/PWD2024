@@ -8,17 +8,20 @@
 ?>	
 
 <!-- Titulo en la pagina -->
-<h3 class="text-center">Ver Autos</h3>
-
-<!-- Tabla -->
-<table border="1">
-    <tr>
-        <th style="width:500px;">Patente</th>
-        <th style="width:500px;">Marca</th>
-        <th style="width:500px;">Modelo</th>
-        <th colspan="2" style="width:500px;">Dueño</th>
-    </tr>
-
+<div class="container mt-3">
+  <h2>Autos</h2>
+  <p>Listado de los autos incluidos en la base de datos</p>            
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Patente</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th colspan="2">Nombre Propietario</th>
+        <th colspan="2">Menu</th>
+      </tr>
+    </thead>
+    <tbody>
     <?php	
         if(!empty($listaAuto))
         {
@@ -26,19 +29,20 @@
             {
                 foreach ($listaAuto as $objAuto)
                 {    
-                    echo '<tr><td style="width:500px;">'.$objAuto->getPatente().'</td>';
-                    echo '<td style="width:500px;">'.$objAuto->getMarca().'</td>';
-                    echo '<td style="width:500px;">'.$objAuto->getModelo().'</td>';
-                    echo '<td style="width:500px;">'.$objAuto->getObjDuenio()->getNombre().'</td>';
-                    echo '<td style="width:500px;">'.$objAuto->getObjDuenio()->getApellido().'</td>';
-                    echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'">editar</a></td>';
-                    echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'">borrar</a></td></tr>'; 
+                    echo '<tr><td>'.$objAuto->getPatente().'</td>';
+                    echo '<td>'.$objAuto->getMarca().'</td>';
+                    echo '<td>'.$objAuto->getModelo().'</td>';
+                    echo '<td>'.$objAuto->getObjDuenio()->getNombre().'</td>';
+                    echo '<td>'.$objAuto->getObjDuenio()->getApellido().'</td>';
+                    echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'"class="btn btn-outline-info btn-sm" role="button">editar</a></td>';
+                    echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'"class="btn btn-outline-danger btn-sm" role="button">borrar</a></td></tr>'; 
                 }
             }
         }else{
             echo "<h2>No hay datos en la base de datos</h2>";
         }
     ?>
+    </tbody>
 </table>
 
 <!-- Boton atras -->

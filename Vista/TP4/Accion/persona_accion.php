@@ -52,8 +52,9 @@
 <br><a href="../Ejercicio/persona_index.php" class="btn btn-success" role="button">Volver</a><br>
 
 <!-- Boton atras -->
-<<button onclick="history.back();">Atras</button>
-
+<div class="col-md-4">
+    <<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+</div>
 <?php	
 echo $mensaje;
 ?>

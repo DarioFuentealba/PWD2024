@@ -16,13 +16,13 @@
         <th>Patente</th>
         <th>Marca</th>
         <th>Modelo</th>
-        <th>DNI PRopietario</th>
+        <th>DNI Propietario</th>
         <th colspan="2">Menu</th>
       </tr>
     </thead>
     <tbody>
     <?php	
-    //var_dump($listaAuto);
+  
     if( count($listaAuto)>0){
         foreach ($listaAuto as $objAuto) { 
             
@@ -30,8 +30,8 @@
             echo '<td>'.$objAuto->getMarca().'</td>';
             echo '<td>'.$objAuto->getModelo().'</td>';
             echo '<td>'.$objAuto->getObjDuenio()->getNroDni().'</td>';
-            echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'" class="btn btn-info" role="button">editar</a></td>';
-            echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'" class="btn btn-danger" role="button">borrar</a></td></tr>'; 
+            echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'" class="btn btn-outline-info btn-sm" role="button">editar</a></td>';
+            echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'" class="btn btn-outline-danger btn-sm" role="button">borrar</a></td></tr>'; 
         }
     }
     ?>

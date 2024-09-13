@@ -10,7 +10,6 @@
 <!-- Titulo en la pagina -->
 <h3 class="text-center">Buscar un auto</h3>
 
-<<<<<<< Updated upstream
 <!-- Contenedor de formulario -->
 <div class="container">
     <div class="row">
@@ -31,49 +30,14 @@
             <!-- Boton enviar -->
             <div class="col-md-4">
                 <button class="btn btn-primary" type="submit">Buscar</button>
+                <!-- Boton atras -->
+                <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
             </div>
         </form>
     </div>
 </div>
 
-<!-- Tabla -->
-=======
-<form action="../Accion/auto_accion_buscar.php" method="post" id="formBuscar" name="formBuscar">
-    <label for="patente" class="form-label">Patente</label>
-    <input type="text" class="form-control" id="Patente" name="Patente" placeholder="AAA 123   ó   AA 456 AA" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required>
-	<input id="accion" name ="accion" value="buscar" type="hidden"><br>
-	<input type="submit" value="Buscar" class="btn btn-success" role="button"><br>
-</form>
-<div></div>
->>>>>>> Stashed changes
-<table border="1">
-    <tr>
-        <th style="width:500px;">Patente</th>
-        <th style="width:500px;">Marca</th>
-        <th style="width:500px;">Modelo</th>
-        <th style="width:500px;">Dueño</th>
-    </tr>
 
-    <?php	
-        if( count($listaAuto) > 0)
-        {
-            foreach ($listaAuto as $objAuto)
-            { 
-                echo '<tr><td style="width:500px;">'.$objAuto->getPatente().'</td>';
-                echo '<td style="width:500px;">'.$objAuto->getMarca().'</td>';
-                echo '<td style="width:500px;">'.$objAuto->getModelo().'</td>';
-                echo '<td style="width:500px;">'.$objAuto->getObjDuenio()->getNroDni().'</td>';
-                echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'">editar</a></td>';
-                echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'">borrar</a></td></tr>'; 
-            }
-        }
-    ?>
-</table>
-
-<!-- Boton atras -->
-<div class="col-md-4">
-	<button class="btn btn-info" type="submit">Atr&aacute;s</button>
-</div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
 <script type="text/javascript" src="../../Js/tp2ej2-6-bootstrap-validation.js"></script>
