@@ -4,28 +4,30 @@
     echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';
     $datos = data_submitted();
-    //verEstructura($datos);
+   // Si no llegan datos del data_submited    
+   if(!empty($datos))
+   {
     
-    $resp = false;
-    $objTrans = new AbmPersona();
+        $resp = false;
+        $objTrans = new AbmPersona();
 
-    if (isset($datos['accion']))
-    {
-        if($datos['accion'] == 'editar')
+        if (isset($datos['accion']))
         {
-            if($objTrans->modificacion($datos))
+            if($datos['accion'] == 'editar')
             {
-                $resp = true;
+                if($objTrans->modificacion($datos))
+                {
+                    $resp = true;
+                }
             }
-        }
 
-        if($datos['accion'] == 'borrar')
-        {
-            if($objTrans->baja($datos))
+            if($datos['accion'] == 'borrar')
             {
-                $resp = true;
+                if($objTrans->baja($datos))
+                {
+                    $resp = true;
+                }
             }
-        }
 
         if($datos['accion'] == 'nuevo')
         {
@@ -36,14 +38,14 @@
             }
         }
 
-        if($resp)
-        {
-            $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
-        }else {
-            $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
+            if($resp)
+            {
+                $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+            }else {
+                $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
+            }
         }
-    }
-?>
+    ?>
 
 <!-- Titulo en la pagina -->
 <h3 class="text-center">Persona - Edici&oacute;n o barrado</h3>
