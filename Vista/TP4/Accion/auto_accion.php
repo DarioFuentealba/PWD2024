@@ -45,7 +45,11 @@
 <!-- Mensaje mostrado en pantalla -->
 <p class="alert alert-info text-center p-3">
     <?php	
-        echo $mensaje;
+echo $mensaje;
+// Si no llegan datos del data_submited    
+    }else{
+        echo "Acceso restringido";
+    }
     ?>
 </p>
 
