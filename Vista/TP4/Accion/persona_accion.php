@@ -4,37 +4,54 @@
     echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';
     $datos = data_submitted();
-    //verEstructura($datos);
+   // Si no llegan datos del data_submited    
+   if(!empty($datos))
+   {
     
-    $resp = false;
-    $objTrans = new AbmPersona();
+        $resp = false;
+        $objTrans = new AbmPersona();
 
-    if (isset($datos['accion']))
-    {
-        if($datos['accion'] == 'editar')
+        if (isset($datos['accion']))
         {
-            if($objTrans->modificacion($datos))
+            if($datos['accion'] == 'editar')
             {
-                $resp = true;
+                if($objTrans->modificacion($datos))
+                {
+                    $resp = true;
+                }
+            }
+
+            if($datos['accion'] == 'borrar')
+            {
+                if($objTrans->baja($datos))
+                {
+                    $resp = true;
+                }
+            }
+
+            if($datos['accion'] == 'nuevo')
+            {
+                //var_dump($datos);
+                if($objTrans->alta($datos))
+                {
+                    $resp = true;
+                }
+            }
+
+            if($resp)
+            {
+                $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+            }else {
+                $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
             }
         }
+    ?>
 
-        if($datos['accion'] == 'borrar')
-        {
-            if($objTrans->baja($datos))
-            {
-                $resp = true;
-            }
-        }
+    <!-- Titulo en la pagina -->
+    <h3 class="text-center">Persona</h3>
 
-        if($datos['accion'] == 'nuevo')
-        {
-            //var_dump($datos);
-            if($objTrans->alta($datos))
-            {
-                $resp = true;
-            }
-        }
+    <!-- Boton volver -->
+    <br><a href="../Ejercicio/persona_index.php" class="btn btn-success" role="button">Volver</a><br>
 
         if($resp)
         {
@@ -58,6 +75,10 @@
 
 <?php	
 echo $mensaje;
+// Si no llegan datos del data_submited    
+}else{
+    echo "Acceso restringido";
+}
 ?>
 
 

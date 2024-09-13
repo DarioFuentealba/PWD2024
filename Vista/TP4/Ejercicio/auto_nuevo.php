@@ -60,12 +60,12 @@
             </div>
 		</form>
 	</div>
-</div>
-<br><br>
-
-<!-- Boton atras -->
-<div class="col-md-4">
-    <<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+    <br><br>
+    
+    <!-- Boton atras -->
+    <div class="col-md-4">
+        <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+    </div>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->

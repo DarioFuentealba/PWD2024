@@ -4,46 +4,55 @@
     echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';
     $datos = data_submitted();
-    //verEstructura($datos);
-
-    $resp = false;
-    $objTrans = new AbmAuto();
-
-    if(isset($datos['accion']))
+    // Si no llegan datos del data_submited    
+    if(!empty($datos))
     {
-        if($datos['accion'] == 'editar')
+        $resp = false;
+        $objTrans = new AbmAuto();
+
+        if (isset($datos['accion']))
         {
-            if($objTrans->modificacion($datos))
+            if($datos['accion'] == 'editar')
             {
-                $resp = true;
+                if($objTrans->modificacion($datos))
+                {
+                    $resp = true;
+                }
+            }
+
+            if($datos['accion'] == 'borrar')
+            {
+                if($objTrans->baja($datos))
+                {
+                    $resp = true;
+                }
+            }
+
+            if($resp)
+            {
+                $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+            }else{
+                $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
             }
         }
-
-        if($datos['accion'] == 'borrar')
-        {
-            if($objTrans->baja($datos))
-            {
-                $resp = true;
-            }
-        }
-
-        if($resp)
-        {
-            $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
-        }else{
-            $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
-        }
-    }
 
 
 ?>
 
-<!-- Titulo en la pagina -->
-<h3 class="text-center">Auto</h3>
+    <!-- Titulo en la pagina -->
+    <h3 class="text-center">Auto</h3>
 
-<br><a href="../Ejercicio/auto_index.php" class="btn btn btn-info m-3" role="button">Volver</a><br>
+    <div class="col-md-4">  
+            <!-- Boton atras -->
+            <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+        </div>
+    <br><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Principal</a><br>
 
 <?php	
-echo $mensaje;
+    echo $mensaje;
+// Si no llegan datos del data_submited    
+}else{
+    echo "Acceso restringido";
+}
 ?>
 

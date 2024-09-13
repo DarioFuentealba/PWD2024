@@ -66,7 +66,8 @@
         echo $mensaje;
         }else{
             echo '<div class="divform"> <p>NO HAY DATOS</p><br>
-            <div><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a></div></div>';
+                <div class="col-md-4"><button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button></div>
+                <div><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Principal</a></div></div>';
         }
 
         include_once '../../Estructura/footer.php';

@@ -80,13 +80,12 @@
 			</div>
 		</form>
 	</div>
-</div>
 <br><br>
-
-
 <!-- Boton atras -->
 <div class="col-md-4">
-	<button class="btn btn-info m-3" type="submit">Atr&aacute;s</button>
+    <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+    <a href="../Ejercicio/persona_index.php" class="btn btn-success" role="button">Principal</a>
+</div>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
