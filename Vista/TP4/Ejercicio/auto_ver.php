@@ -47,7 +47,7 @@
             ?>
         </tbody>
     </table>
-</div>
+
 
 <!-- Boton atras -->
 <div class="col-md-4">

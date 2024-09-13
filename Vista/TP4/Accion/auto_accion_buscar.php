@@ -35,17 +35,21 @@
         echo '<td>'.$objAuto->getMarca().'</td>';
         echo '<td>'.$objAuto->getModelo().'</td>';
         echo '<td>'.$objAuto->getObjDuenio()->getNroDni().'</td>';
+    ?>
+    </tbody>
+    </table>
+    </div>
+    <?php
         }else{
             echo '<div class="alert alert-info text-center p-3"> <h2>No se encontraron los datos del auto</h2></div>';
         }
     ?>
-    </tbody>
-    </table>
-    <div class="col-md-4">  
-        <!-- Boton atras -->
-        <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+    <div class="container mt-3">    
+        <div class="col-md-4">  
+            <!-- Boton atras -->
+            <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+        </div>
     </div>
-</div>
     <?php
     // Si no llegan datos del data_submited    
     }else{

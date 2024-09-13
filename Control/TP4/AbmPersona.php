@@ -91,6 +91,23 @@ class AbmPersona{
         return $resp;
     }
     
+        /**
+     * Buscar si la persona tiene un auto
+     * @param ARRAY $param
+     * @return BOOLEAN $resp
+     */
+    public function verificarAuto($param){
+        $resp = false;
+        $objAbmAuto = new AbmAuto();
+        $enviar['DniDuenio'] = $param['NroDni'];
+        $listaAuto = $objAbmAuto->buscar($enviar);
+        if(!empty($listaAuto)){
+            $resp = true;
+        }
+  
+        
+        return $resp;
+    }
 
     /**
      * permite modificar un objeto
