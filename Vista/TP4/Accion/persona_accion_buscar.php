@@ -30,7 +30,7 @@
     </thead>
     <tbody>
     <?php	
-        if( count($listaPersona) > 0){
+        if(count($listaPersona) > 0){
             foreach ($listaPersona as $objPersona) { 
                 
                 echo '<tr><td>'.$objPersona->getNroDni().'</td>';

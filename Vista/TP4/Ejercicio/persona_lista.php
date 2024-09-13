@@ -18,7 +18,7 @@
     </tr>
 
     <?php	
-        if( count($listaPersona) > 0)
+        if(count($listaPersona) > 0)
         {
             foreach ($listaPersona as $objPersona)
             {

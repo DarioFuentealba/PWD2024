@@ -45,7 +45,7 @@
         <!-- Boton atras -->
         <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
     </div>
-  </div>
+</div>
     <?php
     // Si no llegan datos del data_submited    
     }else{

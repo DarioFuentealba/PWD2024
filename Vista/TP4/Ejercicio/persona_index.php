@@ -47,6 +47,7 @@
     </tbody>
 </table>
 </div>
+
 <div class="container mt-3">
     <a href="persona_nuevo.php" class="btn btn-success" role="button">nuevo</a>
 </div>

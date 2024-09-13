@@ -9,7 +9,7 @@
     $resp = false;
     $objTrans = new AbmAuto();
 
-    if (isset($datos['accion']))
+    if(isset($datos['accion']))
     {
         if($datos['accion'] == 'editar')
         {

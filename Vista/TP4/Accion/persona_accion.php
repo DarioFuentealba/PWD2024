@@ -55,6 +55,7 @@
 <div class="col-md-4">
     <<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
 </div>
+
 <?php	
 echo $mensaje;
 ?>

@@ -38,4 +38,5 @@
     </tbody>
 </table>
 </div>
+
 <div class="container mt-3"><a href="auto_nuevo.php" class="btn btn-success" role="button">Nuevo</a></div>
