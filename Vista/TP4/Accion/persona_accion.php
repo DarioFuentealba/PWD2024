@@ -17,33 +17,40 @@
             {
                 if($objTrans->modificacion($datos))
                 {
-                    $resp = true;
+                    $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+                    //$resp = true;
                 }
             }
 
             if($datos['accion'] == 'borrar')
             {
-                if($objTrans->baja($datos))
-                {
-                    $resp = true;
+                if(!$objTrans->verificarAuto($datos)){
+                    if($objTrans->baja($datos))
+                    {
+                        $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+                        //$resp = true;
+                                    }else{
+                        $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";}
+                }else{
+                    $mensaje = "La accion ".$datos['accion']." no pudo concretarse porque la persona tiene un auto";
                 }
             }
 
         if($datos['accion'] == 'nuevo')
         {
-            //var_dump($datos);
             if($objTrans->alta($datos))
             {
-                $resp = true;
+                $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+                //$resp = true;
             }
         }
 
-            if($resp)
-            {
-                $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
-            }else {
-                $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
-            }
+            //if($resp)
+            //{
+            //    $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+            //}else {
+            //    $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
+            //}
         }
     ?>
 
