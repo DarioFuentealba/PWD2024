@@ -24,6 +24,19 @@ body {
 /*************************************************/
 
 
+/*************************************************************/
+/*********** Estilos boton azul de las tablas TP 4 ***********/
+/*************************************************************/
+.btn-color {
+    color: blue; /* Cambia el color del texto */
+    background-color: transparent; /* Cambia el color de fondo */
+    border: 1px solid blue; /* Cambia el color del borde */
+}
+/*************************************************************/
+/********* Fin estilos boton azul de las tablas TP 4 *********/
+/*************************************************************/
+
+
 .divmenu {
     position: fixed;
     left: 0;

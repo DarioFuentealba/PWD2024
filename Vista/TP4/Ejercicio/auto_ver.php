@@ -34,7 +34,7 @@
                     echo '<td>'.$objAuto->getModelo().'</td>';
                     echo '<td>'.$objAuto->getObjDuenio()->getNombre().'</td>';
                     echo '<td>'.$objAuto->getObjDuenio()->getApellido().'</td>';
-                    echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'"class="btn btn-outline-info btn-sm" role="button">editar</a></td>';
+                    echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'"class="btn btn-color btn-sm" role="button">editar</a></td>';
                     echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'"class="btn btn-outline-danger btn-sm" role="button">borrar</a></td></tr>'; 
                 }
             }

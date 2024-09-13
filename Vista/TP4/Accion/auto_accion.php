@@ -41,7 +41,7 @@
 <!-- Titulo en la pagina -->
 <h3 class="text-center">Auto</h3>
 
-<br><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a><br>
+<br><a href="../Ejercicio/auto_index.php" class="btn btn btn-info m-3" role="button">Volver</a><br>
 
 <?php	
 echo $mensaje;

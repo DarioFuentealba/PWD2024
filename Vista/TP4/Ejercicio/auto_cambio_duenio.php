@@ -14,11 +14,11 @@ include_once '../../Estructura/header.php';
 	<input id="NroDni" class="form-control" name ="NroDni" type="text" placeholder="40222666" pattern="[0-9]{6,8}" required><br/>
 
 	
-	<input type="submit" class="btn btn-success" role="button">
+	<input type="submit" class="btn btn-primary">
 </form>
 <br><br>
 
-<a href="auto_index.php" class="btn btn-success m-3" role="button">Volver</a>
+<a href="auto_index.php" class="btn btn-info">Volver</a>
 
 <!-- JQUERY con las validaciones de los campos -->
 <script type="text/javascript" src="../../Js/validaciontp4.js"></script>

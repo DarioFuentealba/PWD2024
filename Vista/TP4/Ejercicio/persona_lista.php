@@ -24,7 +24,7 @@
             {
                 echo '<tr><td style="width:200px;">'.$objPersona->getApellido().'</td>';
                 echo '<td style="width:200px;">'.$objPersona->getNombre().'</td>';
-                echo '<td><a href="autos_persona.php?NroDni='.$objPersona->getNroDni().'">Ver Autos</a></td></tr>';
+                echo '<td><a href="autos_persona.php?NroDni='.$objPersona->getNroDni().'"class="btn btn-color btn-sm" role="button">Ver Autos</a></td></tr>';
             }
         }
     ?>
