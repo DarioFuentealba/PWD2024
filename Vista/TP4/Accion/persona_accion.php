@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Personas"; //Titulo en la pestania
+    $titulo = "Personas - Edición o barrado"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
     echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';
@@ -46,18 +46,19 @@
 ?>
 
 <!-- Titulo en la pagina -->
-<h3 class="text-center">Persona</h3>
+<h3 class="text-center">Persona - Edici&oacute;n o barrado</h3>
+
+<!-- Mensaje mostrado en pantalla -->
+<p class="alert alert-info text-center p-3">
+    <?php	
+        echo $mensaje;
+    ?>
+</p>
 
 <!-- Boton volver -->
-<br><a href="../Ejercicio/persona_index.php" class="btn btn-success" role="button">Volver</a><br>
+<br><a href="../Ejercicio/persona_index.php" class="btn btn btn-info m-3" role="button">Volver</a><br>
 
-<!-- Boton atras -->
-<div class="col-md-4">
-    <<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
-</div>
-
-<?php	
-echo $mensaje;
-?>
+<!-- Footer -->
+<?php include_once '../../Estructura/footer.php'; ?>
 
 

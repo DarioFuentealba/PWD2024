@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Autos"; //Titulo en la pestania
+    $titulo = "Autos - Edición o borrado"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
     echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';
@@ -39,11 +39,17 @@
 ?>
 
 <!-- Titulo en la pagina -->
-<h3 class="text-center">Auto</h3>
+<h3 class="text-center">Auto - Edici&oacute;n o barrado</h3>
 
+<!-- Mensaje mostrado en pantalla -->
+<p class="alert alert-info text-center p-3">
+    <?php	
+        echo $mensaje;
+    ?>
+</p>
+
+<!-- Boton volver -->
 <br><a href="../Ejercicio/auto_index.php" class="btn btn btn-info m-3" role="button">Volver</a><br>
 
-<?php	
-echo $mensaje;
-?>
-
+<!-- Footer -->
+<?php include_once '../../Estructura/footer.php'; ?>

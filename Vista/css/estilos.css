@@ -28,9 +28,15 @@ body {
 /*********** Estilos boton azul de las tablas TP 4 ***********/
 /*************************************************************/
 .btn-color {
-    color: blue; /* Cambia el color del texto */
-    background-color: transparent; /* Cambia el color de fondo */
-    border: 1px solid blue; /* Cambia el color del borde */
+    color: blue; /* Color del texto */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid blue; /* Borde azul */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición */
+}
+
+.btn-color:hover {
+    background-color: blue; /* Fondo azul al pasar el mouse */
+    color: white; /* Texto blanco al pasar el mouse */
 }
 /*************************************************************/
 /********* Fin estilos boton azul de las tablas TP 4 *********/
@@ -100,7 +106,7 @@ body {
     padding: 5px;
     text-align: justify;
 }
- .divformulario{
+.divformulario{
     border: 1px solid blue;
     width: 50%;
     margin: auto;
@@ -108,7 +114,7 @@ body {
     padding: 10px;
     text-align: left;
     border-radius: 5px;
- }
- .form-label:hover{
+}
+.form-label:hover{
     cursor: pointer;
- }
+}

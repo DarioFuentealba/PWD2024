@@ -16,10 +16,10 @@
         if(!empty($listaAutos)){
             $objAuto = $listaAutos[0];
 ?>
-            <!-- Titulo en la pagina -->
+        <!-- Titulo en la pagina -->
         <div class="container mt-3">
-            <h2>Datos del Auto</h2>
-            <p>Detalle de los datos incluidos en la base de datos</p>            
+            <h2 class="text-center">Datos del auto buscado</h2>
+            <p class="text-center">Detalle de los datos incluidos en la base de datos</p>            
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
@@ -36,7 +36,7 @@
         echo '<td>'.$objAuto->getModelo().'</td>';
         echo '<td>'.$objAuto->getObjDuenio()->getNroDni().'</td>';
         }else{
-            echo '<div class="col-md-4"> <h1>No se encontraron los datos del auto</h1></div>';
+            echo '<div class="alert alert-info text-center p-3"> <h2>No se encontraron los datos del auto</h2></div>';
         }
     ?>
     </tbody>

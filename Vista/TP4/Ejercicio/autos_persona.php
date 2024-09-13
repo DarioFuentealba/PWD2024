@@ -18,7 +18,7 @@
 ?>	
 
 <!-- Titulo en la pagina -->
-<h3 class="text-center">Autos x Persona</h3>
+<h3 class="text-center">Autos por persona</h3>
 
 <!-- Tabla 1 - Datos personas -->
 <table border="1">
@@ -69,10 +69,11 @@
         }
     ?>
 </table>
+<br><br>
 
 <!-- Boton atras -->
 <div class="col-md-4">
-	<button class="btn btn-info" type="submit">Atr&aacute;s</button>
+    <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->

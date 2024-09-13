@@ -7,8 +7,8 @@
 ?>	
 
 <div class="container mt-3">
-  <h2>ABM Personas</h2>
-  <p>Listado de personas incluidas en la base de datos</p>      
+  <h2 class="text-center">Listado de personas</h2>
+  <p class="text-center">Listado de personas incluidas en la base de datos</p>      
   <div>
     <form action="../Accion/persona_accion_buscar.php" method="post">
         <label for="buscar">Buscar Por DNI:</label>
@@ -48,6 +48,10 @@
 </table>
 </div>
 
+<!-- Boton agregar nueva persona -->
 <div class="container mt-3">
-    <a href="persona_nuevo.php" class="btn btn-success" role="button">nuevo</a>
+    <a href="persona_nuevo.php" class="btn btn-primary" role="button">Agregar nueva persona</a>
 </div>
+
+<!-- Footer -->
+<?php include_once '../../Estructura/footer.php'; ?>

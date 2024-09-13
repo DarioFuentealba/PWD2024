@@ -9,8 +9,8 @@
 
 <!-- Titulo en la pagina -->
 <div class="container mt-3">
-    <h2>Autos</h2>
-    <p>Listado de los autos incluidos en la base de datos</p>
+    <h2 class="text-center">Listado de autos</h2>
+    <p class="text-center">Listado de los autos incluidos en la base de datos</p>
 
     <!-- Tabla -->
     <table class="table table-hover table-striped">

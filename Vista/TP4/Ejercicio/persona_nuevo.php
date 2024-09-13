@@ -46,7 +46,7 @@
 			<!-- Fecha de Nacimiento -->
 			<div class="mb-3 form-floating">
 				<input id="fechaNac:" name="fechaNac" width="80" type="text" class="form-control" placeholder="" pattern="^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[01])$|^(?:(19|20)([02468][048]|[13579][26]))-02-29$">
-				<label for="fechaNac" class="form-label">Fecha de Nacimiento: </label>
+				<label for="fechaNac" class="form-label">Fecha de Nacimiento - Formato YYY-MM-DD: </label>
 
 				<!-- Mensajes aprobado y error -->
 				<div class="valid-feedback">Ok!</div>
@@ -56,7 +56,7 @@
 			<!-- Telefono -->
 			<div class="mb-3 form-floating">
 				<input id="Telefono:" name="Telefono" width="80" type="numb" class="form-control" placeholder="" pattern="^[1-9]\d*-[1-9]\d*$">
-				<label for="Telefono" class="form-label">Tel&eacute;fono: </label>
+				<label for="Telefono" class="form-label">Tel&eacute;fono - Formato 299-5443322: </label>
 
 				<!-- Mensajes aprobado y error -->
 				<div class="valid-feedback">Ok!</div>

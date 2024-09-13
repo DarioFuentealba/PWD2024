@@ -27,7 +27,8 @@
                 $aviso .= "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div><br>";
             }
         }
-        //Buscar en la BDD si ya existe el auto con esa patente
+
+       /* //Buscar en la BDD si ya existe el auto con esa patente
         $enviar['Patente'] = $datos['Patente'];      //Enviamos solo la patente
         $listaAuto = $objAbmAuto->buscar($enviar);
         if(empty($listaAuto)){
@@ -46,7 +47,7 @@
             }
         }else{
             $aviso .= "La patente ya está registrada en la base de datos <br>";
-        }
+        }*/
     
 
     if($autoLoad){
@@ -56,8 +57,8 @@
     }
 ?>
 
-        <!-- Titulo en la pagina -->
-        <h3 class="text-center">Auto</h3>
+<!-- Titulo en la pagina -->
+<h3 class="text-center">Agregar nuevo auto</h3>
 
         
 <div class="alert alert-info text-center p-3">
@@ -72,5 +73,6 @@
         include_once '../../Estructura/footer.php';
     ?>
 </div>
+
 <!-- Boton volver -->
-<br><a href="../Ejercicio/auto_index.php" class="btn btn-success m-3" role="button">Volver</a><br>
+<br><a href="../Ejercicio/auto_index.php" class="btn btn-primary m-3" role="button">Volver</a><br>

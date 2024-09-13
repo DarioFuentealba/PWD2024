@@ -1,5 +1,5 @@
 <?php
-$titulo = "Autos";
+$titulo = "Autos"; //Titulo en la paestania
 include_once '../../Estructura/header.php';
 echo '<div class="divtitulo"> <h1>'.$titulo.'</h1></div>';
 $datos = data_submitted();
@@ -41,15 +41,22 @@ if(!empty(data_submitted())){
 
 ?>
 
-<h3>Auto</h3>
+<!-- Titulo en la pagina -->
+<h3 class="text-center">Cambio de due&ntilde;o del auto</h3>
 
-<br><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a><br>
+<!-- Mensaje mostrado en pantalla -->
+<p class="alert alert-info text-center p-3">
+    <?php	
+    echo $mensaje;
+    }else{
+        echo '<div class="divform"> <p>NO HAY DATOS</p><br>
+        <div><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a></div></div>';
+    }
+    include_once '../../Estructura/footer.php';
+    ?>
+</p>
 
-<?php	
-echo $mensaje;
-}else{
-    echo '<div class="divform"> <p>NO HAY DATOS</p><br>
-    <div><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Volver</a></div></div>';
-}
-include_once '../../Estructura/footer.php';
-?>
+<br><a href="../Ejercicio/auto_index.php" class="btn btn-primary" role="button">Volver</a><br>
+
+<!-- Footer -->
+<?php include_once '../../Estructura/footer.php'; ?>
