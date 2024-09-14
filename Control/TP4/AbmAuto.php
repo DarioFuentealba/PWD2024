@@ -117,8 +117,8 @@ class AbmAuto{
     
     /**
      * permite buscar un objeto
-     * @param ARRAY $param
-     * @return ARRAY $arreglo
+     * @param array $param
+     * @return array
      */
     public function buscar($param){
         $where = " true ";
@@ -134,7 +134,7 @@ class AbmAuto{
         if (isset($param['DniDuenio']))
         $where .= " and DniDuenio = '".$param['DniDuenio']."'";    
         }
-        $arreglo = Auto::listar($where);  //Auto::listar($where)   $objAuto->
+        $arreglo = Auto::listar($where);
         return $arreglo;
     }
 

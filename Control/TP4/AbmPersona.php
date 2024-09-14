@@ -5,8 +5,8 @@ class AbmPersona{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
-     * @param ARRAY $param
-     * @return OBJETO $objPersona
+     * @param array $param
+     * @return Persona
      */
     private function cargarObjeto($param){
         $objPersona = null;
@@ -26,8 +26,8 @@ class AbmPersona{
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves
-     * @param ARRAY $param
-     * @return OBJETO $objPersona
+     * @param array $param
+     * @return Persona
      */
     private function cargarObjetoConClave($param){
         $objPersona = null;
@@ -43,8 +43,8 @@ class AbmPersona{
     
     /**
      * Corrobora que dentro del arreglo asociativo estan seteados los campos claves
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean
      */
     
     private function seteadosCamposClaves($param){
@@ -57,8 +57,8 @@ class AbmPersona{
 
     /**
      * 
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean
      */
     public function alta($param){
         $resp = false;
@@ -75,8 +75,8 @@ class AbmPersona{
 
     /**
      * permite eliminar un objeto 
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean
      */
     public function baja($param){
         $resp = false;
@@ -93,8 +93,8 @@ class AbmPersona{
     
         /**
      * Buscar si la persona tiene un auto
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean
      */
     public function verificarAuto($param){
         $resp = false;
@@ -109,8 +109,8 @@ class AbmPersona{
 
     /**
      * permite modificar un objeto
-     * @param ARRAY $param
-     * @return BOOLEAN $resp
+     * @param array $param
+     * @return boolean
      */
     public function modificacion($param){
         //echo "Estoy en modificacion";
@@ -146,8 +146,8 @@ class AbmPersona{
 
     /**
      * permite buscar un objeto
-     * @param ARRAY $param
-     * @return ARRAY $arreglo
+     * @param array $param
+     * @return array
      */
     public function buscar($param){
         $where = " true ";

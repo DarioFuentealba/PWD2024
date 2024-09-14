@@ -2,6 +2,8 @@
 	$titulo = "Editar auto"; //Titulo en la pestania
 	include_once '../../Estructura/header.php';
 	$objAbmAuto = new AbmAuto();
+	$objAbmPersona = new AbmPersona();
+    $listaPersona = $objAbmPersona->buscar(null);
 	$datos = data_submitted();
 	$objAuto = NULL;
 	if (isset($datos['Patente']))
@@ -62,11 +64,19 @@
                 <div class="invalid-feedback">S&oacute;lo se permiten n&uacute;meros enteros positivos</div>
             </div>
 
-            <!-- DNI duenio -->
-            <div class="mb-3">
-				<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label><br/>
-				<input id="DniDuenio:" name ="DniDuenio" width="80" type="number" min="1000000" value="<?php echo $objAuto->getObjDuenio()->getNroDni()?>" class="form-control" pattern="/^[1-9]\d*$/" required>
-				<br/>
+            <!-- Dni del Duenio -->
+            <div class="mb-3 ">
+				<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label><br>
+				<select name="DniDuenio" id="DniDuenio" class="form-control" required>
+                    <option value="<?php echo $objAuto->getObjDuenio()->getNroDni()?>" selected ><?php echo $objAuto->getObjDuenio()->getNroDni()." - ".$objAuto->getObjDuenio()->getApellido()." ".$objAuto->getObjDuenio()->getNombre();?></option>
+                    <?php	
+                    if( count($listaPersona) > 0){
+                        foreach ($listaPersona as $objPersona) { 
+                            echo '<option value="'.$objPersona->getNroDni().'">'.$objPersona->getNroDni().' - '.$objPersona->getApellido().' '.$objPersona->getNombre().'</option>';
+                        }
+                    }
+                ?>
+                </select>
 
                 <!-- Mensajes aprobado y error -->
                 <div class="valid-feedback">Ok!</div>
@@ -80,19 +90,19 @@
             </div>
 		</form>
 	</div>
+	<?php
+		}else{
+			echo "<p>No se encontro la clave que desea modificar";
+		}
+	?>
+	<br><br>
+	
+	<!-- Boton atras -->
+	<div class="col-md-4">
+		<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+	</div>
 </div>
 
-<?php
-	}else{
-		echo "<p>No se encontro la clave que desea modificar";
-	}
-?>
-<br><br>
-
-<!-- Boton atras -->
-<div class="col-md-4">
-    <<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
-</div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
 <script type="text/javascript" src="../../Js/tp2ej2-6-bootstrap-validation.js"></script>

@@ -97,9 +97,8 @@ if ($obj != null)
 				</div>
 			</form>
 		</div>
-	</div>
-
-<?php
+		
+		<?php
 }else {
 	echo '<div class="alert alert-warning" role="alert">No se encontró la clave que desea modificar.</div>';
 }
@@ -109,6 +108,7 @@ if ($obj != null)
 <!-- Boton atras -->
 <div class="col-md-4">
 	<button class="btn btn-info m-4" type="submit">Atr&aacute;s</button>
+</div>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->

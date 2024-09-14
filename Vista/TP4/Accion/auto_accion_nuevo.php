@@ -11,25 +11,6 @@
     $mensaje = "";
     if(!empty(data_submitted()))
     {
-
-        /*
-        if(isset($datos['DniDuenio']))
-        {
-            $enviar['NroDni'] = $datos['DniDuenio'];
-            $listaPersona = $objAbmDuenio->buscar($enviar);
-            if(!empty($listaPersona))
-            {
-                if($objAbmAuto->alta($datos))
-                {
-                    $autoLoad =true;
-                }
-
-            }else{ //Si la persona duenio no existe
-                $aviso .= "No existe en la base de datos el propietario.<br>";
-                $aviso .= "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div><br>";
-            }
-        }*/
-
         //Buscar en la BDD si ya existe el auto con esa patente
         $enviar['Patente'] = $datos['Patente'];      //Enviamos solo la patente
         $listaAuto = $objAbmAuto->buscar($enviar);
@@ -59,11 +40,11 @@
     }
 ?>
 
-<!-- Titulo en la pagina -->
-<h3 class="text-center">Agregar nuevo auto</h3>
 
-        
-<div class="alert alert-info text-center p-3">
+
+<div class="alert alert-info text-center p-3 divform">
+    <!-- Titulo en la pagina -->
+    <h3 class="text-center">Agregar nuevo auto</h3>
     <?php
         echo $aviso ;	
         echo $mensaje;
@@ -72,10 +53,8 @@
                 <div class="col-md-4"><button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button></div>
                 <div><a href="../Ejercicio/auto_index.php" class="btn btn-success" role="button">Principal</a></div></div>';
         }
-
-        include_once '../../Estructura/footer.php';
     ?>
+        <!-- Boton volver -->
+        <br><a href="../Ejercicio/auto_index.php" class="btn btn-primary m-3" role="button">Volver</a><br>
 </div>
-
-<!-- Boton volver -->
-<br><a href="../Ejercicio/auto_index.php" class="btn btn-primary m-3" role="button">Volver</a><br>
+<?php        include_once '../../Estructura/footer.php'; ?>

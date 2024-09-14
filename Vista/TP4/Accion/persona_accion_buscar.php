@@ -47,7 +47,7 @@
                   echo '<td>'.$objP->getFechaNac().'</td>';
                   echo '<td>'.$objP->getTelefono().'</td>';
                   echo '<td>'.$objP->getDomicilio().'</td>';
-                  echo '<td><a href="persona_editar.php?NroDni='.$objP->getNroDni().'" class="btn btn-outline-info btn-sm" role="button">editar</a></td>';
+                  echo '<td><a href="../Ejercicio/persona_editar.php?NroDni='.$objP->getNroDni().'" class="btn btn-outline-info btn-sm" role="button">editar</a></td>';
                   echo '<td><a href="../Accion/persona_accion.php?accion=borrar&NroDni='.$objP->getNroDni().'" class="btn btn-outline-danger btn-sm" role="button">borrar</a></td></tr>'; 
               
           }

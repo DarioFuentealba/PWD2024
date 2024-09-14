@@ -8,15 +8,14 @@
    $mensaje = 'No se realizaron cambios';   //SI NO PONIA ESTE MENSAJE SALTABA ERROR DE VARIABLE NO DEFINIDA EN EL ANVEGADOR
    if(!empty($datos))
    {
-    
         $resp = false;
-        $objTrans = new AbmPersona();
+        $objAbmPersona = new AbmPersona();
 
         if (isset($datos['accion']))
         {
             if($datos['accion'] == 'editar')
             {
-                if($objTrans->modificacion($datos))
+                if($objAbmPersona->modificacion($datos))
                 {
                     $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
                     //$resp = true;
@@ -25,8 +24,8 @@
 
             if($datos['accion'] == 'borrar')
             {
-                if(!$objTrans->verificarAuto($datos)){
-                    if($objTrans->baja($datos))
+                if(!$objAbmPersona->verificarAuto($datos)){
+                    if($objAbmPersona->baja($datos))
                     {
                         $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
                         //$resp = true;
@@ -37,39 +36,39 @@
                 }
             }
 
-        if($datos['accion'] == 'nuevo')
-        {
-            if($objTrans->alta($datos))
+            if($datos['accion'] == 'nuevo')
             {
-                $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
-                //$resp = true;
+                $enviar['NroDni'] = $datos['NroDni'];    //Para buscar solo por dni
+                $listaPersona = $objAbmPersona->buscar($enviar);
+                if(empty($listaPersona)){
+                    if($objAbmPersona->alta($datos))
+                    {
+                        $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+                        //$resp = true;
+                    }else{$mensaje = "La accion ".$datos['accion']." no pudo concretarse.";}
+                }else{
+                    $mensaje = "El Dni de la persona ya existe en la base de datos.<br> La accion ".$datos['accion']." no pudo concretarse.";
+                }
             }
-        }
-            //if($resp)
-            //{
-            //    $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
-            //}else {
-            //    $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";
-            //}
         }
     ?>
 
 <!-- Titulo en la pagina -->
-<h3 class="text-center">Persona - Edici&oacute;n o barrado</h3>
+<h3 class="text-center">Persona - Edici&oacute;n o borrado</h3>
 
 <!-- Mensaje mostrado en pantalla -->
-<p class="alert alert-info text-center p-3">
+<div class="alert alert-info text-center p-3 divform">
     <?php	
-        echo $mensaje;
+        echo "<p>".$mensaje."</p>";
         // Si no llegan datos del data_submited    
 }else{
     echo "Acceso restringido";
 }
     ?>
-</p>
-
 <!-- Boton volver -->
 <br><a href="../Ejercicio/persona_index.php" class="btn btn btn-info m-3" role="button">Volver</a><br>
+</div>
+
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
