@@ -5,11 +5,10 @@
     $listaPersona = $objAbmPersona->buscar(null);
 ?>
 
-<!-- Titulo en la pagina -->
-<h3 class="text-center">Ingresar nuevo auto</h3>
-
 <!-- Contenedor de formulario -->
-<div class="container">
+<div class="container mt-5 p-4 border rounded shadow">
+    <!-- Titulo en la pagina -->
+    <h3 class="text-center">Ingresar nuevo auto</h3>
     <div class="row">
 
 		<!-- Formulario -->
@@ -17,18 +16,18 @@
 
 			<!-- Patente a buscar -->
 			<div class="mb-3 form-floating">
-				<input class="form-control" type="text" id="Patente" name="Patente" placeholder="AAA 111 ó AA 111 AA" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required><br/>
-				<label for="patente" class="form-label">Ingrese una patente con el siguiente formato: AAA 111 ó AA 111 AA</label><br>
+				<input class="form-control" type="text" id="Patente" name="Patente" placeholder="AAA 111 ó AA 111 AA" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required>
+				<label for="patente" class="form-label">Ingrese una patente con el siguiente formato: AAA 111 ó AA 111 AA</label>
 
 				<!-- Mensajes aprobado y error -->
                 <div class="valid-feedback">Ok!</div>
                 <div class="invalid-feedback">S&oacute;lo se permiten patentes con el formato especificado</div>
             </div>
 
-            <!-- Patente a buscar -->
+            <!-- Marca -->
             <div class="mb-3 form-floating">
-				<input class="form-control" id="Marca" name ="Marca" type="text" pattern="^[A-Za-z0-9\s]*[A-Za-z0-9][A-Za-z0-9\s]*$" required><br/>
-				<label for="Marca" class="form-label">Marca</label><br>
+				<input class="form-control" id="Marca" name ="Marca" type="text" pattern="^[A-Za-z0-9\s]*[A-Za-z0-9][A-Za-z0-9\s]*$" placeholder="" required>
+				<label for="Marca" class="form-label">Marca</label>
 
 				<!-- Mensajes aprobado y error -->
                 <div class="valid-feedback">Ok!</div>
@@ -37,8 +36,8 @@
 
             <!-- Modelo -->
             <div class="mb-3 form-floating">
-				<input class="form-control" id="Modelo" name ="Modelo" type="number" min="1" placeholder="" required><br/>
-				<label for="Modelo" class="form-label">Modelo</label><br>
+				<input class="form-control" id="Modelo" name ="Modelo" type="number" min="1" placeholder="" required>
+				<label for="Modelo" class="form-label">Modelo</label>
 
 				<!-- Mensajes aprobado y error -->
                 <div class="valid-feedback">Ok!</div>
@@ -57,7 +56,7 @@
                     }
                 ?>
                 </select>
-				<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label><br>
+				<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label>
 
 				<!-- Mensajes aprobado y error -->
                 <div class="valid-feedback">Ok!</div>

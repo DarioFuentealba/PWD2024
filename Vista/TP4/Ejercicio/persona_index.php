@@ -1,24 +1,21 @@
 <?php
     $titulo = "BD Personas"; //Titulo en la pestania
-    include_once '../../Estructura/header.php';
-    
+    include_once '../../Estructura/header.php';    
     $objAbmPersona = new AbmPersona();
-
-  
-
     $listaPersona = $objAbmPersona->buscar(null);
 ?>	
 
-<div class="container mt-3">
+<div class="container mt-5 p-4 border rounded shadow">
   <h2 class="text-center">Listado de personas</h2>
   <p class="text-center">Listado de personas incluidas en la base de datos</p>      
   <div>
-    <form action="../Accion/persona_accion_buscar.php" method="post">
+    <form action="../Accion/persona_accion_buscar.php" method="post" class="container mt-5 p-4 border rounded shadow">
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por DNI:</label>
         <input name="NroDni" id="NroDni" type="text" pattern="[0-9]{6,8}" required onchange="buscador()"/>
-        <input type="submit" name="buscar" id="buscar" class="btn btn-info" role="button" value="Buscar">
+        <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
 	</form>
-  </div>      
+  </div>  
+  <br>    
   <table class="table table-hover table-striped">
     <thead>
       <tr>

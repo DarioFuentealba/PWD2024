@@ -1,9 +1,7 @@
 <?php
     $titulo = "Ver Autos"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
-
     $objAbmAuto = new AbmAuto();
-
     $listaAuto = $objAbmAuto->buscar(null);
 ?>	
 

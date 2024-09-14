@@ -3,11 +3,11 @@
 	include_once '../../Estructura/header.php';
 ?>
 
-<!-- Titulo en la pagina -->
-<h3 class="text-center">Agregar una nueva persona</h3>
 
 <!-- Contenedor de formulario -->
-<div class="container">
+<div class="container mt-5 p-4 border rounded shadow">
+	<!-- Titulo en la pagina -->
+	<h3 class="text-center">Agregar una nueva persona</h3>
 	<div class="row">
 
 		<!-- Formulario -->
