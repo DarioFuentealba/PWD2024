@@ -1,6 +1,8 @@
 <?php
 $titulo = "Cambio de dueño";
 include_once '../../Estructura/header.php';
+$objAbmPersona = new AbmPersona();
+$listaPersona = $objAbmPersona->buscar(null);
 ?>
 
 <h3 class="text-center text-primary mb-4">Auto - Cambio de due&ntilde;o</h3>
@@ -11,8 +13,20 @@ include_once '../../Estructura/header.php';
 		<label>Patente</label><br>
 		<input type="text" class="form-control" id="Patente" name="Patente" placeholder="AAA 123 ó AA 456 AA" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required><br/>
 
-		<label>Dni del Nuevo Due&ntilde;o</label><br>
-		<input id="NroDni" class="form-control" name ="NroDni" type="text" placeholder="40222666" pattern="[0-9]{6,8}" required><br/>
+           <!-- Dni del Duenio -->
+		   <div class="mb-3 form-floating">
+				<select name="DniDuenio" id="DniDuenio" class="form-control" required>
+                    <option value="" selected disabled>Elija DNI</option>
+                    <?php	
+                    if( count($listaPersona) > 0){
+                        foreach ($listaPersona as $objPersona) { 
+                            echo '<option value="'.$objPersona->getNroDni().'">'.$objPersona->getNroDni().' - '.$objPersona->getApellido().' '.$objPersona->getNombre().'</option>';
+                        }
+                    }
+                ?>
+                </select>
+				<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label>
+		   </div>	
 
 		
 		<input type="submit" class="btn btn-primary">

@@ -1,6 +1,8 @@
 <?php
 	$titulo = "Auto nuevo"; //Titulo en la pestania
 	include_once '../../Estructura/header.php';
+    $objAbmPersona = new AbmPersona();
+    $listaPersona = $objAbmPersona->buscar(null);
 ?>
 
 <!-- Titulo en la pagina -->
@@ -45,7 +47,16 @@
 
             <!-- Dni del Duenio -->
             <div class="mb-3 form-floating">
-				<input class="form-control" id="DniDuenio" name ="DniDuenio" type="number" min="1000000" placeholder="" required><br/>
+				<select name="DniDuenio" id="DniDuenio" class="form-control" required>
+                    <option value="" selected disabled>Elija DNI</option>
+                    <?php	
+                    if( count($listaPersona) > 0){
+                        foreach ($listaPersona as $objPersona) { 
+                            echo '<option value="'.$objPersona->getNroDni().'">'.$objPersona->getNroDni().' - '.$objPersona->getApellido().' '.$objPersona->getNombre().'</option>';
+                        }
+                    }
+                ?>
+                </select>
 				<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label><br>
 
 				<!-- Mensajes aprobado y error -->
