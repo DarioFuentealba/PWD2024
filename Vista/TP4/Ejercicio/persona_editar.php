@@ -101,14 +101,14 @@ if ($obj != null)
 
 <?php
 }else {
-	echo "<p>No se encontro la clave que desea modificar";
+	echo '<div class="alert alert-warning" role="alert">No se encontró la clave que desea modificar.</div>';
 }
 ?>
 <br><br>
 
 <!-- Boton atras -->
 <div class="col-md-4">
-	<button class="btn btn-info" type="submit">Atr&aacute;s</button>
+	<button class="btn btn-info m-4" type="submit">Atr&aacute;s</button>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->

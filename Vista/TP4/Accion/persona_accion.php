@@ -5,6 +5,7 @@
     echo $titulo.'</h1></div>';
     $datos = data_submitted();
    // Si no llegan datos del data_submited    
+   $mensaje = 'No se realizaron cambios';   //SI NO PONIA ESTE MENSAJE SALTABA ERROR DE VARIABLE NO DEFINIDA EN EL ANVEGADOR
    if(!empty($datos))
    {
     
@@ -29,7 +30,7 @@
                     {
                         $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
                         //$resp = true;
-                                    }else{
+                    }else{
                         $mensaje = "La accion ".$datos['accion']." no pudo concretarse.";}
                 }else{
                     $mensaje = "La accion ".$datos['accion']." no pudo concretarse porque la persona tiene un auto";
@@ -44,7 +45,6 @@
                 //$resp = true;
             }
         }
-
             //if($resp)
             //{
             //    $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";

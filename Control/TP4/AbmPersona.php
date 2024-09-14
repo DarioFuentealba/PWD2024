@@ -104,8 +104,6 @@ class AbmPersona{
         if(!empty($listaAuto)){
             $resp = true;
         }
-  
-        
         return $resp;
     }
 

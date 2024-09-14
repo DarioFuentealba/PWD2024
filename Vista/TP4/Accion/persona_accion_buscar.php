@@ -3,6 +3,7 @@
     include_once '../../Estructura/header.php';
     $objAbmPersona = new AbmPersona();
     // Si no llegan datos del data_submited    
+    $datos = data_submitted();
     if(!empty($datos))
     {
       $listaPersona = $objAbmPersona->buscar(null);
