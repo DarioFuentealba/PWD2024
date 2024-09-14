@@ -8,9 +8,11 @@
     $objAbmAuto = new AbmAuto();
     $objAbmDuenio = new AbmPersona();
     $aviso = '';
+    $mensaje = "";
     if(!empty(data_submitted()))
     {
 
+        /*
         if(isset($datos['DniDuenio']))
         {
             $enviar['NroDni'] = $datos['DniDuenio'];
@@ -26,9 +28,9 @@
                 $aviso .= "No existe en la base de datos el propietario.<br>";
                 $aviso .= "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div><br>";
             }
-        }
+        }*/
 
-       /* //Buscar en la BDD si ya existe el auto con esa patente
+        //Buscar en la BDD si ya existe el auto con esa patente
         $enviar['Patente'] = $datos['Patente'];      //Enviamos solo la patente
         $listaAuto = $objAbmAuto->buscar($enviar);
         if(empty($listaAuto)){
@@ -42,12 +44,12 @@
                     }  
                 }else{ //Si la persona duenño no existe
                     $aviso .= "No existe el propietario en la base de datos.<br>";
-                    $aviso .= "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div><br>";
+                    $aviso .= '<div><a href="../Ejercicio/persona_nuevo.php" class="btn btn-success" role="button">Ingresar Nuevo Dueño</a></div><br>';
                 }
             }
         }else{
             $aviso .= "La patente ya está registrada en la base de datos <br>";
-        }*/
+        }
     
 
     if($autoLoad){
