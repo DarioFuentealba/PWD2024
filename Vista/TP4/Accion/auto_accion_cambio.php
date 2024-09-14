@@ -8,7 +8,7 @@ $autoExiste = false;
 $personaExiste = false;
 $objAbmAuto = new AbmAuto();
 $objAbmDuenio = new AbmPersona();
-$mensaje = "Fallo Total";
+$mensaje = "Fallo Total <br>";
 
 if(!empty(data_submitted())){
 
@@ -18,9 +18,9 @@ if(!empty(data_submitted())){
         if(!empty($listaPersona)){
             $personaExiste =true;
         }else{ //Si la persona duenño no existe
-            echo "No existe en la base de datos el propietario.";
-            echo "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div>";
-            echo '<button onclick="history.back();">Atras</button>';
+            $mensaje .= "No existe en la base de datos el propietario.<br>";
+            $mensaje .= "<div>Desea ingresar un nuevo Dueño. <a href='../Ejercicio/persona_nuevo.php'>click aqui</a></div>";
+            $mensaje .= '<button onclick="history.back();">Atras</button>';
         }
     }
 
@@ -30,17 +30,17 @@ if(!empty(data_submitted())){
         if(!empty($listaAuto)){
             $autoExiste =true;
         }else{ //Si la persona duenño no existe
-            echo "No existe en la base de datos el auto solicitado.";
-            echo "<div>Desea ingresar un nuevo auto. <a href='../Ejercicio/auto_nuevo.php'>click aqui</a></div>";
-            echo '<button onclick="history.back();">Atras</button>';
+            $mensaje .= "No existe en la base de datos el auto solicitado.<br>";
+            $mensaje .= "<div>Desea ingresar un nuevo auto. <a href='../Ejercicio/auto_nuevo.php'>click aqui</a></div>";
+            $mensaje .= '<button onclick="history.back();">Atras</button>';
         }
     }
    
     if($autoExiste && $personaExiste){
         if($objAbmAuto->modificarDni($datos)){
-            $mensaje = "La carga en la base de datos se realizo correctamente.";
+            $mensaje = "La carga en la base de datos se realizo correctamente.<br>";
         }else{
-            $mensaje = "La carga no pudo concretarse.";     
+            $mensaje = "La carga no pudo concretarse.<br>";     
         }
     }
 

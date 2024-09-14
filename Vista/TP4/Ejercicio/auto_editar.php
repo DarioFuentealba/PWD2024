@@ -56,7 +56,7 @@
             <!-- Modelo -->
             <div class="mb-3">
 				<label for="Modelo" class="form-label">Modelo</label><br/>
-				<input id="Modelo:" name ="Modelo" width="80" type="number" min="1" value="<?php echo $objAuto->getModelo()?>" class="form-control" required>
+				<input id="Modelo:" name ="Modelo" width="80" type="number" min="1"  max="2024" maxlength="4" value="<?php echo $objAuto->getModelo()?>" class="form-control" required>
 				<br/>
 
                 <!-- Mensajes aprobado y error -->
