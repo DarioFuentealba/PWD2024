@@ -6,7 +6,12 @@
     $datos = data_submitted();
     if(!empty($datos))
     {
-      $listaPersona = $objAbmPersona->buscar(null);
+      
+      
+      $objP= $objAbmPersona -> buscarPersona($datos['NroDni']);
+      
+
+      
 ?>	
 
   <div class="container mt-3">
@@ -33,24 +38,24 @@
       </thead>
       <tbody>
       <?php	
-          if( count($listaPersona) > 0){
-              foreach ($listaPersona as $objPersona) { 
+          if( $objP != null){
+              
                   
-                  echo '<tr><td>'.$objPersona->getNroDni().'</td>';
-                  echo '<td>'.$objPersona->getApellido().'</td>';
-                  echo '<td>'.$objPersona->getNombre().'</td>';
-                  echo '<td>'.$objPersona->getFechaNac().'</td>';
-                  echo '<td>'.$objPersona->getTelefono().'</td>';
-                  echo '<td>'.$objPersona->getDomicilio().'</td>';
-                  echo '<td><a href="persona_editar.php?NroDni='.$objPersona->getNroDni().'" class="btn btn-outline-info btn-sm" role="button">editar</a></td>';
-                  echo '<td><a href="../Accion/persona_accion.php?accion=borrar&NroDni='.$objPersona->getNroDni().'" class="btn btn-outline-danger btn-sm" role="button">borrar</a></td></tr>'; 
-              }
+                  echo '<tr><td>'.$objP->getNroDni().'</td>';
+                  echo '<td>'.$objP->getApellido().'</td>';
+                  echo '<td>'.$objP->getNombre().'</td>';
+                  echo '<td>'.$objP->getFechaNac().'</td>';
+                  echo '<td>'.$objP->getTelefono().'</td>';
+                  echo '<td>'.$objP->getDomicilio().'</td>';
+                  echo '<td><a href="persona_editar.php?NroDni='.$objP->getNroDni().'" class="btn btn-outline-info btn-sm" role="button">editar</a></td>';
+                  echo '<td><a href="../Accion/persona_accion.php?accion=borrar&NroDni='.$objP->getNroDni().'" class="btn btn-outline-danger btn-sm" role="button">borrar</a></td></tr>'; 
+              
           }
       ?>
       </tbody>
   </table>
   </div>
-  <div class="container mt-3"><a href="persona_nuevo.php" class="btn btn-success" role="button">nuevo</a></div>
+  <div class="container mt-3"><a href="../Ejercicio/persona_nuevo.php" class="btn btn-success" role="button">nuevo</a></div>
 <?php	
 // Si no llegan datos del data_submited    
 }else{

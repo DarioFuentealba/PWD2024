@@ -1,7 +1,10 @@
 <?php
     $titulo = "BD Personas"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
+    
     $objAbmPersona = new AbmPersona();
+
+  
 
     $listaPersona = $objAbmPersona->buscar(null);
 ?>	
@@ -10,7 +13,7 @@
   <h2 class="text-center">Listado de personas</h2>
   <p class="text-center">Listado de personas incluidas en la base de datos</p>      
   <div>
-    <form action="persona_editar.php" method="post">
+    <form action="../Accion/persona_accion_buscar.php" method="post">
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por DNI:</label>
         <input name="NroDni" id="NroDni" type="text" pattern="[0-9]{6,8}" required onchange="buscador()"/>
         <input type="submit" name="buscar" id="buscar" class="btn btn-info" role="button" value="Buscar">

@@ -19,7 +19,7 @@ class AbmAuto{
             $objAuto = new Auto();
             $objDuenio = new Persona();
             $objDuenio->setNroDni( $param['DniDuenio']);
-            $objDuenio->cargar();
+            $objDuenio->buscar($param['DniDuenio']);
             $objAuto->setear($param['Patente'], $param['Marca'], $param['Modelo'], $objDuenio);
         }
         return $objAuto;
@@ -110,6 +110,10 @@ class AbmAuto{
         }
         return $resp;
     }
+
+
+
+    
     
     /**
      * permite buscar un objeto
@@ -147,7 +151,7 @@ class AbmAuto{
             $elObjAuto->cargar(); 
             $objDuenio =  new Persona();
             $objDuenio->setNroDni( $param['NroDni']);
-            $objDuenio->cargar();
+            $objDuenio->buscar($param['NroDni']);
             $elObjAuto->setObjDuenio($objDuenio);
 
             if($elObjAuto != null and $elObjAuto->modificar()){

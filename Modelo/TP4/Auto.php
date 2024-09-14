@@ -73,7 +73,7 @@ class Auto {
                 if($res > 0){
                     $row = $base->Registro();
                     $objDuenio->setNroDni( $row['DniDuenio']);
-                    $objDuenio->cargar();
+                    $objDuenio->buscar($row['DniDuenio']);
                     $this->setear($row['Patente'], $row['Marca'], $row['Modelo'], $objDuenio); 
                 }
             }
@@ -157,7 +157,7 @@ class Auto {
                     $obj = new Auto();
                     $objDuenio = new Persona();
                     $objDuenio->setNroDni( $row['DniDuenio']);
-                    $objDuenio->cargar();
+                    $objDuenio->buscar($row['DniDuenio']);
                     $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $objDuenio);
                     array_push($arreglo, $obj);
                 }

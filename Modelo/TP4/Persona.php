@@ -87,22 +87,24 @@ class Persona {
     }
 
  
-    public function cargar(){
-        $resp = false;
+    public function buscar($dni){
         $base = new BaseDatos();
-        $sql = "SELECT * FROM persona WHERE NroDni = ".$this->getNroDni();
-        if($base->Iniciar()){
-            $res = $base->Ejecutar($sql);
-            if($res > -1){
-                if($res > 0){
-                    $row = $base->Registro();
-                    $this->setear($row['NroDni'], $row['Apellido'], $row['Nombre'], $row['fechaNac'], $row['Telefono'],$row['Domicilio']);
+        $exito = false;
+        $sql = "Select * from persona where NroDni=" . $dni;
+        if($base ->Iniciar()){
+            if($base->Ejecutar($sql)){
+                if($row = $base->Registro()){
+                    $this -> setNroDni($dni);
+                    $this -> setApellido($row['Apellido']);
+                    $this -> setNombre($row['Nombre']);
+                    $this -> setFechaNac($row['fechaNac']);
+                    $this -> setTelefono($row['Telefono']);
+                    $this -> setDomiciliot($row['Domicilio']);
+                    $exito = true;
                 }
             }
-        }else{
-            $this->setmensajeoperacion("Tabla->listar: ".$base->getError());
         }
-        return $resp;
+        return $exito;
     }
     
     public function insertar(){

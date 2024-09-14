@@ -125,6 +125,23 @@ class AbmPersona{
         }
         return $resp;
     }
+
+
+
+    /**
+     * @param string $dni
+     * @return object $personaEncontrada
+     */
+
+     public function buscarPersona($dni){
+        $objP = new Persona();
+        $personaEncontrada = null;
+        if($objP ->buscar($dni)){
+            $personaEncontrada = $objP;
+        }
+
+        return $personaEncontrada;
+     }
     
 
     /**
