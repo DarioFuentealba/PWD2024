@@ -27,7 +27,7 @@ if (isset($datos['Patente']))
 
            <!-- Dni del Duenio -->
 		   <div class="mb-3 form-floating">
-				<select name="DniDuenio" id="DniDuenio" class="form-control" required>
+				<select name="NroDni" id="NroDni" class="form-control" required>
                     <option value="" selected disabled>Elija DNI</option>
                     <?php	
                     if( count($listaPersona) > 0){
@@ -37,7 +37,7 @@ if (isset($datos['Patente']))
                     }
                 ?>
                 </select>
-				<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label>
+				<label for="NroDni" class="form-label">Dni del Due&ntilde;o</label>
 		   </div>	
 
 		

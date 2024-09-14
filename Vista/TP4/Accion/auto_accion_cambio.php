@@ -8,11 +8,13 @@ $autoExiste = false;
 $personaExiste = false;
 $objAbmAuto = new AbmAuto();
 $objAbmDuenio = new AbmPersona();
+$mensaje = "Fallo Total";
 
 if(!empty(data_submitted())){
 
     if(isset($datos['NroDni'])){
-        $listaPersona = $objAbmDuenio->buscar($datos);
+        $enviar["NroDni"] = $datos["NroDni"];
+        $listaPersona = $objAbmDuenio->buscar($enviar);
         if(!empty($listaPersona)){
             $personaExiste =true;
         }else{ //Si la persona duenño no existe
@@ -23,7 +25,8 @@ if(!empty(data_submitted())){
     }
 
     if(isset($datos['Patente'])){
-        $listaAuto = $objAbmAuto->buscar($datos);
+        $enviar["Patente"] = $datos["Patente"];
+        $listaAuto = $objAbmAuto->buscar($enviar);
         if(!empty($listaAuto)){
             $autoExiste =true;
         }else{ //Si la persona duenño no existe
@@ -33,19 +36,21 @@ if(!empty(data_submitted())){
         }
     }
    
-    if($autoExiste && $personaExiste && $objAbmAuto->modificarDni($datos)){
-        $mensaje = "La carga en la base de datos se realizo correctamente.";
-    }else {
-        $mensaje = "La carga no pudo concretarse.";
+    if($autoExiste && $personaExiste){
+        if($objAbmAuto->modificarDni($datos)){
+            $mensaje = "La carga en la base de datos se realizo correctamente.";
+        }else{
+            $mensaje = "La carga no pudo concretarse.";     
+        }
     }
 
 ?>
 
-<!-- Titulo en la pagina -->
-<h3 class="text-center">Cambio de due&ntilde;o del auto</h3>
 
 <!-- Mensaje mostrado en pantalla -->
-<p class="alert alert-info text-center p-3">
+<div class="alert alert-info text-center p-3">
+    <!-- Titulo en la pagina -->
+    <h3 class="text-center">Cambio de due&ntilde;o del auto</h3>
     <?php	
     echo $mensaje;
     }else{
@@ -54,9 +59,9 @@ if(!empty(data_submitted())){
     }
     include_once '../../Estructura/footer.php';
     ?>
-</p>
+    <br><a href="../Ejercicio/auto_index.php" class="btn btn-primary" role="button">Volver</a><br>
+</div>
 
-<br><a href="../Ejercicio/auto_index.php" class="btn btn-primary" role="button">Volver</a><br>
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
