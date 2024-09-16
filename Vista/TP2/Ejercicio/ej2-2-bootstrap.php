@@ -93,7 +93,7 @@ include_once('../../Estructura/header.php');
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
-<script type="text/javascript" src="../../Js/tp2ej2-6-bootstrap-validation.js"></script>
+<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
 
 <!-- Footer -->
 <?php

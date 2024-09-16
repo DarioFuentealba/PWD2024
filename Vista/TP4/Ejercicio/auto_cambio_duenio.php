@@ -17,14 +17,15 @@ if (isset($datos['Patente']))
 }
 ?>
 
-<!-- Cuadro sombreado que rodea todo -->
+<!-- Contenedor de formulario -->
 <div class="container mt-3 mt-5 p-4 border rounded shadow">
+    <!-- Titulo en la pagina -->
+    <h3 class="text-center text-primary mb-4">Auto - Cambio de due&ntilde;o</h3>
 
-	<h3 class="text-center text-primary mb-4">Auto - Cambio de due&ntilde;o</h3>
+    <div class="row">
 
-	<div class="container mt-3">
-		<form method="post" action="../Accion/auto_accion_cambio.php" class="container">
-
+		<!-- Formulario -->
+		<form method="post" action="../Accion/auto_accion_nuevo.php" id="formAutoNuevo" name="formAutoNuevo" class="row g-3 mt-3 needs-validation" novalidate>
 			<!-- Patente a buscar -->
 			<div class="mb-3 form-floating text-primary mb-4">
 				<input class="form-control" type="text" id="Patente" name="Patente" placeholder="AAA 111 ó AA 111 AA" pattern="^\s*([A-Za-z]{2} \d{3} [A-Za-z]{2}|[A-Za-z]{2}\d{3}[A-Za-z]{2}|[A-Za-z]{3} \d{3}|[A-Za-z]{3}\d{3})\s*$" required>
@@ -62,6 +63,9 @@ if (isset($datos['Patente']))
 
 	</div>
 </div>
+
+<!-- BOOTSTRAP con las validaciones de los campos -->
+<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
 
 <!-- JQUERY con las validaciones de los campos -->
 <script type="text/javascript" src="../../Js/validaciontp4.js"></script>

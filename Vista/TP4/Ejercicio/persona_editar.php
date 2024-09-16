@@ -87,10 +87,11 @@
 					<div class="invalid-feedback">S&oacute;lo se permiten letras o letras y n&uacute;meros separados por un espacio</div>
 				</div>
 
-				<!-- Boton editar -->
+				<!-- Botones atras y editar -->
 				<div class="col-md-4">
-				<input id="accion" name ="accion" value="editar" type="hidden" class="btn btn-primary">
-				<button class="btn btn-primary" type="submit">Editar</button>
+					<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+					<input id="accion" name ="accion" value="editar" type="hidden">
+					<button class="btn btn-primary" type="submit">Editar</button>
 				</div>
 			</form>
 		</div>
@@ -101,14 +102,10 @@
 }
 ?>
 
-<!-- Boton atras -->
-<div class="container mt-5">
-	<button class="btn btn-info m-4" type="submit">Atr&aacute;s</button>
-</div>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
-<script type="text/javascript" src="../../Js/tp2ej2-6-bootstrap-validation.js"></script>
+<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>

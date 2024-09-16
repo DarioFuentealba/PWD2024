@@ -49,7 +49,9 @@
 </div>
 
 <!-- Boton Agregar nuevo auto -->
-<div class="container mt-3"><a href="auto_nuevo.php" class="btn btn-primary" role="button">Agregar nuevo auto</a></div>
+<div class="container mt-3">
+  <a href="auto_nuevo.php" class="btn btn-primary" role="button">Agregar nuevo auto</a>
+</div>
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
