@@ -62,6 +62,7 @@
   <!-- Boton agregar nueva persona -->
   <div class="container mt-3">
       <a href="persona_nuevo.php" class="btn btn-primary" role="button">Agregar nueva persona</a>
+      <a href="persona_index.php" class="btn btn-primary" role="button">Volver</a>
   </div>
 </div>
 
