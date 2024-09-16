@@ -42,6 +42,7 @@ body {
 /********* Fin estilos boton azul de las tablas TP 4 *********/
 /*************************************************************/
 
+
 /********************************************************************/
 /************* Estilos letras de patentes en mayusculas *************/
 /********************************************************************/
@@ -50,6 +51,32 @@ body {
 }
 /********************************************************************/
 /*********** Fin estilos letras de patentes en mayusculas ***********/
+/********************************************************************/
+
+
+/********************************************************************/
+/************************** Estilos tablas **************************/
+/********************************************************************/
+/* Cambiar el color de texto de todas las filas a azul */
+.table-striped tbody tr {
+    color: blue;
+}
+
+/* Cambiar el fondo de las filas impares a color celeste */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f0fdff;
+    color: blue;
+
+}
+
+/* Cambiar el fondo de las filas al pasar el mouse */
+.table-striped tbody tr:hover {
+    background-color: #e6f7fa;
+    color: blue;
+
+}
+/********************************************************************/
+/************************ Fin estilos tablas ************************/
 /********************************************************************/
 
 
