@@ -19,7 +19,7 @@
 
             <!-- Patente a buscar -->
             <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="Patente" name="Patente" placeholder="AAA 123   ó   AA 456 AA" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required>
+                <input type="text" class="form-control" id="Patente" name="Patente" placeholder="AAA 123   ó   AA 456 AA" pattern="^\s*([A-Za-z]{2} \d{3} [A-Za-z]{2}|[A-Za-z]{2}\d{3}[A-Za-z]{2}|[A-Za-z]{3} \d{3}|[A-Za-z]{3}\d{3})\s*$" required>
                 <label for="patente" class="form-label">Ingrese la patente a buscar - Formato permitidos AAA 123   ó   AA 456 AA</label>
 
                 <!-- Mensajes aprobado y error -->

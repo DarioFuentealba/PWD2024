@@ -33,7 +33,7 @@
         {
             foreach ($listaAuto as $objAuto)
             { 
-                echo '<tr><td>'.$objAuto->getPatente().'</td>';
+                echo '<tr><td class="uppercase">'.$objAuto->getPatente().'</td>';
                 echo '<td>'.$objAuto->getMarca().'</td>';
                 echo '<td>'.$objAuto->getModelo().'</td>';
                 echo '<td>'.$objAuto->getObjDuenio()->getNroDni().'</td>';

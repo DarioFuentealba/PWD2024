@@ -25,7 +25,8 @@
         <th>Fecha Nacimiento</th>
         <th>Teléfono</th>
         <th>Domicilio</th>
-        <th colspan="2">Menu</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
       </tr>
     </thead>
     <tbody>
