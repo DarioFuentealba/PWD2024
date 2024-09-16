@@ -19,7 +19,7 @@
 
 <!-- Cuadro sombreado que rodea todo -->
 <!-- Contenedor de formulario -->
-<div class="container mt-5 p-4 border rounded shadow">
+<div class="container text-primary mb-4 mt-5 p-4 border rounded shadow">
 		<!-- Titulo en la pagina -->
 		<h3 class="text-center text-primary mb-4">Editar persona</h3>
 		<div class="row">
@@ -89,7 +89,7 @@
 
 				<!-- Botones atras y editar -->
 				<div class="col-md-4">
-					<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+					<button type="button" class="btn btn-info"  onclick="window.location.href='auto_index.php';">Atr&aacute;s</button>
 					<input id="accion" name ="accion" value="editar" type="hidden">
 					<button class="btn btn-primary" type="submit">Editar</button>
 				</div>
