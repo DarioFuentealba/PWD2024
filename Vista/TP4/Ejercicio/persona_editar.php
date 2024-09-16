@@ -89,7 +89,7 @@
 
 				<!-- Botones atras y editar -->
 				<div class="col-md-4">
-					<button type="button" class="btn btn-info"  onclick="window.location.href='auto_index.php';">Atr&aacute;s</button>
+					<button type="button" class="btn btn-info"  onclick="window.location.href='persona_index.php';">Atr&aacute;s</button>
 					<input id="accion" name ="accion" value="editar" type="hidden">
 					<button class="btn btn-primary" type="submit">Editar</button>
 				</div>
