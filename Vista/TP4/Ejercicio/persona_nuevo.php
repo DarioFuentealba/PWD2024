@@ -55,7 +55,7 @@
 
 			<!-- Telefono -->
 			<div class="mb-3 form-floating">
-				<input id="Telefono:" name="Telefono" width="80" type="numb" class="form-control" placeholder="" pattern="^[1-9]\d*-[1-9]\d*$">
+				<input id="Telefono:" name="Telefono" width="80" type="numb" class="form-control" placeholder="" pattern="^(?!\s*$)[1-9]\d*-[1-9]\d*$">
 				<label for="Telefono" class="form-label">Tel&eacute;fono - Formato 299-5443322: </label>
 
 				<!-- Mensajes aprobado y error -->
@@ -81,6 +81,7 @@
 		</form>
 	</div>
 <br><br>
+
 <!-- Boton atras -->
 <div class="col-md-4">
     <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>

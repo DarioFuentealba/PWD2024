@@ -5,8 +5,9 @@
     $listaAuto = $objAbmAuto->buscar(null);
 ?>	
 
-<!-- Titulo en la pagina -->
-<div class="container mt-3">
+<!-- Cuadro sombreado que rodea todo -->
+<div class="container mt-3 mt-5 p-4 border rounded shadow">
+    <!-- Titulo en la pagina -->
     <h2 class="text-center">Listado de autos</h2>
     <p class="text-center">Listado de los autos incluidos en la base de datos</p>
 

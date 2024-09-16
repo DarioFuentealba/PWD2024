@@ -17,6 +17,7 @@
 	{
 	?>
 
+<!-- Cuadro sombreado que rodea todo -->
 <!-- Contenedor de formulario -->
 <div class="container mt-5 p-4 border rounded shadow">
 		<!-- Titulo en la pagina -->

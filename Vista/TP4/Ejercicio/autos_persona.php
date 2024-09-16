@@ -15,70 +15,87 @@
 			$objPersona = $listaPersona[0];
 		}
 	}
-?>	
-<!-- Titulo en la pagina -->
-<div class="container mt-3">
-    <h2 class="text-center">Autos por Persona</h2>
-    <p class="text-center">Listado de los autos incluidos en la base de datos</p>
+?>
 
-<!-- Tabla 1 - Datos personas -->
-    <table class="table table-hover table-striped">
-        <tr>
-            <th style="width:200px;">Dni</th>
-            <th style="width:200px;">Apellido</th>
-            <th style="width:200px;">Nombre</th>
-            <th style="width:200px;">Fecha Nacimiento</th>
-            <th style="width:200px;">Teléfono</th>
-            <th style="width:200px;">Domicilio</th>
-        </tr>
+<!-- Cuadro sombreado que rodea todo -->
+<div class="container mt-3 mt-5 p-4 border rounded shadow">
 
-        <?php
-            if ($objPersona != null)
-            {
-
-                echo '<tr><td style="width:200px;">'.$objPersona->getNroDni().'</td>';
-                echo '<td style="width:200px;">'.$objPersona->getApellido().'</td>';
-                echo '<td style="width:200px;">'.$objPersona->getNombre().'</td>';
-                echo '<td style="width:200px;">'.$objPersona->getFechaNac().'</td>';
-                echo '<td style="width:200px;">'.$objPersona->getTelefono().'</td>';
-                echo '<td style="width:200px;">'.$objPersona->getDomicilio().'</td></tr>';
-            }else{
-                echo "<p>No se encontro la clave que desea modificar";
-            }
-        ?>
-    </table>
-    <br><br>
-
-    <!-- Tabla 2 - Datos autos -->
+    <!-- Titulo en la pagina -->
     <div class="container mt-3">
-        <h2 class="text-center">Lista de autos</h2>
-        <p class="text-center">Listado de los autos pertenecientes a <?php echo $objPersona->getNombre(); ?> </p>
+        <h2 class="text-center">Autos por Persona</h2>
+        <p class="text-center">Listado de los autos incluidos en la base de datos</p>
+
+    <!-- Tabla 1 - Datos personas -->
         <table class="table table-hover table-striped">
             <tr>
-                <th style="width:200px;">Patente</th>
-                <th style="width:200px;">Marca</th>
-                <th style="width:200px;">Modelo</th>
+                <th style="width:200px;">Dni</th>
+                <th style="width:200px;">Apellido</th>
+                <th style="width:200px;">Nombre</th>
+                <th style="width:200px;">Fecha Nacimiento</th>
+                <th style="width:200px;">Teléfono</th>
+                <th style="width:200px;">Domicilio</th>
+                <th style="width:200px;">Editar</th>
+                <th style="width:200px;">Eliminar</th>
             </tr>
 
-            <?php	
-                if( count($listaAutos) > 0)
+            <?php
+                if ($objPersona != null)
                 {
-                    foreach ($listaAutos as $objAuto)
-                    {
-                        echo '<tr><td style="width:200px;">'.$objAuto->getPatente().'</td>';
-                        echo '<td style="width:200px;">'.$objAuto->getMarca().'</td>';
-                        echo '<td style="width:200px;">'.$objAuto->getModelo().'</td></tr>'; 
-                    }
+
+                    echo '<tr><td style="width:200px;">'.$objPersona->getNroDni().'</td>';
+                    echo '<td style="width:200px;">'.$objPersona->getApellido().'</td>';
+                    echo '<td style="width:200px;">'.$objPersona->getNombre().'</td>';
+                    echo '<td style="width:200px;">'.$objPersona->getFechaNac().'</td>';
+                    echo '<td style="width:200px;">'.$objPersona->getTelefono().'</td>';
+                    echo '<td style="width:200px;">'.$objPersona->getDomicilio().'</td>';
+                    echo '<td><a href="persona_editar.php?NroDni='.$objPersona->getNroDni().'" class="btn btn-color btn-sm" role="button">Editar</a></td>';
+                    echo '<td><a href="../Accion/persona_accion.php?accion=borrar&NroDni='.$objPersona->getNroDni().'" class="btn btn-outline-danger btn-sm" role="button">Borrar</a></td></tr>';
+                }else{
+                    echo "<p>No se encontro la clave que desea modificar";
                 }
             ?>
         </table>
-    <br><br>
-</div>
-    <!-- Boton atras -->
-    <div class="col-md-4">
-        <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+        <br><br>
+
+        <!-- Tabla 2 - Datos autos -->
+        <div class="container mt-3">
+            <h2 class="text-center">Lista de autos</h2>
+            <p class="text-center">Listado de los autos pertenecientes a <?php echo $objPersona->getNombre(); ?> </p>
+            <table class="table table-hover table-striped">
+                <tr>
+                    <th style="width:200px;">Patente</th>
+                    <th style="width:200px;">Marca</th>
+                    <th style="width:200px;">Modelo</th>
+                    <th style="width:200px;">Editar</th>
+                    <th style="width:200px;">Eliminar</th>
+                    <th style="width:200px;">Cambio de due&ntilde;o</th>
+                </tr>
+
+                <?php	
+                    if( count($listaAutos) > 0)
+                    {
+                        foreach ($listaAutos as $objAuto)
+                        {
+                            echo '<tr><td style="width:200px;">'.$objAuto->getPatente().'</td>';
+                            echo '<td style="width:200px;">'.$objAuto->getMarca().'</td>';
+                            echo '<td style="width:200px;">'.$objAuto->getModelo().'</td>';
+                            echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'" class="btn btn-color btn-sm" role="button">Editar</a></td>';
+                            echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'" class="btn btn-outline-danger btn-sm" role="button">Borrar</a></td>'; 
+                            echo '<td><a href="auto_cambio_duenio.php?Patente='.$objAuto->getPatente().'" class="btn btn-outline-success btn-sm" role="button">Cambio</a></td></tr>';
+                        }
+                    }
+                ?>
+            </table>
+            <br><br>
+        </div>
+
+        <!-- Botones atras y Agregar nuevo auto -->
+        <div class="col-md-4">
+            <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+            <a href="auto_nuevo.php" class="btn btn-primary" role="button">Agregar nuevo auto</a>
+        </div>
     </div>
-</div>
+
 <!-- BOOTSTRAP con las validaciones de los campos -->
 <script type="text/javascript" src="../../Js/tp2ej2-6-bootstrap-validation.js"></script>
 

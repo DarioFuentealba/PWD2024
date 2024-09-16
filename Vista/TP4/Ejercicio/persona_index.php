@@ -5,6 +5,7 @@
     $listaPersona = $objAbmPersona->buscar(null);
 ?>	
 
+<!-- Cuadro sombreado que rodea todo -->
 <div class="container mt-5 p-4 border rounded shadow">
   <h2 class="text-center">Listado de personas</h2>
   <p class="text-center">Listado de personas incluidas en la base de datos</p>      
@@ -13,9 +14,10 @@
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por DNI:</label>
         <input name="NroDni" id="NroDni" type="text" pattern="[0-9]{6,8}" required onchange="buscador()"/>
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
-	</form>
+    </form>
   </div>  
-  <br>    
+  <br>
+
   <table class="table table-hover table-striped">
     <thead>
       <tr>

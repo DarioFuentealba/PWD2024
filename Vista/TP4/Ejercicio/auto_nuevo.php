@@ -75,7 +75,8 @@
     <!-- Boton atras -->
     <div class="col-md-4">
         <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
-    </div>
+        <a href="../Ejercicio/auto_index.php" class="btn btn-primary" role="button">Principal</a>
+        </div>
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->

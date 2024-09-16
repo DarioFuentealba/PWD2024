@@ -7,36 +7,39 @@
     $listaAuto = $objAbmAuto->buscar(null);
 ?>	
 
-<!-- Titulo en la pagina -->
-<h3 class="text-center">Buscar un auto</h3>
+<!-- Cuadro sombreado que rodea todo -->
+<div class="container mt-3 mt-5 p-4 border rounded shadow">
 
-<!-- Contenedor de formulario -->
-<div class="container">
-    <div class="row">
+    <!-- Titulo en la pagina -->
+    <h3 class="text-center">Buscar un auto</h3>
 
-        <!-- Formulario -->
-        <form action="../Accion/auto_accion_buscar.php" method="post" id="formAutoBuscar" name="formAutoBuscar" class="row g-3 mt-3 needs-validation" novalidate>
+    <!-- Contenedor de formulario -->
+    <div class="container">
+        <div class="row">
 
-            <!-- Patente a buscar -->
-            <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="Patente" name="Patente" placeholder="AAA 123   ó   AA 456 AA" pattern="^\s*([A-Za-z]{2} \d{3} [A-Za-z]{2}|[A-Za-z]{2}\d{3}[A-Za-z]{2}|[A-Za-z]{3} \d{3}|[A-Za-z]{3}\d{3})\s*$" required>
-                <label for="patente" class="form-label">Ingrese la patente a buscar - Formato permitidos AAA 123   ó   AA 456 AA</label>
+            <!-- Formulario -->
+            <form action="../Accion/auto_accion_buscar.php" method="post" id="formAutoBuscar" name="formAutoBuscar" class="row g-3 mt-3 needs-validation" novalidate>
 
-                <!-- Mensajes aprobado y error -->
-                <div class="valid-feedback">Ok!</div>
-                <div class="invalid-feedback">S&oacute;lo se permiten patentes con el formato especificado</div>
-            </div>
+                <!-- Patente a buscar -->
+                <div class="mb-3 form-floating">
+                    <input type="text" class="form-control" id="Patente" name="Patente" placeholder="AAA 123   ó   AA 456 AA" pattern="^\s*([A-Za-z]{2} \d{3} [A-Za-z]{2}|[A-Za-z]{2}\d{3}[A-Za-z]{2}|[A-Za-z]{3} \d{3}|[A-Za-z]{3}\d{3})\s*$" required>
+                    <label for="patente" class="form-label">Ingrese la patente a buscar - Formato permitidos AAA 123   ó   AA 456 AA</label>
 
-            <!-- Boton enviar -->
-            <div class="col-md-4">
-                <button class="btn btn-primary" type="submit">Buscar</button>
-                <!-- Boton atras -->
-                <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
-            </div>
-        </form>
+                    <!-- Mensajes aprobado y error -->
+                    <div class="valid-feedback">Ok!</div>
+                    <div class="invalid-feedback">S&oacute;lo se permiten patentes con el formato especificado</div>
+                </div>
+
+                <!-- Boton enviar -->
+                <div class="col-md-4">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
+                    <!-- Boton atras -->
+                    <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
 
 
 <!-- BOOTSTRAP con las validaciones de los campos -->

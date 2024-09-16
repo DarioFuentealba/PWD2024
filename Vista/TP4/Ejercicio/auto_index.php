@@ -7,6 +7,7 @@
     $listaAuto = $objAbmAuto->buscar(null);
 ?>	
 
+<!-- Cuadro sombreado que rodea todo -->
 <div class="container mt-3 mt-5 p-4 border rounded shadow">
 
   <!-- Titulo en la pagina -->

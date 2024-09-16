@@ -39,15 +39,17 @@ if (isset($datos['Patente']))
                     }
                 ?>
                 </select>
-				<label for="NroDni" class="form-label">Dni del Due&ntilde;o</label>
+
+					<label for="NroDni" class="form-label">Dni del Due&ntilde;o</label>
 			</div>	
 
-		
-		<input type="submit" class="btn btn-primary">
+		<div class="col-md-4">
+			<a href="auto_index.php" class="btn btn-info">Volver</a>
+			<input type="submit" class="btn btn-primary">
+		</div>
 	</form>
 	<br><br>
 
-	<a href="auto_index.php" class="btn btn-info">Volver</a>
 </div>
 
 <!-- JQUERY con las validaciones de los campos -->

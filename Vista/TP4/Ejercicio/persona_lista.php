@@ -6,6 +6,7 @@
     $listaPersona = $objAbmPersona->buscar(null);
 ?>	
 
+<!-- Cuadro sombreado que rodea todo -->
 <div class="container mt-5 p-4 border rounded shadow">
     <!-- Titulo en la pagina -->
     <h3 class="text-center">Lista de personas</h3>
