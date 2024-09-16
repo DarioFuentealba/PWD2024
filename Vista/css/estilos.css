@@ -66,14 +66,59 @@ body {
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #f0fdff;
     color: blue;
-
 }
 
 /* Cambiar el fondo de las filas al pasar el mouse */
 .table-striped tbody tr:hover {
-    background-color: #e6f7fa;
-    color: blue;
+    background-color: blue;
+    color: white;
+}
 
+/* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
+.table-striped tbody tr:hover .btn-color {
+    background-color: #99f0ff;
+    border-color: #99f0ff;
+    color: blue;
+}
+
+/* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
+.table-striped tbody tr:hover .btn-outline-danger {
+    background-color: #ff99cc;
+    border-color: #ff99cc;
+    color: blue;
+}
+
+/* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
+.table-striped tbody tr:hover .btn-outline-success {
+    background-color: #7bfd7b;
+    border-color: #7bfd7b;
+    color: blue;
+}
+
+/* Cambiar el borde y las letras del botón "Editar" cuando se pase el ratón por encima del botón */
+.table-striped tbody tr .btn-color:hover {
+    background-color: blue;
+    border-color: white;
+    color: white;
+}
+/* Cambiar el borde y las letras del botón "Borrar" cuando se pase el ratón por encima del botón */
+.table-striped tbody tr .btn-outline-danger:hover {
+    background-color: red;
+    border-color: white;
+    color: white;
+}
+/* Cambiar el borde y las letras del botón "Cambiar" cuando se pase el ratón por encima del botón */
+.table-striped tbody tr .btn-outline-success:hover {
+    background-color: green;
+    border-color: white;
+    color: white;
+}
+
+/* Reducir el tamaño de los botones cuando se hace clic */
+.btn-color:active,
+.btn-outline-danger:active,
+.btn-outline-success:active {
+    transform: scale(0.95); /* Reduce el tamaño en un 5% */
 }
 /********************************************************************/
 /************************ Fin estilos tablas ************************/
