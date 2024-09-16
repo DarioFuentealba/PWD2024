@@ -1,8 +1,8 @@
 <?php
     $titulo = "Autos Buscar"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
-    echo '<div class="divtitulo"> <h1>';
-    echo $titulo.'</h1></div>';
+    /*echo '<div class="divtitulo"> <h1>';
+    echo $titulo.'</h1></div>';*/
     $datos = data_submitted();
 
     if(!empty($datos))
