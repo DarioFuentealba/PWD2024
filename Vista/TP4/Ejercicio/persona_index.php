@@ -7,8 +7,8 @@
 
 <!-- Cuadro sombreado que rodea todo -->
 <div class="container mt-5 p-4 border rounded shadow">
-  <h2 class="text-center">Listado de personas</h2>
-  <p class="text-center">Listado de personas incluidas en la base de datos</p>      
+  <h2 class="text-center text-primary mb-4">Listado de personas</h2>
+  <p class="text-center text-primary mb-4">Listado de personas incluidas en la base de datos</p>      
   <div>
     <form action="../Accion/persona_accion_buscar.php" method="post" class="container mt-5 p-4 border rounded shadow">
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por DNI:</label>
@@ -20,7 +20,7 @@
 
   <table class="table table-hover table-striped">
     <thead>
-      <tr>
+      <tr class="text-primary mb-4">
         <th>D.N.I.</th>
         <th>Apellido</th>
         <th>Nombre</th>

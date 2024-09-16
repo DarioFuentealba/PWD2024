@@ -8,13 +8,13 @@
 <!-- Cuadro sombreado que rodea todo -->
 <div class="container mt-3 mt-5 p-4 border rounded shadow">
     <!-- Titulo en la pagina -->
-    <h2 class="text-center">Listado de autos</h2>
-    <p class="text-center">Listado de los autos incluidos en la base de datos</p>
+    <h2 class="text-center text-primary mb-4">Listado de autos</h2>
+    <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
 
     <!-- Tabla -->
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-striped ">
         <thead>
-            <tr>
+            <tr class="text-primary mb-4">
                 <th>Patente</th>
                 <th>Marca</th>
                 <th>Modelo</th>

@@ -21,7 +21,7 @@
 <!-- Contenedor de formulario -->
 <div class="container mt-5 p-4 border rounded shadow">
 		<!-- Titulo en la pagina -->
-		<h3 class="text-center">Editar persona</h3>
+		<h3 class="text-center text-primary mb-4">Editar persona</h3>
 		<div class="row">
 
 			<!-- Formulario -->

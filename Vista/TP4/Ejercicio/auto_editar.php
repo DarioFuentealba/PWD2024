@@ -20,7 +20,7 @@
 <div class="container mt-3 mt-5 p-4 border rounded shadow">
 
 	<!-- Titulo en la pagina -->
-	<h3 class="text-center">Editar un auto</h3>
+	<h3 class="text-center text-primary mb-4">Editar un auto</h3>
 
 	<?php
 		if ($objAuto != null)

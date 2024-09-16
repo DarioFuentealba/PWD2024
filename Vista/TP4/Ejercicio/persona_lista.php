@@ -9,11 +9,11 @@
 <!-- Cuadro sombreado que rodea todo -->
 <div class="container mt-5 p-4 border rounded shadow">
     <!-- Titulo en la pagina -->
-    <h3 class="text-center">Lista de personas</h3>
+    <h3 class="text-center text-primary mb-4">Lista de personas</h3>
     <!-- Tabla -->
     <table class="table table-hover table-striped">
         <thead>
-            <tr>
+            <tr class="text-primary mb-4">
                 <th style="width:200px;">Apellido</th>
                 <th style="width:200px;">Nombre</th>
                 <th style="width:200px;">Autos</th>

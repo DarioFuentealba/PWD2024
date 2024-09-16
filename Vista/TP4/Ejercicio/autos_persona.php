@@ -22,8 +22,8 @@
 
     <!-- Titulo en la pagina -->
     <div class="container mt-3">
-        <h2 class="text-center">Autos por Persona</h2>
-        <p class="text-center">Listado de los autos incluidos en la base de datos</p>
+        <h2 class="text-center text-primary mb-4">Autos por Persona</h2>
+        <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
 
     <!-- Tabla 1 - Datos personas -->
         <table class="table table-hover table-striped">
@@ -59,8 +59,8 @@
 
         <!-- Tabla 2 - Datos autos -->
         <div class="container mt-3">
-            <h2 class="text-center">Lista de autos</h2>
-            <p class="text-center">Listado de los autos pertenecientes a <?php echo $objPersona->getNombre(); ?> </p>
+            <h2 class="text-center text-primary mb-4">Lista de autos</h2>
+            <p class="text-center text-primary mb-4">Listado de los autos pertenecientes a <?php echo $objPersona->getNombre(); ?> </p>
             <table class="table table-hover table-striped">
                 <tr>
                     <th style="width:200px;">Patente</th>

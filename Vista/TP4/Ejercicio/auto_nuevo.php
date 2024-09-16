@@ -8,14 +8,14 @@
 <!-- Contenedor de formulario -->
 <div class="container mt-5 p-4 border rounded shadow">
     <!-- Titulo en la pagina -->
-    <h3 class="text-center">Ingresar nuevo auto</h3>
+    <h3 class="text-center text-primary mb-4">Ingresar nuevo auto</h3>
     <div class="row">
 
 		<!-- Formulario -->
 		<form method="post" action="../Accion/auto_accion_nuevo.php" id="formAutoNuevo" name="formAutoNuevo" class="row g-3 mt-3 needs-validation" novalidate>
 
 			<!-- Patente a buscar -->
-			<div class="mb-3 form-floating">
+			<div class="mb-3 form-floating text-primary mb-4">
 				<input class="form-control" type="text" id="Patente" name="Patente" placeholder="AAA 111 ó AA 111 AA" pattern="^\s*([A-Za-z]{2} \d{3} [A-Za-z]{2}|[A-Za-z]{2}\d{3}[A-Za-z]{2}|[A-Za-z]{3} \d{3}|[A-Za-z]{3}\d{3})\s*$" required>
 				<label for="patente" class="form-label">Ingrese una patente con el siguiente formato: AAA 111 ó AA 111 AA</label>
 
@@ -25,7 +25,7 @@
             </div>
 
             <!-- Marca -->
-            <div class="mb-3 form-floating">
+            <div class="mb-3 form-floating text-primary mb-4">
 				<input class="form-control" id="Marca" name ="Marca" type="text" pattern="^[A-Za-z0-9\s]*[A-Za-z0-9][A-Za-z0-9\s]*$" placeholder="" required>
 				<label for="Marca" class="form-label">Marca</label>
 
@@ -35,7 +35,7 @@
             </div>
 
             <!-- Modelo -->
-            <div class="mb-3 form-floating">
+            <div class="mb-3 form-floating text-primary mb-4">
 				<input class="form-control" id="Modelo" name ="Modelo" type="number" min="1" placeholder="" required>
 				<label for="Modelo" class="form-label">Modelo</label>
 
@@ -45,8 +45,8 @@
             </div>
 
             <!-- Dni del Duenio -->
-            <div class="mb-3 form-floating">
-				<select name="DniDuenio" id="DniDuenio" class="form-control" required>
+            <div class="mb-3 form-floating text-primary mb-4">
+				<select name="DniDuenio" id="DniDuenio" class="form-control text-primary mb-4" required>
                     <option value="" selected disabled>Elija DNI</option>
                     <?php	
                     if( count($listaPersona) > 0){
