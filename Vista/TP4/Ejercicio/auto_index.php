@@ -15,7 +15,7 @@
 
   <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
 
-  <table class="table table-hover table-striped">
+  <table class="table table-hover table-striped text-primary ">
     <thead>
       <tr class="text-primary mb-4">
         <th>Patente</th>

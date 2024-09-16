@@ -4,8 +4,6 @@
     echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';
     $datos = data_submitted();
-    //verEstructura($datos);
-
 
     if(!empty($datos))
     {
@@ -53,6 +51,6 @@
     <?php
     // Si no llegan datos del data_submited    
     }else{
-        echo "Acceso restringido";
+        echo '<div class="alert alert-info text-center p-3"> <h2>Acceso restringido</h2></div>';
     }
 ?>
