@@ -46,11 +46,11 @@
       ?>
     </tbody>
   </table>
-</div>
 
-<!-- Boton Agregar nuevo auto -->
-<div class="container mt-3">
-  <a href="auto_nuevo.php" class="btn btn-primary" role="button">Agregar nuevo auto</a>
+  <!-- Boton Agregar nuevo auto -->
+  <div class="container mt-3">
+    <a href="auto_nuevo.php" class="btn btn-primary" role="button">Agregar nuevo auto</a>
+  </div>
 </div>
 
 <!-- Footer -->

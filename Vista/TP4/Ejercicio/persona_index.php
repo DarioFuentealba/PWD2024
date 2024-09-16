@@ -58,12 +58,13 @@
     ?>
     </tbody>
 </table>
+
+  <!-- Boton agregar nueva persona -->
+  <div class="container mt-3">
+      <a href="persona_nuevo.php" class="btn btn-primary" role="button">Agregar nueva persona</a>
+  </div>
 </div>
 
-<!-- Boton agregar nueva persona -->
-<div class="container mt-3">
-    <a href="persona_nuevo.php" class="btn btn-primary" role="button">Agregar nueva persona</a>
-</div>
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
 

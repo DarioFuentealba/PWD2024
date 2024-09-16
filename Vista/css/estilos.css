@@ -57,6 +57,34 @@ body {
 /********************************************************************/
 /************************** Estilos tablas **************************/
 /********************************************************************/
+/* Aplicar bordes redondeados a la primera y última celda de cada fila */
+.table-striped tbody tr td:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+}
+.table-striped tbody tr td:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+}
+
+/* Quitar las líneas de separación entre las filas y encabezado */
+.table-striped {
+    border-collapse: separate; /* Asegura que los bordes no colapsen */
+    border-spacing: 0; /* Elimina espacio entre las celdas */
+}
+
+/* Eliminar cualquier borde en las celdas del cuerpo de la tabla */
+.table-striped td {
+    border: none;
+}
+
+/* Eliminar cualquier borde en las celdas del encabezado */
+.table-striped th {
+    border: none;
+}
+
 /* Cambiar el color de texto de todas las filas a azul */
 .table-striped tbody tr {
     color: blue;
@@ -79,6 +107,7 @@ body {
     background-color: #99f0ff;
     border-color: #99f0ff;
     color: blue;
+    border-radius: 5px;
 }
 
 /* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
@@ -86,6 +115,7 @@ body {
     background-color: #ff99cc;
     border-color: #ff99cc;
     color: blue;
+    border-radius: 5px;
 }
 
 /* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
@@ -93,6 +123,7 @@ body {
     background-color: #7bfd7b;
     border-color: #7bfd7b;
     color: blue;
+    border-radius: 5px;
 }
 
 /* Cambiar el borde y las letras del botón "Editar" cuando se pase el ratón por encima del botón */
