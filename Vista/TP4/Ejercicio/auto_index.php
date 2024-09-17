@@ -41,6 +41,7 @@
         <th class="text-center">Editar</th>
         <th class="text-center">Eliminar</th>
         <th class="text-center">Cambio de due&ntilde;o</th>
+        <th class="text-center">Ver due&ntilde;o</th>
       </tr>
     </thead>
 
@@ -57,6 +58,7 @@
                 echo '<td class="text-center"><a href="auto_editar.php?Patente='.$objAuto->getPatente().'" class="btn btn-color btn-sm" role="button">Editar</a></td>';
                 echo '<td class="text-center"><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'" class="btn btn-outline-danger btn-sm" role="button">Borrar</a></td>'; 
                 echo '<td class="text-center"><a href="auto_cambio_duenio.php?Patente='.$objAuto->getPatente().'" class="btn btn-outline-success btn-sm" role="button">Cambio</a></td>'; 
+                echo '<td class="text-center"><a href="autos_persona.php?NroDni='.$objAuto->getObjDuenio()->getNroDni().'" class="btn btn-outline-dark btn-sm" role="button">Ver Dueño</a></td></tr>';
               }
         }
       ?>
