@@ -109,8 +109,7 @@
 <?php include_once '../../Estructura/footer.php'; ?>
 
 <script>
-
-document.getElementById("Modelo").addEventListener("blur", function(){
-    validarModelo(this);
-  });
+	document.getElementById("Modelo").addEventListener("blur", function(){
+		validarModelo(this);
+	});
 </script>
