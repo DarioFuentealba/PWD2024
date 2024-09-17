@@ -1,37 +1,37 @@
+(() => {
+    'use strict'
 
-function validar(){   
-    if (validarNombre(document.getElementById("nombre")) && 
-        validarNombre(document.getElementById("apellido")) && 
-        validarFecha() && 
-        validarEmail() && 
-        validarObra())
-    {
-            document.getElementById("cartel").style.display = "none";
-            alert("Los datos ingresados son correctos.");
-            return true;
-    }else{
-        document.getElementById("cartel").style.display = "flex";
-        return false;
-    }     
-}
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+
+})()
+
+
 
 //***************************************************** */
 //Validar email
 /****************************************************** */
 function validarEmail(obj){
-    var obj1 = obj.find(".input-group");
-    var obj2 = obj1.find("input");
-    var obj3 = obj1.find("span");
-    var obj4 = obj.find(".subtitulo");
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(obj2).val())){
-        val_positiva(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/check-circle.svg"></img>');
-       return true;
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(obj).val())){
+        obj.setCustomValidity('');  // Restablecer la validez 
+        return true;
     }else{
-        val_negativa(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/exclamation-triangle.svg"></img>');
+        obj.setCustomValidity(' '); 
         return false;
-    }   
+    }  
 }
 
 //***************************************************** */
@@ -41,19 +41,14 @@ function validarEmail(obj){
 //Validar nombre y apellido
 /****************************************************** */
 function validarNombre(obj){
-    var obj1 = obj.find(".input-group");
-    var obj2 = obj1.find("input");
-    var obj3 = obj1.find("span");
-    var obj4 = obj.find(".subtitulo");
-    if ($(obj2).val() != "" && validarSoloLetra($(obj2).val())){
-        val_positiva(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/check-circle.svg"></img>');
-       return true;
+
+    if ($(obj).val() != "" && validarSoloLetra($(obj).val())){
+        obj.setCustomValidity('');  // Restablecer la validez 
+        return true;
     }else{
-        val_negativa(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/exclamation-triangle.svg"></img>');
+        obj.setCustomValidity(' '); 
         return false;
-    }   
+    } 
 }
 
 //***************************************************** */
@@ -62,19 +57,14 @@ function validarNombre(obj){
 //Validar nombre de usuario
 /****************************************************** */
 function validarUsuario(obj){
-    var obj1 = obj.find(".input-group");
-    var obj2 = obj1.find("input");
-    var obj3 = obj1.find("span");
-    var obj4 = obj.find(".subtitulo");
-    if ($(obj2).val() != "" && validarLetraNum($(obj2).val())){
-        val_positiva(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/person-check.svg"></img>');
-       return true;
+
+    if ($(obj).val() != "" && validarLetraNum($(obj).val())){
+        obj.setCustomValidity('');  // Restablecer la validez 
+        return true;
     }else{
-        val_negativa(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/person-exclamation.svg"></img>');
+        obj.setCustomValidity(' '); 
         return false;
-    }   
+    }
 }
 //***************************************************** */
 
@@ -82,43 +72,33 @@ function validarUsuario(obj){
 //Validar contraseña
 /****************************************************** */
 function validarContrasenia(obj){
-    var obj1 = obj.find(".input-group");
-    var obj2 = obj1.find("input");
-    var obj3 = obj1.find("span");
-    var obj4 = obj.find(".subtitulo");
-    var cadena = $(obj2).val();
+    var cadena = $(obj).val();
+
     if (cadena != "" && validarLetraNum(cadena) && cadena.length > 8){
-        val_positiva(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/eye-slash.svg"></img>');
-       return true;
+        obj.setCustomValidity('');  // Restablecer la validez 
+        return true;
     }else{
-        val_negativa(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/eye-slash-fill.svg"></img>');
+        obj.setCustomValidity(' '); 
         return false;
-    }   
+    } 
 }
 //***************************************************** */
 
 //***************************************************** */
-//Contraseña visible
+//Validar Modelo AA y AAAA menor al año actual
 /****************************************************** */
-function contraseniaVisible(obj){
-    var obj1 = obj.find(".input-group");
-    var obj2 = obj1.find("input");
-    var obj3 = obj1.find("span");
-    var obj4 = obj.find(".subtitulo");
-    var cadena = $(obj2).attr("type");
-    if (cadena == "password"){
-        $(obj2).attr("type", "text");
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/eye.svg"></img>');
-       return true;
+function validarModelo(obj){
+    const fechaActual = new Date();
+    var cadena = parseInt(obj.value);
+    
+    if (((cadena <= fechaActual.getFullYear()) && (cadena >= 2000)) || ((cadena <= 99) && (cadena >= 30))){
+        obj.setCustomValidity('');  // Restablecer la validez 
+        return true;
     }else{
-        $(obj2).attr("type", "password");
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/eye-slash.svg"></img>');
+        obj.setCustomValidity(' '); 
         return false;
-    }   
+    }
 }
-//***************************************************** */
 
 //***************************************************** */
 //Validar numero de dni entre 1M y 99M 
@@ -129,45 +109,28 @@ function validarDni(obj){
     
     if (cadena != "" && esNumero(cadena) && cadena.length > 6 && cadena<99999999 && cadena>1000000){ 
         obj.setCustomValidity('');  // Restablecer la validez 
+        return true;
     }else{
         obj.setCustomValidity(' '); 
+        return false;
     }
 }
 //***************************************************** */
 //Validar numero telefono minimo de 8 digitos
 /****************************************************** */
 function validarTelefono(obj){
-    var obj1 = obj.find(".input-group");
-    var obj2 = obj1.find("input");
-    var obj3 = obj1.find("span");
-    var obj4 = obj.find(".subtitulo");
-    var cadena = $(obj2).val();
+    var pre = obj.value.slice(0, 3);
+    var fijo = obj.value.slice(4 );
     
     if (cadena != "" && esNumero(cadena) && cadena.length > 8 && cadena.length<15){ 
-        val_positiva(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/telephone.svg"></img>');
-       return true;
+        obj.setCustomValidity('');  // Restablecer la validez 
+        return true;
     }else{
-        val_negativa(obj1, obj3, obj4);
-        $(obj3).html('<img src="../../Librerias/node_modules/bootstrap-icons/icons/exclamation-triangle.svg"></img>');
+        obj.setCustomValidity(' '); 
         return false;
-    }  
+    }
 }
 
-function val_positiva(obj1, obj3, obj4){ 
-    $(obj1).removeClass();
-    $(obj1).addClass("input-valido input-group mb-3");
-    $(obj3).css({"background-color": "rgb(183, 243, 183"});
-    $(obj4).css({"color": "green"});
-    $(obj4).html("OK!");
-}
-function val_negativa(obj1, obj3, obj4){
-    $(obj1).removeClass();
-    $(obj1).addClass("input-novalido input-group mb-3");
-    $(obj3).css({"background-color": "rgb(249, 188, 188)"});
-    $(obj4).css({"color": "red"});
-    $(obj4).html("Datos inválidos!");
-}
 //***************************************************** */
 //Validar numero
 /****************************************************** */
@@ -193,6 +156,37 @@ function esPositivo(obj){
     }
     return valor;
 }
+//Valida que la fecha sea válida, respetando los años biciestos y 
+//que la fecha sea menor al día actual FechaNac
+function validarFechaNac(obj){
+    var boolAnio = false;
+    var boolMes = false;
+    var boolDia = false;
+    var boolFecha = false;
+    var fecha = obj.value;
+    var anio = obj.value.slice(0, 4);
+    var mes = obj.value.slice(5, 7);
+    var dia = obj.value.slice(8, 10);
+    const fechaActual = new Date();
+    var meses = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    obj.setCustomValidity(' '); 
+    if (((anio <= fechaActual.getFullYear()) && (anio >= 1910)) ){
+        boolAnio = true;
+    }
+    if ((mes <= 12 && mes > 0) && !((anio == fechaActual.getFullYear()) && (mes > fechaActual.getMonth()+1))){
+        boolMes = true
+    }
+    if(((dia<=meses[mes]) && dia>0)|| ((mes==2) && (dia <= 29) && (anio%4 == 0)) && boolAnio && boolMes){
+       obj.setCustomValidity('');  // Restablecer la validez 
+       boolFecha =true;
+    }else{
+       obj.setCustomValidity(' '); 
+    }
+
+    return boolFecha;
+}
+
+
 
 //Valida que la fecha sea válida, respetando los años biciestos y 
 //que la fecha sea menor al día actual
@@ -241,18 +235,6 @@ function validarDia (dia, mes, anio){
 }
 //************************************************************************ */
 
-//Validar la ciudad
-
-function validarCiudad(){
-    var obj = document.getElementById("ciudad")
-    if (obj.value != ""){
-        obj.style.borderColor="green";
-        return true;
-    }else{
-        obj.style.borderColor="red";
-        return false;
-    }
-}
 
 //Validar cadena por formato
 function validarSoloLetra(cadena){
@@ -274,3 +256,5 @@ function validarLetraNum(cadena){
     }
     return true;
 }
+
+//pattern="^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[01])$|^(?:(19|20)([02468][048]|[13579][26]))-02-29$"

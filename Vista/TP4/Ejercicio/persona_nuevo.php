@@ -15,7 +15,7 @@
 
 			<!-- Numero DNI -->
 			<div class="col-md-12 text-primary form-floating">
-				<input id="NroDni:" name="NroDni" width="80" type="number" min="1000000" class="form-control" placeholder="" pattern="[0-9]{6,8}" required>
+				<input id="NroDni" name="NroDni" width="80" type="number" min="1000000" class="form-control" placeholder="" pattern="[0-9]{6,8}" required>
 				<label for="NroDni" class="form-label">N&uacute;mero de Dni: </label>
 
 				<!-- Mensajes aprobado y error -->
@@ -25,7 +25,7 @@
 
 			<!-- Apellido -->
 			<div class="col-md-6 text-primary form-floating">
-				<input id="Apellido:" name="Apellido" width="80" type="text" class="form-control" placeholder="" pattern="^\s*[A-Za-z]+(\s[A-Za-z]+)*\s*$" required>
+				<input id="Apellido" name="Apellido" width="80" type="text" class="form-control" placeholder="" pattern="^\s*[A-Za-z]+(\s[A-Za-z]+)*\s*$" required>
 				<label for="Apellido" class="form-label">Apellido: </label>
 
 				<!-- Mensajes aprobado y error -->
@@ -35,7 +35,7 @@
 
 			<!-- Nombre -->
 			<div class="col-md-6 text-primary form-floating">
-				<input id="Nombre:" name="Nombre" width="80" type="text" class="form-control" placeholder="" pattern="^\s*[A-Za-z]+(\s[A-Za-z]+)*\s*$" required>
+				<input id="Nombre" name="Nombre" width="80" type="text" class="form-control" placeholder="" pattern="^\s*[A-Za-z]+(\s[A-Za-z]+)*\s*$" required>
 				<label for="Nombre" class="form-label">Nombre: </label>
 
 				<!-- Mensajes aprobado y error -->
@@ -45,7 +45,7 @@
 
 			<!-- Fecha de Nacimiento -->
 			<div class="mb-3 form-floating text-primary mb-4">
-				<input id="fechaNac:" name="fechaNac" width="80" type="text" class="form-control" placeholder="" pattern="^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[01])$|^(?:(19|20)([02468][048]|[13579][26]))-02-29$" required>
+				<input id="fechaNac" name="fechaNac" width="80" type="text" class="form-control" placeholder="" pattern="^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[01])$|^(?:(19|20)([02468][048]|[13579][26]))-02-29$" required>
 				<label for="fechaNac" class="form-label">Fecha de Nacimiento - Formato YYY-MM-DD: </label>
 
 				<!-- Mensajes aprobado y error -->
@@ -55,7 +55,7 @@
 
 			<!-- Telefono -->
 			<div class="mb-3 form-floating text-primary mb-4">
-				<input id="Telefono:" name="Telefono" width="80" type="numb" class="form-control" placeholder="" pattern="^(?!\s*$)[1-9]\d*-[1-9]\d*$" required>
+				<input id="Telefono" name="Telefono" width="80" type="numb" class="form-control" placeholder="" pattern="^(?!\s*$)[1-9]\d*-[1-9]\d*$" required>
 				<label for="Telefono" class="form-label">Tel&eacute;fono - Formato 299-5443322: </label>
 
 				<!-- Mensajes aprobado y error -->
@@ -65,7 +65,7 @@
 
 			<!-- Domicilio -->
 			<div class="mb-3 form-floating text-primary mb-4">
-				<input id="Domicilio:" name="Domicilio" width="80" type="text" class="form-control" placeholder="Nombre de la ciudad" pattern="^[A-Za-z0-9\s]*[A-Za-z0-9][A-Za-z0-9\s]*$" required>
+				<input id="Domicilio" name="Domicilio" width="80" type="text" class="form-control" placeholder="Nombre de la ciudad" pattern="^[A-Za-z0-9\s]*[A-Za-z0-9][A-Za-z0-9\s]*$" required>
 				<label for="Domicilio" class="form-label">Domicilio: </label>
 
 				<!-- Mensajes aprobado y error -->
@@ -89,18 +89,20 @@
 </div>
 </div>
 
-<!-- BOOTSTRAP con las validaciones de los campos -->
-<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
+
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
+
+<!-- BOOTSTRAP con las validaciones de los campos -->
+<script type="text/javascript" src="../../Js/validacionTP4.js"></script> 
+
 <script>
-  $(document).ready(function(){
-    $("#NroDni").blur(function(){
-      validarDni($(this));
-    });
-	$("#fechaNac").blur(function(){
-      validarFecha($(this));
-    });
+
+document.getElementById("fechaNac").addEventListener("blur", function(){
+    validarFechaNac(this);
   });
+document.getElementById("Telefono").addEventListener("blur", function(){
+validarTelefono(this);
+});
 </script>

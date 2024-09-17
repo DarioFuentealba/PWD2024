@@ -5,6 +5,7 @@
     $listaPersona = $objAbmPersona->buscar(null);
 ?>
 
+
 <!-- Contenedor de formulario -->
 <div class="container mt-5 p-4 border rounded shadow">
     <!-- Titulo en la pagina -->
@@ -36,7 +37,7 @@
 
             <!-- Modelo -->
             <div class="mb-3 form-floating text-primary mb-4">
-				<input class="form-control" id="Modelo" name ="Modelo" type="number" min="1" placeholder="" required>
+				<input class="form-control" id="Modelo" name ="Modelo" type="text" min="1" placeholder="" >
 				<label for="Modelo" class="form-label">Modelo</label>
 
 				<!-- Mensajes aprobado y error -->
@@ -79,8 +80,15 @@
         </div>
 </div>
 
-<!-- BOOTSTRAP con las validaciones de los campos -->
-<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
-
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
+
+<!-- BOOTSTRAP con las validaciones de los campos -->
+<script type="text/javascript" src="../../Js/validacionTP4.js"></script> 
+
+<script>
+
+document.getElementById("Modelo").addEventListener("blur", function(){
+    validarModelo(this);
+  });
+</script>
