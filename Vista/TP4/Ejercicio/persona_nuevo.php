@@ -55,7 +55,7 @@
 
 			<!-- Telefono -->
 			<div class="mb-3 form-floating text-primary mb-4">
-				<input id="Telefono" name="Telefono" width="80" type="numb" class="form-control" placeholder="" pattern="^(?!\s*$)[1-9]\d*-[1-9]\d*$" required>
+				<input id="Telefono" name="Telefono" width="80" type="numb" class="form-control" placeholder="" pattern="^(?!\s*$)[1-9]{1,5}\d*-[1-9]{5,9}\d*$" required>
 				<label for="Telefono" class="form-label">Tel&eacute;fono - Formato 299-5443322: </label>
 
 				<!-- Mensajes aprobado y error -->

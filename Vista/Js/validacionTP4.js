@@ -182,3 +182,4 @@ function validarLetraNum(cadena){
     }
     return true;
 }
+//^(?!\s*$)[1-9]{1,5}\d*-[1-9]{5,9}\d*$

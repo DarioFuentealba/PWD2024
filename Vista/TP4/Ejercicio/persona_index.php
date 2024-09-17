@@ -18,14 +18,14 @@
 <div class="container mt-5 p-4 border rounded shadow">
   <h2 class="text-center text-primary mb-4">Listado de personas</h2>
   <p class="text-center text-primary mb-4">Listado de personas incluidas en la base de datos</p>      
-  <div>
+  <div class="mb-2">
     <form action="persona_index.php" method="post" class="container mt-5 p-4 border rounded shadow">
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por DNI:</label>
         <input name="NroDni" id="NroDni" type="text" pattern="[0-9]{0,8}" >
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
     </form>
   </div>  
-  <br>
+  
 
   <table class="table table-hover table-striped text-primary ">
     <thead>

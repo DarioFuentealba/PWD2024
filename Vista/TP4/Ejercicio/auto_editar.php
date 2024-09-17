@@ -36,8 +36,8 @@
 
 				<!-- Patente -->
 				<div class="mb-3 form-floating">
-					<input id="Patente:" readonly name ="Patente" width="80" type="text" class="form-control" value="<?php echo $objAuto->getPatente()?>" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required>
-					<label for="Patente" class="form-label">Patente</label><br/>
+					<input id="Patente" readonly name ="Patente" width="80" type="text" class="form-control" value="<?php echo $objAuto->getPatente()?>" pattern="[A-z\s]{4}[0-9]{3}||[A-z]{2}[0-9]{3}[A-z]{2}" required>
+					<label for="Patente" class="form-label">Patente</label>
 					<br/>
 
 					<!-- Mensajes aprobado y error -->
@@ -47,8 +47,8 @@
 
 				<!-- Marca -->
 				<div class="mb-3 form-floating">
-					<input id="Marca" name ="Marca" width="80" type="text" value="<?php echo $objAuto->getMarca()?>" class="form-control"[A-Za-z0-9][A-Za-z0-9\s]*$" required>
-					<label for="Marca" class="form-label">Marca</label><br/>
+					<input id="Marca" name ="Marca" width="80" type="text" value="<?php echo $objAuto->getMarca()?>" class="form-control" pattern="[A-Za-z0-9][A-Za-z0-9\s]*$" required>
+					<label for="Marca" class="form-label">Marca</label>
 					<br/>
 
 					<!-- Mensajes aprobado y error -->
@@ -58,8 +58,8 @@
 
 				<!-- Modelo -->
 				<div class="mb-3 form-floating">
-					<input id="Modelo:" name ="Modelo" width="80" type="number" min="1"  max="2024" maxlength="4" value="<?php echo $objAuto->getModelo()?>" class="form-control" required>
-					<label for="Modelo" class="form-label">Modelo</label><br/>
+					<input id="Modelo" name ="Modelo" width="80" type="number" min="1"  max="2024" maxlength="4" value="<?php echo $objAuto->getModelo()?>" class="form-control" required>
+					<label for="Modelo" class="form-label">Modelo</label>
 					<br/>
 
 					<!-- Mensajes aprobado y error -->
@@ -79,7 +79,7 @@
 						}
 					?>
 					</select>
-					<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label><br>
+					<label for="DniDuenio" class="form-label">Dni del Due&ntilde;o</label>
 
 					<!-- Mensajes aprobado y error -->
 					<div class="valid-feedback">Ok!</div>
@@ -103,7 +103,14 @@
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
-<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
+<script type="text/javascript" src="../../Js/validacionTP4.js"></script>
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>
+
+<script>
+
+document.getElementById("Modelo").addEventListener("blur", function(){
+    validarModelo(this);
+  });
+</script>

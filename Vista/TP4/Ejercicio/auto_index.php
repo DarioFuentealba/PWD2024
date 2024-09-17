@@ -3,8 +3,16 @@
     include_once '../../Estructura/header.php';
 
     $objAbmAuto = new AbmAuto();
-
     $listaAuto = $objAbmAuto->buscar(null);
+
+    // Si no llegan datos del data_submited    
+    $datos = data_submitted();
+    if(!empty($datos))
+    {
+      if($datos['Patente'] == 'null'){$datos['Patente'] = "";}
+      $listaAuto= $objAbmAuto->buscar($datos['Patente']);  //../Accion/persona_accion_buscar.php
+    }
+
 ?>	
 
 <!-- Cuadro sombreado que rodea todo -->
@@ -14,6 +22,14 @@
   <h2 class="text-center text-primary mb-4">Listado de autos</h2>
 
   <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
+
+  <div class="mb-2">
+    <form action="persona_index.php" method="post" class="container mt-5 p-4 border rounded shadow">
+        <label for="buscar" class="form-label text-primary fw-bold">Buscar por Patente:</label>
+        <input name="Patente" id="Patente" type="text" pattern="^\s*([A-Za-z]{2} \d{3} [A-Za-z]{2}|[A-Za-z]{3} \d{3})\s*$" >
+        <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
+    </form>
+  </div> 
 
   <table class="table table-hover table-striped text-primary ">
     <thead>
