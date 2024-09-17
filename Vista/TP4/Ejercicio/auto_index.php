@@ -24,7 +24,7 @@
   <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
 
   <div class="mb-2">
-    <form action="auto_index.php" method="post" class="container mt-5 p-4 border rounded shadow">
+    <form action="auto_index.php" method="post" class="container mt-5 p-4 border rounded shadow" novalidate>
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por Patente:</label>
         <input name="Patente" id="Patente" type="text" pattern="[A-z0-9]" >
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
