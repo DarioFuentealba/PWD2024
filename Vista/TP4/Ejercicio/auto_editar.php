@@ -58,7 +58,7 @@
 
 				<!-- Modelo -->
 				<div class="mb-3 form-floating">
-					<input id="Modelo" name ="Modelo" width="80" type="number" min="1900"  max="2024" maxlength="4" value="<?php echo $objAuto->getModelo()?>" class="form-control" required>
+					<input id="Modelo" name ="Modelo" width="80" type="text" value="<?php echo $objAuto->getModelo()?>" class="form-control" required>
 					<label for="Modelo" class="form-label">Modelo - A&ntilde;o de 4 d&iacute;gitos</label>
 					<br/>
 
