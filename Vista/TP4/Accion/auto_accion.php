@@ -41,7 +41,7 @@
 ?>
 
 <!-- Titulo en la pagina -->
-<h3 class="text-center mt-3">Auto - Edici&oacute;n o borrado</h3>
+<h3 class="text-center mt-3 text-primary">Auto - Edici&oacute;n o borrado</h3>
 
 <!-- Mensaje mostrado en pantalla -->
 <div class="alert alert-info text-center p-3 divform">

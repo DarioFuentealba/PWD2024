@@ -37,7 +37,7 @@
 
             <!-- Modelo -->
             <div class="mb-3 form-floating text-primary mb-4">
-                <input class="form-control" id="Modelo" name="Modelo" type="number" placeholder=" " required>
+                <input class="form-control" id="Modelo" name="Modelo" type="number"  min="1900"  max="2024" maxlength="4" placeholder=" " required>
                 <label for="Modelo" class="form-label">Modelo - Formato: A&ntilde;o de 4 d&iacute;gitos</label>
 
 				<!-- Mensajes aprobado y error -->

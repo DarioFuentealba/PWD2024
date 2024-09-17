@@ -1,7 +1,7 @@
 <?php
     $titulo = "Autos"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
-    echo '<div class="divtitulo"> <h1>'.$titulo.'</h1></div>';
+    //echo '<div class="divtitulo"> <h1>'.$titulo.'</h1></div>';
     $datos = data_submitted();
     //verEstructura($datos);
     $autoLoad = false;
@@ -44,7 +44,7 @@
 
 <div class="alert alert-info text-center p-3 divform">
     <!-- Titulo en la pagina -->
-    <h3 class="text-center">Agregar nuevo auto</h3>
+    <h3 class="text-center text-primary">Agregar nuevo auto</h3>
     <?php
         echo $aviso ;	
         echo $mensaje;
