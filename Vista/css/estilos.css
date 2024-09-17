@@ -1,7 +1,7 @@
-.navbar{
+/*.navbar{
     position: fixed;
     top: 0;
-    left: 0;         /* Alinea la navbar al borde izquierdo */
+    left: 0;
     width: 100%;
     z-index: 1000;
     background-color: black;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-/*.container {
+.container {
     margin-top: 60px;
     position: absolute;
     top: 50px;
