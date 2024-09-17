@@ -160,6 +160,15 @@ class AbmAuto{
         }
         return $resp;
     }
-    
+        /**
+     * permite buscar una patente parcial
+     * @param $patente
+     * @return array
+     */
+    public function buscarPorPatente($patente){
+        $where = " Patente LIKE '%".$patente."%'";     
+    $arreglo = Auto::listar($where);  
+    return $arreglo;
+}
 }
 ?>

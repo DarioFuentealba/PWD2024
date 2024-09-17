@@ -10,7 +10,7 @@
     if(!empty($datos))
     {
       if($datos['Patente'] == 'null'){$datos['Patente'] = "";}
-      $listaAuto= $objAbmAuto->buscar($datos['Patente']);  //../Accion/persona_accion_buscar.php
+      $listaAuto= $objAbmAuto->buscarPorPatente($datos['Patente']);  //../Accion/persona_accion_buscar.php
     }
 
 ?>	
@@ -24,10 +24,11 @@
   <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
 
   <div class="mb-2">
-    <form action="persona_index.php" method="post" class="container mt-5 p-4 border rounded shadow">
+    <form action="auto_index.php" method="post" class="container mt-5 p-4 border rounded shadow">
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por Patente:</label>
-        <input name="Patente" id="Patente" type="text" pattern="^\s*([A-Za-z]{2} \d{3} [A-Za-z]{2}|[A-Za-z]{3} \d{3})\s*$" >
+        <input name="Patente" id="Patente" type="text" pattern="[A-z0-9]" >
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
+        <div class="text-success">Buscar en vacio para refrescar</div>
     </form>
   </div> 
 
