@@ -22,9 +22,9 @@
         <th>Marca</th>
         <th>Modelo</th>
         <th>DNI Propietario</th>
-        <th>Editar</th>
-        <th>Eliminar</th>
-        <th>Cambio de due&ntilde;o</th>
+        <th class="text-center">Editar</th>
+        <th class="text-center">Eliminar</th>
+        <th class="text-center">Cambio de due&ntilde;o</th>
       </tr>
     </thead>
 
@@ -38,9 +38,9 @@
                 echo '<td>'.$objAuto->getMarca().'</td>';
                 echo '<td>'.$objAuto->getModelo().'</td>';
                 echo '<td>'.$objAuto->getObjDuenio()->getNroDni().'</td>';
-                echo '<td><a href="auto_editar.php?Patente='.$objAuto->getPatente().'" class="btn btn-color btn-sm" role="button">Editar</a></td>';
-                echo '<td><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'" class="btn btn-outline-danger btn-sm" role="button">Borrar</a></td>'; 
-                echo '<td><a href="auto_cambio_duenio.php?Patente='.$objAuto->getPatente().'" class="btn btn-outline-success btn-sm" role="button">Cambio</a></td>'; 
+                echo '<td class="text-center"><a href="auto_editar.php?Patente='.$objAuto->getPatente().'" class="btn btn-color btn-sm" role="button">Editar</a></td>';
+                echo '<td class="text-center"><a href="../Accion/auto_accion.php?accion=borrar&Patente='.$objAuto->getPatente().'" class="btn btn-outline-danger btn-sm" role="button">Borrar</a></td>'; 
+                echo '<td class="text-center"><a href="auto_cambio_duenio.php?Patente='.$objAuto->getPatente().'" class="btn btn-outline-success btn-sm" role="button">Cambio</a></td>'; 
               }
         }
       ?>

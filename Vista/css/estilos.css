@@ -113,27 +113,32 @@ body {
     color: white;
 }
 
-/* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
+/* Cambiar el color del botón cuando se pase el ratón por encima de la fila */
 .table-striped tbody tr:hover .btn-color {
     background-color: #99f0ff;
     border-color: #99f0ff;
     color: blue;
     border-radius: 5px;
 }
-
-/* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
+/* Cambiar el color del botón cuando se pase el ratón por encima de la fila */
 .table-striped tbody tr:hover .btn-outline-danger {
     background-color: #ff99cc;
     border-color: #ff99cc;
     color: blue;
     border-radius: 5px;
 }
-
-/* Cambiar el color del botón "Borrar" a rosa cuando se pase el ratón por encima de la fila */
+/* Cambiar el color del botón cuando se pase el ratón por encima de la fila */
 .table-striped tbody tr:hover .btn-outline-success {
     background-color: #7bfd7b;
     border-color: #7bfd7b;
     color: blue;
+    border-radius: 5px;
+}
+/* Cambiar el color del botón cuando se pase el ratón por encima de la fila */
+.table-striped tbody tr:hover .btn-outline-dark {
+    background-color: white;
+    border-color: white;
+    color: black;
     border-radius: 5px;
 }
 
@@ -155,11 +160,18 @@ body {
     border-color: white;
     color: white;
 }
+/* Cambiar el borde y las letras del botón "Ver Autos" cuando se pase el ratón por encima del botón */
+.table-striped tbody tr .btn-outline-dark:hover {
+    background-color: black;
+    border-color: white;
+    color: white;
+}
 
 /* Reducir el tamaño de los botones cuando se hace clic */
 .btn-color:active,
 .btn-outline-danger:active,
-.btn-outline-success:active {
+.btn-outline-success:active,
+.btn-outline-dark:active {
     transform: scale(0.95); /* Reduce el tamaño en un 5% */
 }
 /********************************************************************/
