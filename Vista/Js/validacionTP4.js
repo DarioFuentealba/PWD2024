@@ -91,7 +91,7 @@ function validarModelo(obj){
     const fechaActual = new Date();
     var cadena = parseInt(obj.value);
     
-    if (((cadena <= fechaActual.getFullYear()) && (cadena >= 2000)) || ((cadena <= 99) && (cadena >= 30))){
+    if (((cadena <= fechaActual.getFullYear()) && (cadena >= 1900)) || ((cadena <= 99) && (cadena >= 30))){
         obj.setCustomValidity('');  // Restablecer la validez 
         return true;
     }else{
@@ -156,83 +156,9 @@ function esPositivo(obj){
     }
     return valor;
 }
-//Valida que la fecha sea válida, respetando los años biciestos y 
-//que la fecha sea menor al día actual FechaNac
-function validarFechaNac(obj){
-    var boolAnio = false;
-    var boolMes = false;
-    var boolDia = false;
-    var boolFecha = false;
-    var fecha = obj.value;
-    var anio = obj.value.slice(0, 4);
-    var mes = obj.value.slice(5, 7);
-    var dia = obj.value.slice(8, 10);
-    const fechaActual = new Date();
-    var meses = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    obj.setCustomValidity(' '); 
-    if (((anio <= fechaActual.getFullYear()) && (anio >= 1910)) ){
-        boolAnio = true;
-    }
-    if ((mes <= 12 && mes > 0) && !((anio == fechaActual.getFullYear()) && (mes > fechaActual.getMonth()+1))){
-        boolMes = true
-    }
-    if(((dia<=meses[mes]) && dia>0)|| ((mes==2) && (dia <= 29) && (anio%4 == 0)) && boolAnio && boolMes){
-       obj.setCustomValidity('');  // Restablecer la validez 
-       boolFecha =true;
-    }else{
-       obj.setCustomValidity(' '); 
-    }
-
-    return boolFecha;
-}
 
 
 
-//Valida que la fecha sea válida, respetando los años biciestos y 
-//que la fecha sea menor al día actual
-function validarFecha (){
-    var v_anio = false;
-    var v_mes = false;
-    var v_dia = false;
-    var anio = esPositivo(document.getElementById("anio"));
-    var mes = esPositivo(document.getElementById("mes"));
-    var dia = esPositivo(document.getElementById("dia"));
-    const fechaActual = new Date();
-
-    if (((anio <= fechaActual.getFullYear()) && (anio >= 1910)) ){
-        v_anio = true;
-        document.getElementById("anio").style.borderColor="green";
-    }else{
-        document.getElementById("anio").style.borderColor="red";
-    }
-    if ((mes <= 12 && mes > 0) && !((anio == fechaActual.getFullYear()) && (mes > fechaActual.getMonth()+1))){
-        v_mes = true
-        document.getElementById("mes").style.borderColor="green";
-    }else{
-        document.getElementById("mes").style.borderColor="red";
-    }
-    if(validarDia(dia, mes, anio)){// && !(anio == fechaActual.getFullYear() && (mes >= (fechaActual.getMonth()+1)) && (dia > fechaActual.getDate()-1))){
-        v_dia =true;
-        document.getElementById("dia").style.borderColor="green";
-    }else{
-        document.getElementById("dia").style.borderColor="red";
-    }
-    if (v_anio && v_mes && v_dia){
-        return true;
-    }else{
-        return false;
-    }    
-}
-
-// valida el dia
-function validarDia (dia, mes, anio){
-    var meses = [31, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-    if(((dia<=meses[mes]) && dia>0)|| ((mes==2) && (dia == 29) && (anio%4 == 0))){
-        return true;
-    }
-    return false;
-}
 //************************************************************************ */
 
 
@@ -256,5 +182,3 @@ function validarLetraNum(cadena){
     }
     return true;
 }
-
-//pattern="^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|1\d|2\d|3[01])$|^(?:(19|20)([02468][048]|[13579][26]))-02-29$"
