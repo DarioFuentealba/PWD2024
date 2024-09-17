@@ -23,7 +23,7 @@
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por DNI:</label>
         <input name="NroDni" id="NroDni" type="text" pattern="[0-9]{0,8}" >
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
-        <div class="text-success">Buscar en vacio para refrescar</div>
+        <div class="text-success"><i class="bi bi-info-circle-fill"></i> Buscar en vacio para refrescar</div>
     </form>
   </div>  
   

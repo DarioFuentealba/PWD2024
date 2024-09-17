@@ -28,7 +28,7 @@
         <label for="buscar" class="form-label text-primary fw-bold">Buscar por Patente:</label>
         <input name="Patente" id="Patente" type="text" pattern="[A-z0-9]" >
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
-        <div class="text-success">Buscar en vacio para refrescar</div>
+        <div class="text-success"><i class="bi bi-info-circle-fill"></i> Buscar en vacio para refrescar</div>
     </form>
   </div> 
 
