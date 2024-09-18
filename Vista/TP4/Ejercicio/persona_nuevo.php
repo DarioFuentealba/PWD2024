@@ -80,13 +80,13 @@
 			</div>
 		</form>
 	</div>
-<br><br>
+	<br><br>
 
-<!-- Boton atras -->
-<div class="col-md-4">
-    <button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
-    <a href="../Ejercicio/persona_index.php" class="btn btn-primary" role="button">Principal</a>
-</div>
+	<!-- Boton atras -->
+	<div class="col-md-4">
+		<button class="btn btn-info" onclick="history.back();">Atr&aacute;s</button>
+		<a href="../Ejercicio/persona_index.php" class="btn btn-primary" role="button">Principal</a>
+	</div>
 </div>
 
 

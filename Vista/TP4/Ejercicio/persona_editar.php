@@ -69,8 +69,8 @@
 
 				<!-- Telefono -->
 				<div class="mb-3 form-floating">
-					<input id="Telefono:" name="Telefono" width="80" type="numb" value="<?php echo $obj->getTelefono()?>" class="form-control" placeholder="" pattern="^[1-9]\d*-[1-9]\d*$">
-					<label for="Telefono" class="form-label">Tel&eacute;fono: </label>
+					<input id="Telefono:" name="Telefono" width="80" type="numb" value="<?php echo $obj->getTelefono()?>" class="form-control" placeholder="" pattern="^(?!\s*$)[1-9]{1,5}\d*-[1-9]{5,9}\d*$" required>
+					<label for="Telefono" class="form-label">Tel&eacute;fono - Formato 299-5443322: </label>
 
 					<!-- Mensajes aprobado y error -->
 					<div class="valid-feedback">Ok!</div>
@@ -105,7 +105,7 @@
 </div>
 
 <!-- BOOTSTRAP con las validaciones de los campos -->
-<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
+<script type="text/javascript" src="../../Js/validacionTP4.js"></script>
 
 <!-- Footer -->
 <?php include_once '../../Estructura/footer.php'; ?>

@@ -64,8 +64,5 @@ if (isset($datos['Patente']))
 	</div>
 </div>
 
-<!-- BOOTSTRAP con las validaciones de los campos -->
-<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
-
 <!-- JQUERY con las validaciones de los campos -->
 <script type="text/javascript" src="../../Js/validaciontp4.js"></script>
