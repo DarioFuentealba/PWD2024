@@ -65,7 +65,7 @@
   <!-- Boton agregar nueva persona -->
   <div class="container mt-3">
       <a href="persona_nuevo.php" class="btn btn-primary" role="button">Agregar nueva persona</a>
-      <a href="persona_index.php" class="btn btn-primary" role="button">Volver</a>
+      <a href="auto_index.php" class="btn btn-primary" role="button">Ver Listado de Autos</a>
   </div>
 </div>
 
