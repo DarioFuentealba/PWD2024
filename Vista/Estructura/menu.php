@@ -81,11 +81,11 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_index.php">Auto</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_ver.php">Ver Auto Ej3a</a></li>
+              <!-- <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_ver.php">Ver Auto Ej3a</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_buscar.php">Buscar Auto Ej4</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li> -->
             </ul>
           </li>
         </ul>
