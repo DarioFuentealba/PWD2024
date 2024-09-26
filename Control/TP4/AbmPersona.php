@@ -192,12 +192,12 @@ class AbmPersona{
  */
 public function vXc($param, $key){
     $bool   = false;
-    $options['NroDni']   = array('options' => array("/^[1-9][0-9]{5,6}[0-9]$/"));
-    $options['Apellido'] = array('options' => array("/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
-    $options['Nombre']   = array('options' => array("/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
-    $options['fechaNac'] = array('options' => array("/^[0-3][0-9]{1}-[0-9]{2}-[0-9]{3}[0-9]$/"));
-    $options['Telefono'] = array('options' => array("/^[1-9][0-9]{1,3}-[0-9]{4,9}[0-9]$/"));
-    $options['Domicilio']= array('options' => array("/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ'°0-9]{1,40}[A-z0-9]$/"));
+    $options['NroDni']      = array('options' => array("regexp"=>"/^[1-9][0-9]{5,6}[0-9]$/"));
+    $options['Apellido']    = array('options' => array("regexp"=>"/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
+    $options['Nombre']      = array('options' => array("regexp"=>"/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
+    $options['fechaNac']    = array('options' => array("regexp"=>"/^[0-3][0-9]{1}-[0-9]{2}-[0-9]{3}[0-9]$/"));
+    $options['Telefono']    = array('options' => array("regexp"=>"/^[1-9][0-9]{1,3}-[0-9]{4,9}[0-9]$/"));
+    $options['Domicilio']   = array('options' => array("regexp"=>"/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ'°0-9]{1,40}[A-z0-9]$/"));
     if ($param <> NULL)
     {
         if (($param[$key] != 'null') && (filter_var($param[$key], FILTER_VALIDATE_REGEXP, $options[$key]) !== FALSE)) {
@@ -224,23 +224,24 @@ public function vXc($param, $key){
  */
 public function validarTodo($param){
     $bool   = false;
-    $listaKey = ['NroDni', 'Apellido', 'Nombre', 'fechaNac', 'Telefono', 'Domicilio'];
-    $options['NroDni']   = array('options' => array("/^[1-9][0-9]{5,6}[0-9]$/"));
-    $options['Apellido'] = array('options' => array("/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
-    $options['Nombre']   = array('options' => array("/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
-    $options['fechaNac'] = array('options' => array("/^[0-3][0-9]{1}-[0-9]{2}-[0-9]{3}[0-9]$/"));
-    $options['Telefono'] = array('options' => array("/^[1-9][0-9]{1,3}-[0-9]{4,9}[0-9]$/"));
-    $options['Domicilio']= array('options' => array("/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ'°0-9]{1,40}[A-z0-9]$/"));
+    $listaKey = ['NroDni', 'Apellido', 'Nombre', 'Telefono', 'Domicilio'];
+    $options['NroDni']      = array('options' => array("regexp"=>"/^[1-9][0-9]{5,6}[0-9]$/"));
+    $options['Apellido']    = array('options' => array("regexp"=>"/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
+    $options['Nombre']      = array('options' => array("regexp"=>"/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ']{0,40}[A-z]$/"));
+    //$options['fechaNac']    = array('options' => array("regexp"=>"/^[0-3][0-9]{1}-[0-9]{2}-[0-9]{3}[0-9]$/"));
+    $options['Telefono']    = array('options' => array("regexp"=>"/^[1-9][0-9]{1,3}-[0-9]{4,9}[0-9]$/"));
+    $options['Domicilio']   = array('options' => array("regexp"=>"/^[A-Z][A-z\sáéíóúüñÁÉÍÓÚÜÑ'°0-9]{1,40}[A-z0-9]$/"));
     if ($param <> NULL)
     {
         foreach ($listaKey as $key){
             if (($param[$key] != 'null') && (filter_var($param[$key], FILTER_VALIDATE_REGEXP, $options[$key]) !== FALSE)) {
                 //exepciones
                 if(($key === 'fechaNac')){
-                    $dia = substr($param[$key],0,2);
-                    $mes = substr($param[$key],3,2);
-                    $ani = substr($param[$key],6,4);
+                    $dia = substr($param[$key],0,4);
+                    $mes = substr($param[$key],5,2);
+                    $ani = substr($param[$key],8,2);
                     $bool = checkdate($mes,$dia,$ani) ? true : false;
+                    
                 }elseif($key === 'Modelo'){$bool = ($param[$key] <= date("Y")) ? true : false;
                 }else{     $bool = true;
                 }
