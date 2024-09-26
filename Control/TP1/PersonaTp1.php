@@ -1,5 +1,5 @@
 <?php
-class Persona {
+class PersonaTp1 {
 
     private $nombre;
     private $apellido;

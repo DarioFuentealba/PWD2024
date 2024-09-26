@@ -5,7 +5,7 @@ echo '<div class="divtitulo"> <h1>';
 echo $titulo.'</h1></div>';
 if(!empty(data_submitted())){
     $recibido = data_submitted();
-    $objpersona = new Persona($recibido);
+    $objpersona = new PersonaTP1($recibido);
     ?>
 
     <div class="divform">

@@ -6,7 +6,7 @@ echo $titulo.'</h1></div>';
 
 if(!empty(data_submitted())){
     $recibido = data_submitted();
-    $objpersona = new Persona($recibido);
+    $objpersona = new PersonaTp1($recibido);
 
     $mayor = "";
 
