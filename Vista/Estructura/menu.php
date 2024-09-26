@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="../../Inicio/principal/principal.php">Grupo 5</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -74,22 +74,23 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 3</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio1.php">Ejercicio 1</a></li>
-              <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio2.php">Ejercicio 2</a></li>
-              <li><a class="dropdown-item" href="../../TP3/Ejercicio/ejercicio3.php">Ejercicio 3</a></li>
+              <li><a class="dropdown-item" href="../../TP3/Ejercicio/ej1_subir_archivo.php">Ejercicio 1 - Subir archivo</a></li>
+              <li><a class="dropdown-item" href="../../TP3/Ejercicio/ej2_mostrar_txt_en_textarea.php">Ejercicio 2 - Subir .txt y mostrarlo en un textarea</a></li>
+              <li><a class="dropdown-item" href="../../TP3/Ejercicio/ej3_insertar_imagen.php">Ejercicio 3 - Insertar imagen</a></li>
             </ul>
           </li>
-                    <!-- Menu TP 4 -->
-                    <li class="nav-item dropdown">
+
+          <!-- Menu TP 4 -->
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TP N° 4</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_index.php">Auto</a></li>
               <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
-              <!-- <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_ver.php">Ver Autos Ej3a</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_buscar.php">Buscar Autos Ej4a</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_lista.php">Lista Persona Ej3b</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_nuevo.php">Persona nuevo Ej4b</a></li>
-              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_nuevo.php">Auto Nuevo Ej5</a></li> -->
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_ver.php">Ver Auto Ej3a</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/auto_buscar.php">Buscar Auto Ej4</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
+              <li><a class="dropdown-item" href="../../TP4/Ejercicio/persona_index.php">Persona</a></li>
             </ul>
           </li>
         </ul>
