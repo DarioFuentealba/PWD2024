@@ -1,5 +1,5 @@
 <?php
-$titulo = "Grupo X PWD 2024";
+$titulo = "Grupo 5 PWD 2024";
 include_once '../../Estructura/header.php';
 ?>
 
