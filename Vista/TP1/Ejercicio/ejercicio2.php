@@ -14,16 +14,16 @@ include_once('../../Estructura/header.php');
   </p>
 </div>
 <div class="divform">
-<form action="../Accion/eje2accion.php" method="get" id="form2" name="form2" onsubmit="return validarej2();">
-    Lunes:<input type="number" id="lunes" name="lunes" value="0" min="0" step="1" required><br><br>
+<form action="../Accion/eje2accion.php" method="get" id="form2" name="form2">
+    Lunes:<input type="number" id="lunes" name="lunes" value="0" min="0" max='23' step="1" required><br><br>
 
-    Martes:<input type="number" id="martes" name="martes" value="0" min="0" step="1" required><br><br>
+    Martes:<input type="number" id="martes" name="martes" value="0" min="0" max='23' step="1" required><br><br>
 
-    Miércoles:<input type="number" id="miércoles" name="miércoles" value="0" min="0" step="1" required><br><br>
+    Miércoles:<input type="number" id="miércoles" name="miércoles" value="0" max='23' min="0" step="1" required><br><br>
 
-    Jueves:<input type="number" id="jueves" name="jueves" value="0" min="0" step="1" required><br><br>
+    Jueves:<input type="number" id="jueves" name="jueves" value="0" min="0" max='23' step="1" required><br><br>
 
-    Viernes:<input type="number" id="viernes" name="viernes" value="0" min="0" step="1" required><br><br>
+    Viernes:<input type="number" id="viernes" name="viernes" value="0" min="0" max='23' step="1" required><br><br>
 
 <button type="submit" class="btn btn-success" role="button">Calcular Horas Totales</button>
 </form>

@@ -18,13 +18,13 @@ include_once '../../Estructura/header.php';
 <div class="divform">
     <form id="form4" name="form4" action="../Accion/eje4accion.php" method="get">
         <label for="lnombre">Nombre:</label><br>
-        <input type="text" name="nombre" id="nombre" oninput="validarNombre(event)" required><br>
+        <input type="text" name="nombre" id="nombre" ><br>
         <label for="lapellido">Apellido:</label><br>
-        <input type="text" name="apellido" id="apellido" oninput="validarNombre(event)" required><br>
+        <input type="text" name="apellido" id="apellido" ><br>
         <label for="ledad">Edad:</label><br>
-        <input type="number" name="edad" id="edad" oninput="validarEdad(event)" required min="1" ><br>
+        <input type="number" name="edad" id="edad" min="1" max='90'><br>
         <label for="ldireccion">Direcci&oacute;n</label><br>
-        <input type="text" name="direccion" id="direccion" required><br>
+        <input type="text" name="direccion" id="direccion" ><br>
         <br>
         <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
         
@@ -39,3 +39,33 @@ include_once '../../Estructura/header.php';
 <?php
 include_once '../../Estructura/footer.php';
 ?>
+<script type="text/javascript" src="../../Js/validacionTP1.js"></script>
+<script>
+    document.getElementById("form4").addEventListener("submit", function(event){
+        var campos =[
+            document.getElementById("nombre"),
+            document.getElementById("apellido"),
+            document.getElementById("edad"),
+            document.getElementById("direccion")
+        ];
+        var todosValidos = true; 
+        // Validar todos los campos
+        campos.forEach(function(campo){
+            if(!validarCampo(campo)){
+                todosValidos = false;
+            }
+        });
+        var nombres= [
+            document.getElementById("nombre"),
+            document.getElementById("apellido")
+        ]
+        nombres.forEach(function(campo){
+            if(!validarNombre(campo)){
+                todosValidos = false; 
+            }
+        });
+        if(!todosValidos){
+            event.preventDefault(); // Evitar que se envíe el formulario si alguno es inválido
+        }
+    });
+</script>

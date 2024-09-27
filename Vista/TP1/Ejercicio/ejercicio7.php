@@ -13,12 +13,12 @@ include_once '../../Estructura/header.php';
 </div>
 
 <div class="divform">
-    <form method="get" action="../Accion/eje7accion.php">
+    <form method="get" action="../Accion/eje7accion.php" id='form7'>
         <label>Número 1:</label>
-        <input type="number" id="numero1" name="numero1" step="any" required>
+        <input type="number" id="numero1" name="numero1" step="any" ><br><br>
 
         <label>Número 2:</label>
-        <input type="number" id="numero2" name="numero2" step="any" required>
+        <input type="number" id="numero2" name="numero2" step="any" ><br><br>
 
         <label>Operación:</label>
         <select id="operacion" name="operacion" required>
@@ -35,3 +35,21 @@ include_once '../../Estructura/header.php';
 <?php
 include_once '../../Estructura/footer.php';
 ?>
+<script type="text/javascript" src="../../Js/validacionTP1.js"></script>
+<script>
+    document.getElementById("form7").addEventListener("submit", function(event) {
+    var numeros =[
+        document.getElementById("numero1"),
+        document.getElementById("numero2")
+    ] 
+    var todosValidos = true;
+    numeros.forEach(function(campo){
+            if(!validarCampo(campo)){
+                todosValidos = false; 
+            }
+        });
+        if(!todosValidos){
+            event.preventDefault(); // Evitar que se envíe el formulario si alguno es inválido
+        }
+    });
+</script>

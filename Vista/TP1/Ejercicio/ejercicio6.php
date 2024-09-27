@@ -17,15 +17,15 @@ include_once '../../Estructura/header.php';
   </p>
 </div>
 <div class="divform">
-    <form id="form5" name="form4" action="../Accion/eje6accion.php" method="post">
+    <form id="form6" name="form4" action="../Accion/eje6accion.php" method="post">
         <label for="lnombre">Nombre:</label><br>
-        <input type="text" name="nombre" id="nombre" oninput="validarNombre(event)" required><br>
+        <input type="text" name="nombre" id="nombre"><br>
         <label for="lapellido">Apellido:</label><br>
-        <input type="text" name="apellido" id="apellido" oninput="validarNombre(event)" required><br>
+        <input type="text" name="apellido" id="apellido"><br>
         <label for="ledad">Edad:</label><br>
-        <input type="number" name="edad" id="edad" oninput="validarEdad(event)" required min="0"><br>
+        <input type="number" name="edad" id="edad" min="0" max='90'><br>
         <label for="ldireccion">Direcci&oacute;n</label><br>
-        <input type="text" name="direccion" id="direccion" required><br>
+        <input type="text" name="direccion" id="direccion" ><br>
         <label for="lnivelestudio">Nivel de estudios:</label><br>
         <input type="radio" id="estudio" name="estudio" value="1" checked>
         <label for="lsin">Sin Estudios</label><br>
@@ -58,3 +58,45 @@ include_once '../../Estructura/header.php';
 <?php
 include_once '../../Estructura/footer.php';
 ?>
+<script type="text/javascript" src="../../Js/validacionTP1.js"></script>
+<script>
+    document.getElementById("form6").addEventListener("submit", function(event){
+        var campos =[
+            document.getElementById("nombre"),
+            document.getElementById("apellido"),
+            document.getElementById("edad"),
+            document.getElementById("direccion")
+        ];
+        var todosValidos = true; 
+        // Validar todos los campos
+        campos.forEach(function(campo){
+            if(!validarCampo(campo)){
+                todosValidos = false;
+            }
+        });
+        var nombres= [
+            document.getElementById("nombre"),
+            document.getElementById("apellido")
+        ]
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        nombres.forEach(function(campo){
+            if(!validarNombre(campo)){
+                todosValidos = false; 
+            }
+        });
+        var checkboxMarcado = false;
+        // Usar un bucle `for` para comprobar si al menos uno está seleccionado
+        for(var i = 0; i < checkboxes.length; i++){
+            if(checkboxes[i].checked){
+              todosValidos = true;
+              break; // Detener el bucle si se encuentra un checkbox seleccionado
+            }
+        }
+        if(!checkboxMarcado){
+            event.preventDefault(); // Evitar que se envíe el formulario si alguno es inválido
+        }
+        if(!todosValidos){
+            event.preventDefault(); // Evitar que se envíe el formulario si alguno es inválido
+        }
+    });
+</script>

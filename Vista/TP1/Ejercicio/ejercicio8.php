@@ -16,10 +16,10 @@ include_once '../../Estructura/header.php';
 </div>
 
 <div class="divform">
-    <form method="get" action="../Accion/eje8accion.php">
+    <form method="get" action="../Accion/eje8accion.php" id='form8'>
         <label>Ingrese sus datos para calcular la tarifa:</label><br><br>
         <label>Edad:</label><br>
-        <input type="number" name="edad" id='edad'><br><br>
+        <input type="number" name="edad" id='edad' min='1' max='90'><br><br>
 
         <label>Estudia:</label><br>
         <input type="radio" name="estudia" value="si" required>Estudio<br>
@@ -34,3 +34,16 @@ include_once '../../Estructura/header.php';
 <?php
 include_once '../../Estructura/footer.php';
 ?>
+<script type="text/javascript" src="../../Js/validacionTP1.js"></script>
+<script>
+    document.getElementById("form8").addEventListener("submit", function(event) {
+        var edad = document.getElementById("edad");
+        var todosValidos = true;
+        if(!validarCampo(edad)){
+            todosValidos = false; 
+        }
+        if(!todosValidos){
+            event.preventDefault(); // Evitar que se envíe el formulario si alguno es inválido
+        }
+    });
+</script>
