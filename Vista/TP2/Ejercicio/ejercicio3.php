@@ -13,22 +13,31 @@ include_once '../../Estructura/header.php';
     <form action="../Accion/eje3accion.php" method="post" id='form3' class="needs-validation" novalidate>                    
             <div class="input-group mb-4">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person" style="font-size: 22px; color: black;"></i></span>
-                <input type="text" class="form-control" name="usuario" id="usuario" required placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" name="usuario" id="usuario" required placeholder="Usuario" >
                 <div class="valid-feedback">¡Se ve bien!</div>
                 <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
             <div class="input-group mb-4">
                 <span class="input-group-text" id="basic-addon2"><i class="bi bi-lock-fill" style="font-size: 22px;"></i></span>
-                <input type="password" class="form-control" id="clave" name="clave" required placeholder="Clave" aria-label="Clave" aria-describedby="basic-addon2">
+                <input type="password" class="form-control" id="clave" name="clave" required placeholder="Clave" >
                 <div class="valid-feedback">¡Se ve bien!</div>
                 <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
             <button type="submit" value="Ingresar" id="btn_enviar" name="iniciar" class="btn btn-success form-control">Enviar</button>
     </form>
 </div>
-<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script>
-
 
 <?php
 include_once '../../Estructura/footer.php';
 ?>
+<!-- BOOTSTRAP con las validaciones de los campos -->
+<script type="text/javascript" src="../../Js/bootstrap-validation.js"></script> 
+<script>
+    document.getElementById("form3").addEventListener("submit", function(event) {
+    var clave = document.getElementById("clave");
+    var usuario = document.getElementById("usuario");
+    if (!validarClave(clave) || !validarNombre(usuario)) {
+      event.preventDefault();  // Evitar que se envíe el formulario si la validación falla
+    }
+    });
+</script>
