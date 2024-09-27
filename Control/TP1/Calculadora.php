@@ -38,14 +38,33 @@ class Calculadora{
      */
     public function realizaOperacion(){
         $resultado = '';
-        if($this->getOperacion() == "suma"){
-            $resultado = $this->getNumero1() + $this->getNumero2();
-        }elseif($this->getOperacion() == "resta"){
-            $resultado = $this->getNumero1() - $this->getNumero2();
-        }elseif($this->getOperacion() == "multiplicacion"){
-            $resultado = $this->getNumero1() * $this->getNumero2();
-        }elseif($this->getOperacion() == "division"){
-            $resultado = $this->getNumero1() / $this->getNumero2();
+        // if($this->getOperacion() == "suma"){
+        //     $resultado = $this->getNumero1() + $this->getNumero2();
+        // }elseif($this->getOperacion() == "resta"){
+        //     $resultado = $this->getNumero1() - $this->getNumero2();
+        // }elseif($this->getOperacion() == "multiplicacion"){
+        //     $resultado = $this->getNumero1() * $this->getNumero2();
+        // }elseif($this->getOperacion() == "division"){
+        //     $resultado = $this->getNumero1() / $this->getNumero2();
+        // }
+        // $mensaje = "El resultado es: " . $resultado;
+        // return $mensaje;
+        
+        $numero1 = $this->getNumero1();
+        $numero2 = $this->getNumero2();
+        if ($this->getOperacion() == "suma") {
+            $resultado = $numero1 + $numero2;
+        } elseif ($this->getOperacion() == "resta") {
+            $resultado = $numero1 - $numero2;
+        } elseif ($this->getOperacion() == "multiplicacion") {
+            $resultado = $numero1 * $numero2;
+        } elseif ($this->getOperacion() == "division") {
+            // Verificar que el divisor no sea 0 para evitar la división por cero
+            if ($numero2 != 0) {
+                $resultado = $numero1 / $numero2;
+            } else {
+                $resultado = "Error: No se puede dividir por cero.";
+            }
         }
         $mensaje = "El resultado es: " . $resultado;
         return $mensaje;
