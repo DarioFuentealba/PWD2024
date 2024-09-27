@@ -12,8 +12,8 @@ include_once('../../Estructura/header.php');
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
-  <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+  <p class="h5 mb-4">Enunciado: </p>
   <p>
     Crear una p&aacute;gina php que contenga un formulario HTML que permita ingresar las horas de cursada, de la materia Programaci&oacute;n Web Din&aacute;mica, por cada d&iacute;a de la semana. Enviar los datos del formulario por el m&eacute;todo Get a otra p&aacute;gina php que los reciba y complete un array unidimensional. Visualizar por pantalla la cantidad total de horas que se cursan por semana. 
   </p>
@@ -22,17 +22,17 @@ include_once('../../Estructura/header.php');
 <!-- Formularo -->
 <div class="divform">
   <form action="../Accion/ej2-2accion.php" method="get" id="miFormulario" name="form2">
-      Lunes:<input type="text" id="lunes" name="lunes" class="dia" maxlength="1"><br><br>
+      Lunes: <input type="text" id="lunes" name="lunes" class="dia" maxlength="1"><br><br>
 
-      Martes:<input type="text" id="martes" name="martes" class="dia" maxlength="1"><br><br>
+      Martes: <input type="text" id="martes" name="martes" class="dia" maxlength="1"><br><br>
 
-      Mi&eacute;rcoles:<input type="text" id="miercoles" name="miercoles" class="dia" maxlength="1"><br><br>
+      Mi&eacute;rcoles: <input type="text" id="miercoles" name="miercoles" class="dia" maxlength="1"><br><br>
 
-      Jueves:<input type="text" id="jueves" name="jueves" class="dia" maxlength="1"><br><br>
+      Jueves: <input type="text" id="jueves" name="jueves" class="dia" maxlength="1"><br><br>
 
-      Viernes:<input type="text" id="viernes" name="viernes" class="dia" maxlength="1"><br><br>
-      <div class="error-numero" ><span class="h5 mb-4 text-primary">IMPORTANTE!! completar con ceros los campos incompletos</span></div><br><br>
-  <button type="submit" class="btn btn-success" role="button">Calcular Horas Totales</button>
+      Viernes: <input type="text" id="viernes" name="viernes" class="dia" maxlength="1"><br><br>
+      <div class="error-numero" ><span class="h5 mb-4 text-important">IMPORTANTE!! completar con ceros los campos incompletos</span></div><br><br>
+  <button type="submit" class="btn btn-tp2" role="button">Horas Totales</button>
   </form>
   
 </div>

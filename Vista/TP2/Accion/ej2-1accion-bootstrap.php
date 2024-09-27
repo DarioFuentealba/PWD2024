@@ -14,7 +14,7 @@ if(!empty(data_submitted())){
     $tipoNumero=$obj->verificaSigno();
     ?>
     <div class="container-tp1-ej1">
-        <h1 id="tituloAccion1">El numero seleccionado es: <?php echo $nro ?></h1>
+        <h1 id="tituloAccion">El numero seleccionado es: <?php echo $nro ?></h1>
         <?php 
     // var_dump($tipoNumero); 
             if($tipoNumero == "Positivo"){
@@ -31,7 +31,9 @@ if(!empty(data_submitted())){
             }// fin if 
 
         ?>
-        <div class="volver-tp1-ej1"><a href="../Ejercicio/ej2-1-bootstrap.php" class="volver-accion-ej1">Volver</a></div>
+        <div id="botones" class="d-flex justify-content-center">
+            <a href="../Ejercicio/ej2-1-bootstrap.php" class="volver-accion-ej1">Volver</a>
+        </div>
     </div>
 
 

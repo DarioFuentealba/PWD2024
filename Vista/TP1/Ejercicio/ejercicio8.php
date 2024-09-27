@@ -1,12 +1,12 @@
 <?php
-$titulo = "Ejercicio 8";
+$titulo = "TP 1 - Ejercicio 8";
 include_once '../../Estructura/header.php';
 ?>
 
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
+<div class="enunciado"  id="enunciado">
     <p>Enunciado: </p>
     <p>
     La empresa de Cine Cinem@s tiene establecidas diferentes tarifas para las entradas, en funci&oacute;n de la edad y de la condici&oacute;n de estudiante del cliente.
@@ -25,8 +25,8 @@ include_once '../../Estructura/header.php';
         <input type="radio" name="estudia" value="si" required>Estudio<br>
         <input type="radio" name="estudia" value="no" required>No estudio<br><br>
 
-        <input type="submit" name="submit" value="Enviar" class="btn btn-success" role="button">
-        <input type="reset" value="Limpiar Formulario" class="btn btn-success" role="button">
+        <input type="submit" name="submit" value="Enviar" class="btn-tp1" role="button">
+        <input type="reset" value="Limpiar Formulario" class="btn-tp1" role="button">
 
     </form>
 </div>

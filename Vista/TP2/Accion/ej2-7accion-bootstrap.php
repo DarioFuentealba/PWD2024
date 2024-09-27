@@ -9,12 +9,12 @@ if(!empty(data_submitted())){
     $recibido = data_submitted();
     $objCalculadora = new Ej7Calculadora($recibido);
     ?>
-    <div class="container">
+    <div class="container" id="tituloAccion">
         <?php
             echo $objCalculadora->getNro1()." ".$objCalculadora->signo()." ".$objCalculadora->getNro2()." = ".$objCalculadora->cuenta();
         ?>
 
-        <div><a href="../Ejercicio/ej2-7-bootstrap.php" class="btn btn-success" role="button">Volver</a></div>
+        <div><a href="../Ejercicio/ej2-7-bootstrap.php" class="btn btn-light" role="button">Volver</a></div>
     </div>
 <?php
 }else{

@@ -1,5 +1,5 @@
 <?php
-    $titulo = "TP 2 - Ejercicio 4"; //Titulo en la pestania
+    $titulo = "TP 3 - Ejercicio 3"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
 ?>
 
@@ -9,7 +9,7 @@
 </div>
 
 <!-- Contenedor -->
-<div class="container full-height">
+<div class="container full-height text-light">
     <!-- Cuadro sombreado que contiene a todo -->
     <div class="form-container rounded p-4 shadow-lg  mt-5">
         <!-- Titulo dentro del cuadro con imagen -->

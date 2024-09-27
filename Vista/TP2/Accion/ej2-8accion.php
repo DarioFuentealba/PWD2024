@@ -18,7 +18,9 @@ if(!empty(data_submitted())){
         ?>
     </div>
 
-    <div><a href="../Ejercicio/ejercicio2-8.php" class="btn btn-success" role="button">Volver</a></div>
+    <div id="botones" class="d-flex justify-content-center">
+        <a href="../Ejercicio/ejercicio2-8.php" class="btn btn-tp2" role="button">Volver</a>
+    </div>
 
 <?php
 }else{

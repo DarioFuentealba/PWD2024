@@ -24,7 +24,9 @@ if(!empty(data_submitted())){
             echo $cadena;
         ?>
 
-        <div><a href="../Ejercicio/ejercicio2-6.php" class="btn btn-success" role="button">Volver</a></div>
+        <div id="botones" class="d-flex justify-content-center">
+            <a href="../Ejercicio/ejercicio2-6.php" class="btn btn-tp2" role="button">Volver</a>
+        </div>
     </div>
 
 <?php

@@ -14,7 +14,9 @@ if(!empty(data_submitted())){
             echo "Hola, yo soy ".$objpersona->getNombre()." ".$objpersona->getApellido().", ".$objpersona->mayorEdad()." mayor de edad y vivo en la calle ".$objpersona->getDireccion();
         ?>
 
-        <div><a href="../Ejercicio/ejercicio2-4.php" class="btn btn-success" role="button">Volver</a></div>
+        <div id="botones" class="d-flex justify-content-center">
+            <a href="../Ejercicio/ejercicio2-4.php" class="btn btn-tp2" role="button">Volver</a>
+        </div>
     </div>
 
 <?php

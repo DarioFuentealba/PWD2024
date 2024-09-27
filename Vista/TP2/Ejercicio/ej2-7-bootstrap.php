@@ -9,8 +9,8 @@ include_once '../../Estructura/header.php';
 </div>
 
 <!-- Enunciado -->
-<div class="enunciado">
-    <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+    <p class="h5 mb-4">Enunciado: </p>
     <p>
     Crear una p&aacute;gina con un formulario que contenga dos input de tipo text y un select. En los inputs se ingresarán n&uacute;meros y el select debe dar la opci&oacute;n de una operaci&oacute;n matem&aacute;tica que podr&aacute; resolverse usando los n&uacute;meros ingresados. En la p&aacute;gina que procesa la informaci&oacute;n se debe mostrar por pantalla la operaci&oacute;n seleccionada, cada uno de los operandos y el resultado obtenido de resolver la operaci&oacute;n. Ejemplo del formulario: 
     </p>
@@ -43,7 +43,7 @@ include_once '../../Estructura/header.php';
                     <input type="number" step="any" name="numero2" id="numero2Input" class="form-control" pattern="^(?!0$)\d+$" placeholder="" required>
                     <label for="numero2Input" class="form-label">N&uacute;mero 2: </label>
                     <div class="valid-feedback">Ok!</div>
-                    <div class="invalid-feedback">Sólo se permiten n&uacute;meros</div>
+                    <div class="invalid-feedback">Sólo se permiten n&uacute;meros distintos de cero</div>
                 </div>
             </div>
 
@@ -57,7 +57,7 @@ include_once '../../Estructura/header.php';
                         <option value="suma">Suma</option>
                         <option value="resta">Resta</option>
                         <option value="multiplicacion">Multiplicaci&oacute;n</option>
-                        <option value="dividion">Divisi&oacute;</option>
+                        <option value="dividion">Divisi&oacute;n</option>
                     </select>
                     <div class="valid-feedback">Ok!</div>
                     <div class="invalid-feedback">Debe seleccionar una operaci&oacute;n</div>

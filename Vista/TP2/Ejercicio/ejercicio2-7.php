@@ -9,8 +9,8 @@ include_once '../../Estructura/header.php';
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
-  <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+  <p class="h5 mb-4">Enunciado: </p>
   <p>
     Crear una p&aacute;gina con un formulario que contenga dos input de tipo text y un select. En los inputs se ingresarán n&uacute;meros y el select debe dar la opci&oacute;n de una operaci&oacute;n matem&aacute;tica que podr&aacute; resolverse usando los n&uacute;meros ingresados. En la p&aacute;gina que procesa la informaci&oacute;n se debe mostrar por pantalla la operaci&oacute;n seleccionada, cada uno de los operandos y el resultado obtenido de resolver la operaci&oacute;n. Ejemplo del formulario: 
   </p>
@@ -38,7 +38,7 @@ include_once '../../Estructura/header.php';
         <div class="error-operacion"></div>
         <br><br>
 
-        <input type="submit" value="Calcular" class="btn btn-success" role="button">
+        <input type="submit" value="Calcular" class="btn btn-tp2" role="button">
     </form>
 </div>
 

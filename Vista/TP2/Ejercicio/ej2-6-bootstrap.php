@@ -13,12 +13,13 @@ include_once "../../Estructura/header.php";
     <h1><?php echo $titulo;?></h1>
 </div>
 
-<div class="enunciado">
-    <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+    <p class="h5 mb-4">Enunciado: </p>
     <p>
     Confeccionar un formulario que solicite un número. Al pulsar el botón de enviar debe llamar a un script -vernumero.php- y visualizar un mensaje que indique si el número enviado fue: positivo, cero o negativo. Añadir un link, a la página que visualiza la respuesta, que permita volver a la página anterior.
     </p>
 </div>
+
 <!-- Contenedor del formulario -->
 <div class="container">
     <div class="row">
@@ -73,7 +74,7 @@ include_once "../../Estructura/header.php";
             <!-- 3er fila - 1er columna -->
             <div class="col-4">
                 <!-- Estudios -->
-                <div class="mb-3">
+                <div class="mb-3 text-extra">
                     <label class="form-label">Nivel de estudios</label>
                     <div class="form-check">
                         <input type="radio" id="radioInput1" name="estudio" class="form-check-input" required>
@@ -91,7 +92,7 @@ include_once "../../Estructura/header.php";
             </div>
 
             <!-- 3er fila - 2da columna -->
-            <div class="col-4">
+            <div class="col-4 text-extra">
                 <!-- Sexo -->
                 <div class="mb-3">
                     <label for="dataListInput" class="form-label">Sexo: </label>
@@ -106,7 +107,7 @@ include_once "../../Estructura/header.php";
 
 
             <!-- 3er fila - 3er columna -->
-            <div class="col-4">
+            <div class="col-4 text-extra">
                 <!-- Deportes -->
                 <div class="col-4">
                     <div class="mb-3">

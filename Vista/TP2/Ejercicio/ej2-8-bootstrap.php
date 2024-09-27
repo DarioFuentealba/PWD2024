@@ -9,8 +9,8 @@ include_once '../../Estructura/header.php';
 </div>
 
 <!-- Enunciado -->
-<div class="enunciado">
-    <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+    <p class="h5 mb-4">Enunciado: </p>
     <p>
     La empresa de Cine Cinem@s tiene establecidas diferentes tarifas para las entradas, en funci&oacute;n de la edad y de la condici&oacute;n de estudiante del cliente.
     Desea que sean los propios clientes los que puedan calcular el valor de sus entradas a través de una p&aacute;gina web. Si es estudiante o menor de 12 años el precio es de $160, si es estudiante y mayor o igual de 12 años el precio es de $180, en cualquier otro caso el precio es de $300. Diseñar un formulario que solicite la edad y permita ingresar si se trata de un estudiante o no. Con un bot&oacute;n enviar los datos a un script encargado de realizar el c&aacute;lculo y visualizarlo. 
@@ -22,7 +22,7 @@ include_once '../../Estructura/header.php';
 <div class="container">
     <div class="row">
         <form name="form8" id="form8" method="get" action="../Accion/ej2-8accion-bootstrap.php" class="row g-3 mt-3 needs-validation" novalidate>
-            <label>Ingrese sus datos para calcular la tarifa:</label><br><br>
+            <label class="text-extra">Ingrese sus datos para calcular la tarifa: </label><br><br>
 
             <!-- 2da fila -->
             <div class="col-12">
@@ -38,7 +38,7 @@ include_once '../../Estructura/header.php';
             <!-- 3er fila -->
             <div class="col-12">
                 <!-- Estudios -->
-                <div class="mb-3">
+                <div class="mb-3 text-extra">
                     <label>Estudiante?</label><br>
 
                     <!-- Si estudia -->

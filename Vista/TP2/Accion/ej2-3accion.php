@@ -10,12 +10,14 @@ if(!empty(data_submitted())){
     $objpersona = new Ej3456Persona($recibido);
     ?>
 
-    <div class="divform">
+    <div class="divform" id="tituloAccion">
         <?php
             echo "Hola, yo soy ".$objpersona->getNombre()." ".$objpersona->getApellido()." tengo ".$objpersona->getEdad()." años y vivo en la calle ".$objpersona->getDireccion();
         ?>
 
-        <div><a href="../Ejercicio/ejercicio2-3.php" class="btn btn-success" role="button">Volver</a></div>
+        <div id="botones" class="d-flex justify-content-center">
+            <a href="../Ejercicio/ejercicio2-3.php" class="btn-tp2" role="button">Volver</a>
+        </div>
     </div>
 
 <?php

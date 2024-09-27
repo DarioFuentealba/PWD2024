@@ -9,8 +9,8 @@ include_once '../../Estructura/header.php';
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
-  <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+  <p class="h5 mb-4">Enunciado: </p>
   <p>
     Modificar el formulario del ejercicio anterior solicitando, tal que usando componentes “radios buttons” se ingrese el nivel de estudio de la persona: 1-no tiene estudios, 2-estudios primarios, 3-estudios secundarios. Agregar el componente que crea m&aacute;s apropiado para solicitar el sexo. En la p&aacute;gina que procesa el formulario mostrar adem&aacute;s un mensaje que indique el tipo de estudios que posee y su sexo. 
   </p>
@@ -52,7 +52,7 @@ include_once '../../Estructura/header.php';
         <div class="error-select"></div>
 
         <br>
-        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input class="btn btn-tp2" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
 </div>
 

@@ -12,8 +12,8 @@
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
-    <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+    <p class="h5 mb-4">Enunciado: </p>
     <p>
     Crear una p&aacute;gina php que contenga un formulario HTML como el que se indica en la imagen (darle formato con CSS), enviar estos datos por el m&eacute;todo Post a otra p&aacute;gina php que los reciba y muestre por pantalla un mensaje como el siguiente: “Hola, yo soy nombre , apellido tengo edad años y vivo en direcci&oacute;n”, usando la informaci&aacute;o recibida. Cambiar el m&eacute;todo Post por Get y analizar las diferencias 
     </p>
@@ -38,7 +38,7 @@
         <!-- Campo oculto sexo -->
         <input type="radio" name="sexo" value="" checked style="display: none;"><br>
 
-        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar" onclick="return validar();">
+        <input class="btn btn-tp2" role="button" type="submit" name="enviar" id="enviar" value="Enviar" onclick="return validar();">
     </form>
 </div>
 

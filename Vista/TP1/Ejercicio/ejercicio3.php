@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Ejercicio 3";
+    $titulo = "TP 1 - Ejercicio 3";
     include_once '../../Estructura/header.php';
 ?>
 
@@ -9,7 +9,7 @@
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
+<div class="enunciado"  id="enunciado">
     <p>Enunciado: </p>
     <p>
     Crear una p&aacute;gina php que contenga un formulario HTML como el que se indica en la imagen (darle formato con CSS), enviar estos datos por el m&eacute;todo Post a otra p&aacute;gina php que los reciba y muestre por pantalla un mensaje como el siguiente: “Hola, yo soy nombre , apellido tengo edad años y vivo en direcci&oacute;n”, usando la informaci&aacute;o recibida. Cambiar el m&eacute;todo Post por Get y analizar las diferencias 
@@ -26,7 +26,7 @@
         <label for="ldireccion">Direcci&oacute;n:</label><br>
         <input type="text" name="direccion" id="direccion"><br>
         <br>
-        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input class="btn-tp1" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
 
         <!-- Campo oculto estudio -->
         <input type="hidden" name="estudio" value=""><br>

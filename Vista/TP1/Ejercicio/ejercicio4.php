@@ -1,5 +1,5 @@
 <?php
-$titulo = "Ejercicio 4";
+$titulo = "TP 1 - Ejercicio 4";
 include_once '../../Estructura/header.php';
 ?>
 
@@ -9,7 +9,7 @@ include_once '../../Estructura/header.php';
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
+<div class="enunciado"  id="enunciado">
   <p>Enunciado: </p>
   <p>
     Modificar el formulario del ejercicio anterior para que usando la edad solicitada, enviar esos datos a otra p&aacute;gina en donde se muestren mensajes distintos dependiendo si la persona es mayor de edad o no; (si la edad es mayor o igual a 18). Enviar los datos usando el m&eacute;todo GET y luego probar de modificar los datos directamente en la url para ver los dos posibles mensajes. 
@@ -26,7 +26,7 @@ include_once '../../Estructura/header.php';
         <label for="ldireccion">Direcci&oacute;n</label><br>
         <input type="text" name="direccion" id="direccion" ><br>
         <br>
-        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input class="btn-tp1" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
         
         <!-- Campo oculto estudio -->
         <input type="hidden" name="estudio" value=""><br>

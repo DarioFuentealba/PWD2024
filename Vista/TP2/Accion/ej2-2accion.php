@@ -14,11 +14,13 @@ if(!empty(data_submitted())){
     ?>
 
     <div class="container-tp1-ej2">
-        <h1 id="tituloAccion2">Horas totales por semana:
+        <h1 id="tituloAccion">Horas totales por semana:
 
     <?php echo $horasTotales ?></h1>
 
-        <div class="volver-tp1-ej2"><a href="../Ejercicio/ejercicio2-2.php" class="volver-accion-ej2">Volver</a></div>
+        <div id="botones" class="d-flex justify-content-center">
+            <a href="../Ejercicio/ejercicio2-2.php" class="volver-accion-ej2 btn-tp2">Volver</a>
+        </div>
     </div>
 
 <?php

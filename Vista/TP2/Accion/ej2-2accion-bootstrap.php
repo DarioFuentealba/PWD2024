@@ -18,7 +18,9 @@ if(!empty(data_submitted())){
 
     <?php echo $horasTotales ?></h1>
 
-        <div class="volver-tp1-ej2"><a href="../Ejercicio/ej2-2-bootstrap.php" class="volver-accion-ej2">Volver</a></div>
+        <div id="botones" class="d-flex justify-content-center">
+            <a href="../Ejercicio/ej2-2-bootstrap.php" class="volver-accion-ej2">Volver</a>
+        </div>
     </div>
 
 <?php

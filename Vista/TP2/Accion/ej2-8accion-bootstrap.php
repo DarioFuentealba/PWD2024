@@ -18,7 +18,9 @@ if(!empty(data_submitted())){
         ?>
     </div>
 
-    <div><a href="../Ejercicio/ej2-8-bootstrap.php" class="btn btn-success" role="button">Volver</a></div>
+    <div id="tituloAccion">
+        <a href="../Ejercicio/ej2-8-bootstrap.php" class="btn btn-light" role="button">Volver</a>
+    </div>
 
 <?php
 }else{

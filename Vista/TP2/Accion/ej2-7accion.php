@@ -14,7 +14,9 @@ if(!empty(data_submitted())){
             echo $objCalculadora->getNro1()." ".$objCalculadora->signo()." ".$objCalculadora->getNro2()." = ".$objCalculadora->cuenta();
         ?>
 
-        <div><a href="../Ejercicio/ejercicio2-7.php" class="btn btn-success" role="button">Volver</a></div>
+        <div id="botones" class="d-flex justify-content-center">
+            <a href="../Ejercicio/ejercicio2-7.php" class="btn btn-tp2" role="button">Volver</a>
+        </div>
     </div>
 <?php
 }else{

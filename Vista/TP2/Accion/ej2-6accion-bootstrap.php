@@ -1,5 +1,5 @@
 <?php
-$titulo = "TP 2 - Ejercicio 2-6";
+$titulo = "TP 2 - Ejercicio 2-3 a 2-6";
 include_once '../../Estructura/header.php';
 
 echo '<div class="divtitulo"> <h1>';
@@ -24,7 +24,7 @@ if(!empty(data_submitted())){
             echo $cadena;
         ?>
 
-        <div><a href="../Ejercicio/ej2-6-bootstrap.php" class="btn btn-success" role="button">Volver</a></div>
+        <div><a href="../Ejercicio/ej2-6-bootstrap.php" class="btn btn-light" role="button">Volver</a></div>
     </div>
 
 <?php

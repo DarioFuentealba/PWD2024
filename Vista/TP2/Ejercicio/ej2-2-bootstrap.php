@@ -13,8 +13,8 @@ include_once('../../Estructura/header.php');
 </div>
 
 <!-- Enunciado -->
-<div class="enunciado">
-    <p class="h5 mb-4 text-primary">Enunciado: </p>
+<div class="enunciado" id="enunciado">
+    <p class="h5 mb-4">Enunciado: </p>
     <p>
     Crear una p&aacute;gina php que contenga un formulario HTML que permita ingresar las horas de cursada, de la materia Programaci&oacute;n Web Din&aacute;mica, por cada d&iacute;a de la semana. Enviar los datos del formulario por el m&eacute;todo Get a otra p&aacute;gina php que los reciba y complete un array unidimensional. Visualizar por pantalla la cantidad total de horas que se cursan por semana. 
     </p>

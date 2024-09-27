@@ -3,14 +3,19 @@
     include_once '../../Estructura/header.php';
 ?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
 <!-- Cuadro sombreado que engloba todo -->
 <div class="container mt-3 mt-5 p-4 border rounded shadow">
 
     <!-- Titulo de la pagina -->
-    <h3 class="text-center text-primary mb-4">Subir archivo</h3>
+    <h3 class="text-center text-light mb-4">Subir archivo</h3>
 
     <!-- Contenedor del formulario -->
-    <div class="container">
+    <div class="container text-light">
         <div class="row">
 
             <!-- Formulario -->

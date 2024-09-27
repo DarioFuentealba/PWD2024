@@ -23,7 +23,7 @@ include_once '../../Estructura/header.php';
                 <div class="valid-feedback">¡Se ve bien!</div>
                 <div class="invalid-feedback">Este campo es obligatorio</div>
             </div>
-            <button type="submit" value="Ingresar" id="btn_enviar" name="iniciar" class="btn btn-success form-control">Enviar</button>
+            <button type="submit" value="Ingresar" id="btn_enviar" name="iniciar" class="btn btn-tp2 form-control">Enviar</button>
     </form>
 </div>
 

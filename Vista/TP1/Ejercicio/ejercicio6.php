@@ -1,5 +1,5 @@
 <?php
-$titulo = "Ejercicio 6";
+$titulo = "TP 1 - Ejercicio 6";
 include_once '../../Estructura/header.php';
 ?>
 
@@ -10,7 +10,7 @@ include_once '../../Estructura/header.php';
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="enunciado">
+<div class="enunciado"  id="enunciado">
   <p>Enunciado: </p>
   <p>
     Modificar el formulario del ejercicio anterior para que permita seleccionar los diferentes deportes que practica (f&uacute;tbol, basket, tennis, voley) un alumno. Mostrar en la p&aacute;gina que procesa el formulario la cantidad de deportes que practica. 
@@ -51,7 +51,7 @@ include_once '../../Estructura/header.php';
         <input type="checkbox" id="otros" name="d6" value="otros">
         <label for="lotros">Otros</label><br>
 
-        <input class="btn btn-success" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
+        <input class="btn-tp1" role="button" type="submit" name="enviar" id="enviar" value="Enviar">
     </form>
 </div>
 
