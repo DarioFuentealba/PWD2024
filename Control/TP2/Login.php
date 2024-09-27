@@ -7,7 +7,7 @@ class Login{
     public function __construct($ArregloDatos)
     {
         $this->usuario = $ArregloDatos["usuario"];
-        $this->password = $ArregloDatos["password"];
+        $this->password = $ArregloDatos["clave"];
         
     }
 
