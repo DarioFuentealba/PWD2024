@@ -48,8 +48,8 @@ include_once '../../Estructura/footer.php';
                 todosValidos = false; 
             }
         });
-        if(!todosValidos){
-            event.preventDefault(); // Evitar que se envíe el formulario si alguno es inválido
-        }
+    if(!todosValidos){
+        event.preventDefault(); // Evitar que se envíe el formulario si alguno es inválido
+    }
     });
 </script>

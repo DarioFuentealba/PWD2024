@@ -33,4 +33,5 @@ function validarNombre(obj){
         obj.placeholder = ''; // Limpiar el mensaje si es válido
         return true; // Permitir el envío si está lleno
     }
+    
 }
