@@ -19,15 +19,15 @@ include_once '../../Estructura/header.php';
 </div>
 
 <!-- Formulario -->
-<div class="container">
+<div class="container d-flex justify-content-center">
     <div class="row">
         <form name="form8" id="form8" method="get" action="../Accion/ej2-8accion-bootstrap.php" class="row g-3 mt-3 needs-validation" novalidate>
-            <label class="text-extra">Ingrese sus datos para calcular la tarifa: </label><br><br>
+            <label class="text-extra" style="text-align: center;">Ingrese sus datos para calcular la tarifa: </label><br><br>
 
             <!-- 2da fila -->
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center">
                 <!-- Edad -->
-                <div class="mb-3 form-floating">
+                <div class="mb-3 form-floating text-primary" style="width: 50%">
                     <input type="number" name="edad" id="edadInput" class="form-control" placeholder="Escribe tu edad" min="0" required>
                     <label for="edadInput" class="form-label">Edad: </label>
                     <div class="valid-feedback">Ok!</div>
@@ -36,9 +36,9 @@ include_once '../../Estructura/header.php';
             </div>
 
             <!-- 3er fila -->
-            <div class="col-12">
+            <div class="col-12 d-flex flex-column align-items-center">
                 <!-- Estudios -->
-                <div class="mb-3 text-extra">
+                <div class="mb-3 text-extra text-center">
                     <label>Estudiante?</label><br>
 
                     <!-- Si estudia -->
@@ -57,14 +57,14 @@ include_once '../../Estructura/header.php';
 
 
             <!-- Botones -->
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center">
                 <!-- Boton enviar -->
-                <div class="mb-3 col-md-4">
+                <div class="mb-3 me-2">
                     <button class="btn btn-primary" type="submit">Enviar</button>
                 </div>
 
                 <!-- Boton limpiar formulario -->
-                <div class="mb-3 col-md-4">
+                <div class="mb-3 me-2">
                     <button class="btn btn-warning" type="reset">Limpiar Formulario</button>
                 </div>
             </div>

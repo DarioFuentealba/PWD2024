@@ -25,9 +25,9 @@ include_once '../../Estructura/header.php';
         <form id="form7" name="form7" method="get" action="../Accion/ej2-7accion-bootstrap.php" class="row g-3 mt-3 needs-validation" novalidate>
 
             <!-- Fila 1 -->
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center">
                 <!-- Numero 1 -->
-                <div class="mb-3 form-floating">
+                <div class="mb-3 form-floating text-primary" style="width: 50%">
                     <input type="number" step="any" name="numero1" id="numero1Input" class="form-control" placeholder="" required>
                     <label for="numero1Input" class="form-label">N&uacute;mero 1: </label>
                     <div class="valid-feedback">Ok!</div>
@@ -37,9 +37,9 @@ include_once '../../Estructura/header.php';
 
 
             <!-- Fila 2 -->
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center">
                 <!-- Numero 2 -->
-                <div class="mb-3 form-floating">
+                <div class="mb-3 form-floating text-primary" style="width: 50%">
                     <input type="number" step="any" name="numero2" id="numero2Input" class="form-control" pattern="^(?!0$)\d+$" placeholder="" required>
                     <label for="numero2Input" class="form-label">N&uacute;mero 2: </label>
                     <div class="valid-feedback">Ok!</div>
@@ -51,24 +51,20 @@ include_once '../../Estructura/header.php';
             <!-- Fila 3 -->
             <div class="col-12">
                 <!-- Listado de operaciones -->
-                <div class="mb-3"> <!-- Da un margin bottom -->
+                <div class="mb-3 text-light divform" style="width: 50%; text-align: center;"> <!-- Da un margin bottom -->
                 <label for="operacion">Elige una operaci&oacute;n: </label>
-                    <select name="operacion" id="operacion" class="form-select">
+                    <select name="operacion" id="operacion" class="form-select text-primary">
                         <option value="suma">Suma</option>
                         <option value="resta">Resta</option>
                         <option value="multiplicacion">Multiplicaci&oacute;n</option>
-                        <option value="dividion">Divisi&oacute;n</option>
                     </select>
                     <div class="valid-feedback">Ok!</div>
                     <div class="invalid-feedback">Debe seleccionar una operaci&oacute;n</div>
-
                 </div>
 
-
-
             <!-- Boton enviar -->
-            <div class="col-md-4">
-                <button class="btn btn-primary" type="submit">Enviar</button>
+            <div id="botones" class="d-flex justify-content-center">
+                <button class="btn-tp2" type="submit">Enviar</button>
             </div>
         </form>
     </div>

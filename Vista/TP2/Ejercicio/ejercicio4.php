@@ -6,9 +6,9 @@ include_once '../../Estructura/header.php';
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
 </div>
-<div class="container full-height">
+<div class="container_cine full-height">
     <div class="form-container rounded p-4 shadow-lg  mt-5">
-        <h3 class="mb-4 text-primary"><i class="bi bi-pencil-square"></i>Cinem@s</h3>
+        <h3 class="mb-4 text-light"><i class="bi bi-pencil-square"></i>Cinem@s</h3>
         <form action="../Accion/eje4accion.php" method="get" id='cine' class="needs-validation" novalidate>
                 <div class="row mb-3">
                     <div class="col-md-6">

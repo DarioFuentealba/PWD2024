@@ -33,7 +33,6 @@ include_once '../../Estructura/header.php';
           <option value="suma">Suma</option>
           <option value="resta">Resta</option>
           <option value="multiplicacion">Multiplicaci&oacute;n</option>
-          <option value="division">Divisi&oacute;n</option>
         </select>
         <div class="error-operacion"></div>
         <br><br>
