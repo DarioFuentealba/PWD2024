@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Autos"; //Titulo en la pestania
+    $titulo = "TP 4 - Nuevo auto"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
     //echo '<div class="divtitulo"> <h1>'.$titulo.'</h1></div>';
     $datos = data_submitted();
@@ -40,9 +40,12 @@
     }
 ?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 
-
-<div class="alert alert-info text-center p-3 divform">
+<div class="alert text-center p-3 divform">
     <!-- Titulo en la pagina -->
     <h3 class="text-center text-primary">Agregar nuevo auto</h3>
     <?php

@@ -1,13 +1,13 @@
 <?php
-    $titulo = "Personas - Edición o barrado"; //Titulo en la pestania
+    $titulo = "tp 4 - Personas - Edición o barrado"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
     /*echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';*/
     $datos = data_submitted();
-   // Si no llegan datos del data_submited    
-   $mensaje = 'No se realizaron cambios';   //SI NO PONIA ESTE MENSAJE SALTABA ERROR DE VARIABLE NO DEFINIDA EN EL ANVEGADOR
-   if(!empty($datos))
-   {
+    // Si no llegan datos del data_submited    
+    $mensaje = 'No se realizaron cambios';   //SI NO PONIA ESTE MENSAJE SALTABA ERROR DE VARIABLE NO DEFINIDA EN EL ANVEGADOR
+    if(!empty($datos))
+    {
         $resp = false;
         $objAbmPersona = new AbmPersona();
 

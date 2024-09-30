@@ -1,19 +1,25 @@
 <?php
-    $titulo = "Lista Personas"; //Titulo en la pestania
+    $titulo = "TP 4 - Lista Personas"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
     $objAbmPersona = new AbmPersona();
 
     $listaPersona = $objAbmPersona->buscar(null);
 ?>	
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
+
 <!-- Cuadro sombreado que rodea todo -->
-<div class="container mt-5 p-4 border rounded shadow">
+<div class="container_persona mt-5 p-4 border rounded shadow text-libht">
     <!-- Titulo en la pagina -->
-    <h3 class="text-center text-primary mb-4">Lista de personas</h3>
+    <h3 class="text-center mb-4">Lista de personas</h3>
     <!-- Tabla -->
     <table class="table table-hover table-striped">
         <thead>
-            <tr class="text-primary mb-4">
+            <tr class="text-light mb-4">
                 <th style="width:200px;">Apellido</th>
                 <th style="width:200px;">Nombre</th>
                 <th style="width:200px;">Autos</th>

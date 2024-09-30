@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
     <div class="container-fluid">
       <a class="navbar-brand" href="../../Inicio/principal/principal.php">Grupo 5</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">

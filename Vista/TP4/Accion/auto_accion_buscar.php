@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Autos Buscar"; //Titulo en la pestania
+    $titulo = "TP 4 - Autos Buscar"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
     /*echo '<div class="divtitulo"> <h1>';
     echo $titulo.'</h1></div>';*/
@@ -14,6 +14,13 @@
         if(!empty($listaAutos)){
             $objAuto = $listaAutos[0];
 ?>
+
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
+
         <!-- Titulo en la pagina -->
         <div class="container mt-3">
             <h2 class="text-center">Datos del auto buscado</h2>
@@ -39,7 +46,7 @@
     </div>
     <?php
         }else{
-            echo '<div class="alert alert-info text-center p-3"> <h2>No se encontraron los datos del auto</h2></div>';
+            echo '<div class="alert text-center p-3"> <h2>No se encontraron los datos del auto</h2></div>';
         }
     ?>
     <div class="container mt-3">    
@@ -51,6 +58,9 @@
     <?php
     // Si no llegan datos del data_submited    
     }else{
-        echo '<div class="alert alert-info text-center p-3"> <h2>Acceso restringido</h2></div>';
+        echo '<div class="alert text-center p-3"> <h2>Acceso restringido</h2></div>';
     }
 ?>
+
+<!-- Footer -->
+<?php include_once '../../Estructura/footer.php'; ?>

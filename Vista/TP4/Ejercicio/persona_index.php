@@ -1,5 +1,5 @@
 <?php
-    $titulo = "BD Personas"; //Titulo en la pestania
+    $titulo = "TP 4 - BD Personas"; //Titulo en la pestania
     include_once '../../Estructura/header.php';    
     $objAbmPersona = new AbmPersona();
     $listaPersona = $objAbmPersona->buscar(null);
@@ -15,22 +15,33 @@
 
 ?>	
 <script type="text/javascript" src="../../Js/validacionTP4.js"></script>
-<div class="container mt-5 p-4 border rounded shadow">
-  <h2 class="text-center text-primary mb-4">Listado de personas</h2>
-  <p class="text-center text-primary mb-4">Listado de personas incluidas en la base de datos</p>      
+
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
+<div class="container_persona mt-5 p-4 border rounded shadow text-light">
+
+  <!-- Subtitulo en la pagina -->
+  <div class="text-center mb-4">
+    <h2>Listado de personas</h2>
+    <p>Listado de los personas incluidas en la base de datos</p>
+  </div>
+
   <div class="mb-2">
     <form action="persona_index.php" method="post" class="container mt-5 p-4 border rounded shadow" novalidate>
-        <label for="buscar" class="form-label text-primary fw-bold">Buscar por DNI:</label>
+        <label for="buscar" class="form-label fw-bold">Buscar por DNI:</label>
         <input name="NroDni" id="NroDni" type="text" pattern="[0-9]{0,8}" >
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
-        <div class="text-success"><i class="bi bi-info-circle-fill"></i> Buscar en vacio para refrescar</div>
+        <div class="text-important"><i class="bi bi-info-circle-fill"></i> Buscar en vacio para refrescar</div>
     </form>
   </div>  
   
 
-  <table class="table table-hover table-striped text-primary ">
+  <table class="table table-hover table-striped ">
     <thead>
-      <tr class="text-primary mb-4">
+      <tr class="text-light mb-4">
         <th>D.N.I.</th>
         <th>Apellido</th>
         <th>Nombre</th>

@@ -1,5 +1,5 @@
 <?php
-    $titulo = "BD Autos"; //Titulo en la pestania
+    $titulo = "TP 4 - BD Autos"; //Titulo en la pestania
     include_once '../../Estructura/header.php';
 
     $objAbmAuto = new AbmAuto();
@@ -15,26 +15,32 @@
 
 ?>	
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
 <!-- Cuadro sombreado que rodea todo -->
-<div class="container mt-3 mt-5 p-4 border rounded shadow">
+<div class="container_auto mt-3 mt-5 p-4 border rounded shadow text-light">
 
-  <!-- Titulo en la pagina -->
-  <h2 class="text-center text-primary mb-4">Listado de autos</h2>
-
-  <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
+  <!-- Subtitulo en la pagina -->
+  <div class="text-center mb-4">
+    <h2>Listado de autos</h2>
+    <p>Listado de los autos incluidos en la base de datos</p>
+  </div>
 
   <div class="mb-2">
     <form action="auto_index.php" method="post" class="container mt-5 p-4 border rounded shadow" novalidate>
-        <label for="buscar" class="form-label text-primary fw-bold">Buscar por Patente:</label>
+        <label for="buscar" class="form-label fw-bold">Buscar por Patente:</label>
         <input name="Patente" id="Patente" type="text" pattern="[A-z0-9]" >
         <input type="submit" name="buscar" id="buscar" class="btn btn-info btn-sm" role="button" value="Buscar">
-        <div class="text-success"><i class="bi bi-info-circle-fill"></i> Buscar en vacio para refrescar</div>
+        <div class="text-important"><i class="bi bi-info-circle-fill"></i> Buscar en vacio para refrescar</div>
     </form>
   </div> 
 
-  <table class="table table-hover table-striped text-primary ">
+  <table class="table table-hover table-striped ">
     <thead>
-      <tr class="text-primary mb-4">
+      <tr class="text-light mb-4">
         <th>Patente</th>
         <th>Marca</th>
         <th>Modelo</th>

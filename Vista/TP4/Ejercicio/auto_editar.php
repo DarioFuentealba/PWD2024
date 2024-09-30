@@ -1,5 +1,5 @@
 <?php
-	$titulo = "Editar auto"; //Titulo en la pestania
+	$titulo = "TP 4 - Editar auto"; //Titulo en la pestania
 	include_once '../../Estructura/header.php';
 	$objAbmAuto = new AbmAuto();
 	$objAbmPersona = new AbmPersona();
@@ -16,11 +16,17 @@
 	}
 ?>	
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
+
 <!-- Cuadro sombreado que rodea todo -->
-<div class="container text-primary mt-3 mt-5 p-4 border rounded shadow">
+<div class="container_auto text-primary mt-3 mt-5 p-4 border rounded shadow">
 
 	<!-- Titulo en la pagina -->
-	<h3 class="text-center mb-4">Editar un auto</h3>
+	<h3 class="text-center mb-4 text-light">Editar un auto</h3>
 
 	<?php
 		if ($objAuto != null)

@@ -1,5 +1,5 @@
 <?php
-	$titulo = "Editar persona"; //Titulo en la pestania
+	$titulo = "TP 4 - Editar persona"; //Titulo en la pestania
 	include_once '../../Estructura/header.php';
 	$objAbmPersona = new AbmPersona();
 	$datos = data_submitted();
@@ -17,15 +17,20 @@
 	{
 	?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
 <!-- Cuadro sombreado que rodea todo -->
 <!-- Contenedor de formulario -->
-<div class="container text-primary mb-4 mt-5 p-4 border rounded shadow">
+<div class="container_persona mb-4 mt-5 p-4 border rounded shadow">
 		<!-- Titulo en la pagina -->
-		<h3 class="text-center text-primary mb-4">Editar persona</h3>
+		<h3 class="text-center mb-4 text-light">Editar persona</h3>
 		<div class="row">
 
 			<!-- Formulario -->
-			<form method="post" action="../Accion/persona_accion.php" id="formPersonaEditar" name="formPersonaEditar" class="row g-3 mt-3 needs-validation" novalidate>
+			<form method="post" action="../Accion/persona_accion.php" id="formPersonaEditar" name="formPersonaEditar" class="text-primary row g-3 mt-3 needs-validation" novalidate>
 
 				<!-- Numero DNI -->
 				<div class="mb-3 form-floating">

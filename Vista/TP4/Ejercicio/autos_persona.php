@@ -1,5 +1,5 @@
 <?php
-	$titulo = "Autos x Persona"; //Titulo en la pestania
+	$titulo = "TP 4 - Autos x Persona"; //Titulo en la pestania
 	include_once '../../Estructura/header.php';
 	$objAbmPersona = new AbmPersona();
     $objAbmAuto = new AbmAuto();
@@ -17,17 +17,23 @@
 	}
 ?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
+
 <!-- Cuadro sombreado que rodea todo -->
-<div class="container mt-3 mt-5 p-4 border rounded shadow">
+<div class="container_persona mt-3 mt-5 p-4 border rounded shadow text-light text-center">
 
     <!-- Titulo en la pagina -->
     <div class="container mt-3">
-        <h2 class="text-center text-primary mb-4">Autos por Persona</h2>
-        <p class="text-center text-primary mb-4">Listado de los autos incluidos en la base de datos</p>
+        <h2 class="mb-4">Autos por Persona</h2>
+        <p class="mb-4">Listado de los autos incluidos en la base de datos</p>
 
     <!-- Tabla 1 - Datos personas -->
         <table class="table table-hover table-striped">
-            <tr>
+            <tr class="text-light mb-4"  style="background-color: transparent;">
                 <th style="width:200px;">Dni</th>
                 <th style="width:200px;">Apellido</th>
                 <th style="width:200px;">Nombre</th>
@@ -59,10 +65,10 @@
 
         <!-- Tabla 2 - Datos autos -->
         <div class="container mt-3">
-            <h2 class="text-center text-primary mb-4">Lista de autos</h2>
-            <p class="text-center text-primary mb-4">Listado de los autos pertenecientes a <?php echo $objPersona->getNombre(); ?> </p>
+            <h2 class="mb-4">Lista de autos</h2>
+            <p class="mb-4">Listado de los autos pertenecientes a <?php echo $objPersona->getNombre(); ?> </p>
             <table class="table table-hover table-striped">
-                <tr>
+                <tr class="text-light mb-4"  style="background-color: transparent;">
                     <th style="width:200px;">Patente</th>
                     <th style="width:200px;">Marca</th>
                     <th style="width:200px;">Modelo</th>

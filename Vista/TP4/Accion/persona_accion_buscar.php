@@ -9,10 +9,12 @@
       
       
       $objP= $objAbmPersona -> buscarPersona($datos['NroDni']);
-      
-
-      
 ?>	
+
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 
   <div class="container mt-3">
     <h2>ABM Personas</h2>

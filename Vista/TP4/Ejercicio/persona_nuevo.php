@@ -1,13 +1,17 @@
 <?php
-	$titulo = "Nueva persona"; //Titulo en la pestania
+	$titulo = "TP 4 - Nueva persona"; //Titulo en la pestania
 	include_once '../../Estructura/header.php';
 ?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 
 <!-- Contenedor de formulario -->
-<div class="container mt-5 p-4 border rounded shadow">
+<div class="container_persona mt-5 p-4 rounded shadow text-light">
 	<!-- Titulo en la pagina -->
-	<h3 class="text-center text-primary mb-4">Agregar una nueva persona</h3>
+	<h3 class="text-center mb-4">Agregar una nueva persona</h3>
 	<div class="row">
 
 		<!-- Formulario -->

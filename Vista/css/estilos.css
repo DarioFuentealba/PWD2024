@@ -141,6 +141,19 @@ body {
     border-radius: 15px;
 }
 
+/* Color de fondo del container_cine */
+.container_auto, .container_persona {
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    width: 80%;
+    margin-left: 10%;
+    padding: 5px;
+    text-align: justify;
+    background-color: rgba(42, 42, 44, 0.5); /* 0.5 es el nivel de opacidad */
+    border-radius: 15px;
+}
+
 /*************************************************************/
 /*********** Estilos boton azul de las tablas TP 4 ***********/
 /*************************************************************/
@@ -168,6 +181,7 @@ body {
 /********************************************************************/
 /************************** Estilos tablas **************************/
 /********************************************************************/
+
 /* Aplicar bordes redondeados a la primera y última celda de cada fila */
 .table-striped tbody tr td:first-child {
     border-top-left-radius: 15px;
@@ -201,10 +215,16 @@ body {
     color: blue;
 }
 
-/* Cambiar el fondo de las filas impares a color celeste */
+/* Cambiar el fondo de las filas impares a color blanco */
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f0fdff;
+    background-color: white;
     color: blue;
+}
+
+/* Cambiar el fondo de las filas pares a color blanco */
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: white; /* Color de fondo para filas pares */
+    color: blue; /* Color del texto para filas pares */
 }
 
 /* Cambiar el fondo de las filas al pasar el mouse */

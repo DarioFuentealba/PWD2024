@@ -1,15 +1,19 @@
 <?php
-	$titulo = "Auto nuevo"; //Titulo en la pestania
+	$titulo = "TP 4 - Auto nuevo"; //Titulo en la pestania
 	include_once '../../Estructura/header.php';
     $objAbmPersona = new AbmPersona();
     $listaPersona = $objAbmPersona->buscar(null);
 ?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 
 <!-- Contenedor de formulario -->
-<div class="container mt-5 p-4 border rounded shadow">
+<div class="container_auto mt-5 p-4 rounded shadow">
     <!-- Titulo en la pagina -->
-    <h3 class="text-center text-primary mb-4">Ingresar nuevo auto</h3>
+    <h3 class="text-center text-light mb-4">Ingresar nuevo auto</h3>
     <div class="row">
 
 		<!-- Formulario -->

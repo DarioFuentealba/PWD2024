@@ -1,5 +1,5 @@
 <?php
-$titulo = "Cambio de dueño";
+$titulo = "TP 4 - Cambio de dueño";
 include_once '../../Estructura/header.php';
 $objAbmAuto = new AbmAuto();
 $objAbmPersona = new AbmPersona();
@@ -17,10 +17,15 @@ if (isset($datos['Patente']))
 }
 ?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
+
 <!-- Contenedor de formulario -->
-<div class="container mt-3 mt-5 p-4 border rounded shadow">
+<div class="container_auto mt-3 mt-5 p-4 border rounded shadow">
     <!-- Titulo en la pagina -->
-    <h3 class="text-center text-primary mb-4">Auto - Cambio de due&ntilde;o</h3>
+    <h3 class="text-center text-light mb-4">Auto - Cambio de due&ntilde;o</h3>
 
     <div class="row">
 

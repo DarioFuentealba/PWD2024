@@ -1,5 +1,5 @@
 <?php
-$titulo = "TP 2 - Ejercicio 4"; //Titulo en la pestania
+$titulo = "TP 3 - Ejercicio 4"; //Titulo en la pestania
 include_once '../../Estructura/header.php';
 include_once '../../../Control/TP3/Ej3_insertar_imagen.php';
 

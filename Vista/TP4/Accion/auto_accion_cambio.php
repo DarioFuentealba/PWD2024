@@ -1,5 +1,5 @@
 <?php
-$titulo = "Autos"; //Titulo en la paestania
+$titulo = "TP 4 - Cambio de dueño"; //Titulo en la paestania
 include_once '../../Estructura/header.php';
 //echo '<div class="divtitulo"> <h1>'.$titulo.'</h1></div>';
 $datos = data_submitted();
@@ -46,12 +46,16 @@ if(!empty(data_submitted())){
 
 ?>
 
+<!-- titulo -->
+<div class="divtitulo">
+    <h1><?php echo $titulo;?></h1>
+</div>
 
     <!-- Titulo en la pagina -->
-    <h3 class="text-center text-primary">Cambio de due&ntilde;o del auto</h3>
+    <h3 class="text-center text-light">Cambio de due&ntilde;o del auto</h3>
 
     <!-- Mensaje mostrado en pantalla -->
-    <div class="alert alert-info text-center p-3 divform">
+    <div class="alert text-center p-3 divform">
         <?php	
     echo $mensaje;
     }else{
