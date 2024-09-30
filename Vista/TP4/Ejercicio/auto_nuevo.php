@@ -72,6 +72,7 @@
             <!-- Boton Guardar nuevo auto -->
             <div class="col-md-4">
                 <button class="btn btn-primary" type="submit">Guardar nuevo auto</button>
+                <a href="persona_nuevo.php" class="btn btn-primary" role="button">Agregar nueva persona</a>
             </div>
 		</form>
 	</div>
