@@ -20,7 +20,7 @@
         {
             $mensaje = '<p class=" text-light" id="tituloAccion">ERROR: No se puede cargar el archivo.</p>';
         }else if($respuesta === '1'){
-            $mensaje = '<p class=" text-light" id="tituloAccion">El archivo'.$datos['subirArchivo']['name'].' se ha copiado con éxito!</p><br>';
+            $mensaje = '<p class=" text-light" id="tituloAccion">El archivo '.$datos['subirArchivo']['name'].' se ha copiado con éxito!</p><br>';
         }else if($respuesta === '-1'){
             $mensaje = '<p class=" text-light" id="tituloAccion">ERROR: No se puede cargar el archivo. No se puede acceder al archivo temporal</p><br>';
         }else if($respuesta === '-2'){
@@ -43,6 +43,13 @@
         echo '<div class="container"> <p>NO HAY DATOS</p><br>
     <div><a href="../Ejercicio/ej1_subir_archivo.php" class="btn btn-primary" role="button">Volver</a></div></div>';
     }
+?>
+
+    <div id="botones" class="d-flex justify-content-center">
+        <a href="../Ejercicio/ej1_subir_archivo.php" class="btn-tp3" role="button">Volver</a>
+    </div>
+
+<?php
     // Footer
     include_once '../../Estructura/footer.php';
 ?>

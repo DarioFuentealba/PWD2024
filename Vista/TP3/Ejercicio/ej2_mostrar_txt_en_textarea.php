@@ -9,26 +9,34 @@
 </div>
 
 <!-- Cuadro sombreado que engloba todo -->
-<div class="container mt-3 mt-5 p-4 border rounded shadow">
+<div class="container mt-3 mt-5 p-4 rounded shadow">
 
     <!-- Titulo de la pagina -->
     <h3 class="text-center text-light mb-4">Subir archivo</h3>
 
     <!-- Contenedor del formulario -->
-    <div class="container text-light">
-        <div class="row">
+    <div class="container text-light d-flex justify-content-center">
+        <div class="row divform w-100" style="max-width: 600px;">
 
             <!-- Formulario -->
             <form action="../Accion/ej2_mostrar_txt_accion.php" method="post" name="formSubirArchivo" id="formSubirArchivo" class="row g-3 mt-3 needs-validation" enctype="multipart/form-data">
 
                 <!-- Seleccion del archivo a subir -->
-                Seleccione el archivo a subir: <input type="file" name="subirArchivo" id="subirArchivo" class="form-control-file w-100" required>
+                <div class="subtitulo text-light d-flex justify-content-center">
+                    Seleccione el archivo a subir:
+                </div>
+
+                <!-- Centrado del input file -->
+                <div class="d-flex justify-content-center w-100">
+                    <input type="file" name="subirArchivo" id="subirArchivo" class="form-control-file" required>
+                </div>
+                
                 <div class="valid-feedback">Ok!</div>
                 <div class="invalid-feedback">Este campo es obligatorio</div>
 
                 <!-- Boton enviar -->
-                <div class="col-md-4">
-                    <input name="submit" id="submit" class="btn btn-primary" type="submit" value="Subir archivo">
+                <div id="botones" class="d-flex justify-content-center">
+                    <button type="submit" class="btn-tp3" name="subir_archivo">Subir archivo</button>
                 </div>
             </form>
         </div>

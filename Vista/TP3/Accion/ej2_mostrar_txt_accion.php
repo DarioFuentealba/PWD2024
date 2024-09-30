@@ -55,6 +55,13 @@
         echo '<div class="container"> <p>NO HAY DATOS</p><br>
     <div><a href="../Ejercicio/Ej2_mostrar_txt_en_textarea.php" class="btn btn-primary" role="button">Volver</a></div></div>';
     }
+?>
+
+    <div id="botones" class="d-flex justify-content-center">
+        <a href="../Ejercicio/ej2_mostrar_txt_en_textarea.php" class="btn-tp3" role="button">Volver</a>
+    </div>
+
+<?php
     // Footer
     include_once '../../Estructura/footer.php';
 ?>

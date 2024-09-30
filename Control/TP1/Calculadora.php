@@ -63,7 +63,7 @@ class Calculadora{
             if ($numero2 != 0) {
                 $resultado = $numero1 / $numero2;
             } else {
-                $resultado = "Error: No se puede dividir por cero.";
+                $resultado = " No se puede dividir por cero.";
             }
         }
         $mensaje = "El resultado es: " . $resultado;

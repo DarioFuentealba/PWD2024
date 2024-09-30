@@ -9,11 +9,11 @@
 </div>
 
 <!-- Contenedor -->
-<div class="container full-height text-light">
+<div class="container_cine full-height text-light">
     <!-- Cuadro sombreado que contiene a todo -->
-    <div class="form-container rounded p-4 shadow-lg  mt-5">
+    <div class="form-container rounded p-4 shadow-lg mt-5">
         <!-- Titulo dentro del cuadro con imagen -->
-        <h3 class="mb-4 text-primary"><i class="bi bi-pencil-square"></i>Cinem@s</h3>
+        <h3 class="mb-4 text-light"><i class="bi bi-pencil-square"></i>Cinem@s</h3>
 
         <!-- Formulario -->
         <form action="../Accion/ej3_insertar_imagen_accion.php" method="post" id='cine' class="needs-validation" enctype="multipart/form-data" novalidate>
@@ -168,7 +168,7 @@
             <!-- Fila 7 -->
             <div class="mb-3">
                 <!-- Insertar imagen de la pelicula -->
-                <label for="imagen" class="form-control">Seleccione una imagen para la pel&iacute;cula </label>
+                <label for="imagen" class="form-label">Seleccione una imagen para la pel&iacute;cula </label>
                 <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*" required>
                 <div class="valid-feedback">¡Se ve bien!</div>
                 <div class="invalid-feedback">Este campo es obligatorio</div>
