@@ -33,11 +33,14 @@ include_once '../../Estructura/footer.php';
 <!-- BOOTSTRAP con las validaciones de los campos -->
 <script type="text/javascript" src="../../Js/bootstrap-validation.js"></script> 
 <script>
-    document.getElementById("form3").addEventListener("submit", function(event) {
+    document.getElementById("form3").addEventListener("submit", function(event){
     var clave = document.getElementById("clave");
     var usuario = document.getElementById("usuario");
-    if (!validarClave(clave) || !validarNombre(usuario)) {
-      event.preventDefault();  // Evitar que se envíe el formulario si la validación falla
+
+    // Validar la clave y el usuario
+    if(!validarClave(clave) || !validarNombre(usuario)){
+        // Evitar el envío si la validación falla
+        event.preventDefault();
     }
-    });
+});
 </script>

@@ -3,9 +3,6 @@ $titulo = "TP 1 - Ejercicio 6";
 include_once '../../Estructura/header.php';
 ?>
 
-<!--Incluyo el archivo JS con las validaciones de los campos-->
-<script src="../../Js/tp1eje6.js"></script>
-
 
 <div class="divtitulo">
     <h1><?php echo $titulo;?></h1>
@@ -68,7 +65,7 @@ include_once '../../Estructura/footer.php';
             document.getElementById("direccion")
         ];
         var todosValidos = true; 
-        // Validar todos los campos
+        // Validar que todos los campos no esten vacios
         campos.forEach(function(campo){
             if(!validarCampo(campo)){
                 todosValidos = false;
@@ -78,17 +75,19 @@ include_once '../../Estructura/footer.php';
             document.getElementById("nombre"),
             document.getElementById("apellido")
         ]
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        // Valida los campos nombre y apellido
         nombres.forEach(function(campo){
             if(!validarNombre(campo)){
                 todosValidos = false; 
             }
         });
+
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
         var checkboxMarcado = false;
         // Usar un bucle `for` para comprobar si al menos uno está seleccionado
         for(var i = 0; i < checkboxes.length; i++){
             if(checkboxes[i].checked){
-              todosValidos = true;
+                checkboxMarcado = true;
               break; // Detener el bucle si se encuentra un checkbox seleccionado
             }
         }
