@@ -1,0 +1,14 @@
+{
+    "name": "dario/pwd2024",
+    "description": "uso de librerias",
+    "type": "proyect",
+    "require": {
+        "realityking/pchart": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Dario"
+        }
+    ],
+    "minimum-stability": "dev"
+}

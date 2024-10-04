@@ -23,6 +23,7 @@ body {
     background-size: cover; /* La imagen se ajusta al tamaño del contenedor sin recortarse */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el cuerpo */
+    background-attachment: fixed; /* El fondo permanece fijo mientras haces scroll */
 }
 
 

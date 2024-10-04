@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "810d218bce18fb49f87b230b7d4ce4bc",
+    "packages": [
+        {
+            "name": "realityking/pchart",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/realityking/pChart.git",
+                "reference": "46fd01cad5a4d761b599df1ab09361fad55c83b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/realityking/pChart/zipball/46fd01cad5a4d761b599df1ab09361fad55c83b6",
+                "reference": "46fd01cad5a4d761b599df1ab09361fad55c83b6",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-1.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Rouven Weßling",
+                    "email": "me@rouvenwessling.de",
+                    "homepage": "http://www.rouvenwessling.de"
+                }
+            ],
+            "description": "A fork of the popular pChart library.",
+            "support": {
+                "issues": "https://github.com/realityking/pChart/issues",
+                "source": "https://github.com/realityking/pChart/tree/master"
+            },
+            "time": "2013-03-18T08:23:38+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "realityking/pchart": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}
